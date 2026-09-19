@@ -1,0 +1,23 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Scratch files upstream writes into its working directory on every MoJoFM call
+upstream/Implementation/experienments/group.rsf
+upstream/Implementation/experienments/example.rsf
+
+# IDEs / OS
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+
+# Java builds (design-decision work)
+target/
+build/
+.gradle/
+*.class
+!upstream/**/*.class

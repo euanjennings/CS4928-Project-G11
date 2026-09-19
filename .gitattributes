@@ -1,0 +1,12 @@
+# Order matters: later lines override earlier ones.
+
+# Everything we write ourselves: normalise to LF
+* text=auto eol=lf
+*.bat text eol=crlf
+*.png binary
+*.pdf binary
+*.xlsx binary
+
+# Keep the upstream import byte-for-byte identical (it mixes CRLF and LF files).
+# Without this, Git can rewrite line endings and pollute the audit diff.
+upstream/** -text
