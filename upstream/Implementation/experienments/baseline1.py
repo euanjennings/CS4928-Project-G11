@@ -197,9 +197,9 @@ class Baseline1(GroupInterface):
         m2 = len(group2)
         couplings = []
         for i in range(m1):
-            method1 = group1.members[i]
+            method1 = group1.units[i]
             for j in range(m2):
-                method2 = group2.members[j]
+                method2 = group2.units[j]
                 coupling = self.get_coupling(method1, method2)
                 couplings.append(coupling)
         return sum(couplings) / (m1 * m2)
