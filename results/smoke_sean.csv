@@ -1,0 +1,4 @@
+index,data_file,origin_class,extract_type,baseline_mojofm,baseline_method_mojofm,baseline_field_mojofm,classsplitter_mojofm,classsplitter_method_mojofm,classsplitter_field_mojofm
+1,46+Activiti_Activiti+16e4a+ModelServiceImpl+ModelImageService.csv,com.activiti.service.editor.ModelServiceImpl,extractClass,0.4347999999999999,0.31419999999999987,0.5556,0.8696,0.8858000000000001,0.7778
+2,53+Activiti_Activiti+b12bf+IdentityInfoEntityImpl+AbstractEntity.csv,org.activiti.engine.impl.persistence.entity.IdentityInfoEntityImpl,extractSuperclass,0.5882,0.5652000000000001,0.5556,0.7647999999999999,0.7391999999999999,0.7778
+3,79+Activiti_Activiti+30899+DefaultAsyncJobExecutor+AbstractAsyncJobExecutor.csv,org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor,extractSuperclass,0.3766,0.33340000000000003,0.41659999999999997,0.4025999999999999,0.33340000000000003,0.41659999999999997
