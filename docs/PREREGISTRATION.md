@@ -1,19 +1,19 @@
-# M1 preregistration (RQ1 freeze) — Group G11
+# M1 preregistration — Group G11
 
 - Paper: Chen et al., *A Position-Aware Approach to Decomposing God Classes*, ASE 2024.
 - Public artefact: https://github.com/ClassSplitter/ClassSplitter, imported verbatim at `459d796d3256de428330bff693f14cf442097338` (tag `UPSTREAM_IMPORT`).
 - Group members: Seán Conneally, Euan Jennings, Cian Gleeson, Yanislav Iliev
 - Date agreed by the group: 2026-10-19
 - Coordinator status: READY
-- Project-pack bounded target: checked against the CS4928 *Project Brief and Rubric* on 2026-10-19: RQ1 is the bounded reproduction of one part of the study (ClassSplitter vs the Bavota baseline, mean MoJoFM, on the authors' 133-case evaluation dataset), using the pack's assigned paper and repository.
-- Scope: this freeze covers **RQ1 only**. RQ2 (transfer and design decision) will be preregistered separately before any RQ2 work starts.
-- Timing note: this plan is frozen later than Week 5. At the time of freezing, no formal (full-dataset) run has been made; only the 3-case feasibility check in §3 exists. See §1 for everything seen beforehand.
+- Project-pack bounded target: checked against the CS4928 *Project Brief and Rubric* on 2026-10-19: RQ1 is the bounded reproduction of one part of the study (ClassSplitter vs the Bavota baseline, mean MoJoFM, on the authors' 133-case evaluation dataset) and RQ2 is the transfer/design question, both using the pack's assigned paper and repository.
+- Scope: RQ1 is fully specified (§2). RQ2 (§3) freezes the group's question, sample, method and hypothesis; its case-level details are added as a dated amendment before any RQ2 tool run.
+- Timing note: At the time of freezing, no formal (full-dataset) run has been made; only the 3-case feasibility check in §4 exists. See §1 for everything seen beforehand.
 
 ## 1. Prior knowledge (disclosed before freezing)
 
 - **Saved artefact results.** We have read the saved outputs in `upstream/Implementation/experienments/experienment_result.ipynb` (§2), because they are the reproduction target.
 - **Setup check (repo notes, Sept 2026).** [DEVIATIONS.md](DEVIATIONS.md) reports a setup run that matched the notebook for method-level MoJoFM and ClassSplitter overall, with small baseline differences due to unseeded randomness. Who ran it: Euan Jennings, around 2026-09-19 (the date of the D1 commit).
-- **Feasibility check (§3).** Cases 1–3 only.
+- **Feasibility check (§4).** Cases 1–3 only.
 
 We will not change the sample, metrics or decision rules to favour any of these observations.
 
@@ -38,7 +38,7 @@ The artefact README states that "the main experiment results can be checked in e
 | Field-level MoJoFM | 0.441 | 0.449 | 40 / 56 / 37 | 0.854 |
 
 - Scale: MoJoFM on 0–1, higher = closer to the developers' actual split.
-- Paper cross-reference (not used for the decision rule): [FILL IN: paper table/page, if the group wants to note whether the paper's printed values match the notebook].
+- Paper cross-reference (not used for the decision rule): not checked. The decision rule uses only the notebook's saved values above.
 - The Bavota baseline is upstream `baseline1.py` (`Baseline1`), as used in the notebook.
 
 ### Cases
@@ -90,7 +90,45 @@ Applied to Run A:
 
 As recorded by the group: both overall means agree with the saved values within ±0.005, with ClassSplitter scoring higher than Bavota (i.e. REPRODUCED). We also expect the baseline's overall mean to vary across seeds by less than 0.01, and ClassSplitter's to be identical across seeds.
 
-## 3. Completed feasibility check
+## 3. RQ2 — transfer and design decision
+
+**RQ2:** *Does ClassSplitter's position-aware advantage transfer to Extract Class refactorings mined from Java projects outside the authors' dataset, and what does that imply for a concrete Extract Class decision (including no structural change) in one of those systems, verified by tests and cohesion/coupling metrics?*
+
+Tracker entries (Week 5, as recorded by the group):
+
+- **Sample:** We will study at least 3 historical Extract Class refactoring cases from Java repositories and fixed commit ranges outside the authors' datasets, and we will be using one case for the detailed design decision.
+- **Method:** Compare both tools against developer splits using mean MoJoFM; a higher ClassSplitter mean supports transfer in our sample, while one design decision is assessed using tests and cohesion/coupling metrics.
+- **Expected result:** Our hypothesis is that ClassSplitter's advantage will be smaller on external cases and may not persist. For the detailed case, we expect a split to improve cohesion while preserving test results and avoiding increased coupling.
+
+### Candidate repositories screened so far
+
+Seven candidates were proposed in the G11 Team Brief (2026-10-07) and screened by Yanislav Iliev for usable historical Extract Class refactorings; JUnit 4 was added during screening. Screening looked only at commit history and build/test feasibility. **Neither tool has been run on any candidate.**
+
+| Repository | Starting class / lead | Screening outcome |
+| --- | --- | --- |
+| Apktool | `AndrolibResources`; Framework extraction, PR 3105 | Shortlisted |
+| Apache PDFBox | `PDDocument` | Shortlisted |
+| JUnit 4 | Commit explicitly labelled as an Extract Class refactoring | Shortlisted (third case) |
+| Apache Commons Digester | `Digester` | Rejected: clean history, but verifying that the 2001 revision still builds and tests reliably is too costly |
+| Checkstyle | `Checker` | Rejected: no clear Extract Class history found |
+| JavaParser | `SourceRoot` | Rejected: no clear Extract Class history found |
+| Apache Commons Configuration | `PropertiesConfiguration` | Rejected: no clear Extract Class history found |
+| Spoon | `Launcher` | Rejected: no clear Extract Class history found |
+
+None of these eight projects appears in either of the authors' datasets (73 projects across `upstream/dataset/GodClassRefactorDictionary.csv` and `GodClassRefactorForPositionStudyDictionary.csv`; checked 2026-10-19).
+
+This is a hand-selected convenience sample, so an RQ2 result describes these cases only and does not generalise.
+
+### Still to be fixed before any RQ2 tool run
+
+The following will be added as a dated amendment (§6) **before** either tool is run on an external case:
+
+- for each case: repository URL, class path, before/after commit IDs, extraction link, confirmation that it is a real Extract Class (e.g. RefactoringMiner or a manual diff check), and build/test outcome at the parent commit;
+- confirmation that every method and field can be mapped to the developer's split (needed for MoJoFM);
+- how the per-entity input CSVs are produced (the artefact does not include its Java extractor) and how that extractor is validated against the authors' shipped CSVs;
+- the case chosen for the design decision, the alternatives compared (including no structural change), the cohesion/coupling metrics and tool, and the decision rule.
+
+## 4. Completed feasibility check
 
 Sean ran this command before M1 on 2026-10-07:
 
@@ -108,13 +146,13 @@ Sean ran this command before M1 on 2026-10-07:
 
 These outcomes are prior observations and will be disclosed. They demonstrate feasibility for three cases, not full-study reproduction.
 
-## 4. Evidence to be produced
+## 5. Evidence to be produced
 
 - `results/m2_repro_seed2026.csv` + `.json` (Run A), `results/m2_seeds/` (Run B), and a summary script/table comparing them with the saved notebook values.
 - Deviations logged in [DEVIATIONS.md](DEVIATIONS.md): D1, unseeded baseline randomness, Java 23 vs 21, `ttest_ind` on paired data.
 - Material AI contributions logged in [AI_USE.md](AI_USE.md).
 
-## 5. Freeze and amendments
+## 6. Freeze and amendments
 
 After the coordinator confirms READY, tag the reviewed commit `M1_PLAN`. After freezing, the text above is not edited; changes go in the table below with the date, the reason and whether results had already been seen.
 
