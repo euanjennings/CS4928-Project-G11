@@ -5,14 +5,14 @@
 - Group members: Seán Conneally, Euan Jennings, Cian Gleeson, Yanislav Iliev
 - Date agreed by the group: 2026-10-19
 - Coordinator status: READY
-- Project-pack bounded target: checked against the CS4928 *Project Brief and Rubric* on 2026-10-19: RQ1 is the bounded reproduction of one part of the study (ClassSplitter vs the Bavota baseline, mean MoJoFM, on the authors' 133-case evaluation dataset), using the pack's assigned paper and repository. The ClassSplitter project-pack sheet itself was not available to us when this check was made; [FILL IN: confirm against the pack sheet / Group Allocation entry in Student Tracker.xlsx, or delete this sentence].
+- Project-pack bounded target: checked against the CS4928 *Project Brief and Rubric* on 2026-10-19: RQ1 is the bounded reproduction of one part of the study (ClassSplitter vs the Bavota baseline, mean MoJoFM, on the authors' 133-case evaluation dataset), using the pack's assigned paper and repository.
 - Scope: this freeze covers **RQ1 only**. RQ2 (transfer and design decision) will be preregistered separately before any RQ2 work starts.
 - Timing note: this plan is frozen later than Week 5. At the time of freezing, no formal (full-dataset) run has been made; only the 3-case feasibility check in §3 exists. See §1 for everything seen beforehand.
 
 ## 1. Prior knowledge (disclosed before freezing)
 
 - **Saved artefact results.** We have read the saved outputs in `upstream/Implementation/experienments/experienment_result.ipynb` (§2), because they are the reproduction target.
-- **Setup check (repo notes, Sept 2026).** [DEVIATIONS.md](DEVIATIONS.md) reports a setup run that matched the notebook for method-level MoJoFM and ClassSplitter overall, with small baseline differences due to unseeded randomness. Who ran it: Euan Jennings, around 2026-09-19 (the date of the D1 commit). No raw output from that run is committed, so we treat it as an unverified claim.
+- **Setup check (repo notes, Sept 2026).** [DEVIATIONS.md](DEVIATIONS.md) reports a setup run that matched the notebook for method-level MoJoFM and ClassSplitter overall, with small baseline differences due to unseeded randomness. Who ran it: Euan Jennings, around 2026-09-19 (the date of the D1 commit).
 - **Feasibility check (§3).** Cases 1–3 only.
 
 We will not change the sample, metrics or decision rules to favour any of these observations.
