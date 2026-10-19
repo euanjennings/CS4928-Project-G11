@@ -1,118 +1,96 @@
-# M1 preregistration — Group G11
-
-**Status: DRAFT — complete every `[FILL IN: ...]` before freezing.**
+# M1 preregistration (RQ1 freeze) — Group G11
 
 - Paper: Chen et al., *A Position-Aware Approach to Decomposing God Classes*, ASE 2024.
-- Public artefact: https://github.com/ClassSplitter/ClassSplitter
-- Date agreed by the group: [FILL IN: date]
-- Group members: [FILL IN: names]
-- Project-pack bounded target: [FILL IN: confirm the allowed target/sample]
-- Week 5 specification: *Freeze the Reproduction Plan* (supplied by Sean).
-- Coordinator status: [FILL IN: NOT YET / BLOCKED / READY, date and evidence].
-- Planned freeze: after the coordinator confirms READY, the reviewed plan commit tagged `M1_PLAN`.
+- Public artefact: https://github.com/ClassSplitter/ClassSplitter, imported verbatim at `459d796d3256de428330bff693f14cf442097338` (tag `UPSTREAM_IMPORT`).
+- Group members: Seán Conneally, Euan Jennings, Cian Gleeson, Yanislav Iliev
+- Date agreed by the group: 2026-10-19
+- Coordinator status: READY
+- Project-pack bounded target: checked against the CS4928 *Project Brief and Rubric* on 2026-10-19: RQ1 is the bounded reproduction of one part of the study (ClassSplitter vs the Bavota baseline, mean MoJoFM, on the authors' 133-case evaluation dataset), using the pack's assigned paper and repository. The ClassSplitter project-pack sheet itself was not available to us when this check was made; [FILL IN: confirm against the pack sheet / Group Allocation entry in Student Tracker.xlsx, or delete this sentence].
+- Scope: this freeze covers **RQ1 only**. RQ2 (transfer and design decision) will be preregistered separately before any RQ2 work starts.
+- Timing note: this plan is frozen later than Week 5. At the time of freezing, no formal (full-dataset) run has been made; only the 3-case feasibility check in §3 exists. See §1 for everything seen beforehand.
 
-The Week 5 specification requires the exact RQs from the assigned project pack. That pack has not yet been supplied in this conversation or located in this repository. Earlier AI-generated RQs and experimental suggestions are provisional and must not replace assigned questions. All proposed choices below must be checked against the pack before freezing.
+## 1. Prior knowledge (disclosed before freezing)
 
-### Scope boundary
+- **Saved artefact results.** We have read the saved outputs in `upstream/Implementation/experienments/experienment_result.ipynb` (§2), because they are the reproduction target.
+- **Setup check (repo notes, Sept 2026).** [DEVIATIONS.md](DEVIATIONS.md) reports a setup run that matched the notebook for method-level MoJoFM and ClassSplitter overall, with small baseline differences due to unseeded randomness. Who ran it: Euan Jennings, around 2026-09-19 (the date of the D1 commit). No raw output from that run is committed, so we treat it as an unverified claim.
+- **Feasibility check (§3).** Cases 1–3 only.
 
-Use only the initial material released for this project. Do not inspect or analyse held-out or Change Event material before its release. New-project mining, position perturbations and embedding recomputation are not authorised by this template; include them only if the assigned pack requires or permits them at this stage.
-
-Out of scope for M1: the full study, unreleased material, and unassigned experiments. M1 establishes the plan and feasibility; substantial reproduction begins after READY and the freeze.
-
-## 1. Prior knowledge and scope
-
-The repository notes in [DEVIATIONS.md](DEVIATIONS.md) describe earlier setup checks, but Sean reports that he has not personally run them. Their provenance and verification by the group remain [FILL IN: who ran the checks, when, and where the evidence is stored; or state that the claims are unverified]. We have seen these reported results while planning and will disclose that prior knowledge. They do not establish that this device can run the experiment.
-
-The setup notes report overall MoJoFM near 0.496 for ClassSplitter and 0.334 for the baseline. These are claims in the existing notes, not results verified during this planning session. We will verify the paper's reported numbers and table before freezing.
-
-Initial device checks on 2026-10-07 found an unprepared Python 3.14 environment. Sean then created `.venv312`, installed the dependencies, and successfully completed the three-case feasibility run recorded below. Java 23.0.2 was used rather than the README's JDK 21; record this version deviation and check any pack-specific requirement before formal execution.
-
-Known deviations: D1 repairs the baseline's reference to `group.members` to use `group.units`. The baseline randomly assigns fields that no methods visit. Details and evidence are in [DEVIATIONS.md](DEVIATIONS.md).
+We will not change the sample, metrics or decision rules to favour any of these observations.
 
 ## 2. RQ1 — bounded reproduction
 
-**Assigned RQ1: [FILL IN: copy exactly from the project pack].**
+**RQ1:** *Using the authors' published artefact and their dataset of 133 real-world God classes, does ClassSplitter reproduce its reported decomposition accuracy (mean MoJoFM) and its reported advantage over the Bavota baseline, and which properties of the artefact affect the stability of that result?*
 
-- Source anchor: [FILL IN: section/table/figure/claim/experiment and page].
-- Target statement: [FILL IN: exact original result and the output our bounded reproduction will produce].
-- RQ1 out of scope: [FILL IN].
+Tracker entries (Week 5, as recorded by the group):
 
-Earlier suggested interpretation, subject to the assigned RQ: compare ClassSplitter and the Bavota baseline against historical developer splits using MoJoFM.
+- **Sample:** We will study all 133 God-class refactoring cases supplied by the authors, using runner case IDs 1–133.
+- **Method:** Run both tools on 133 published cases, compare mean MoJoFM with the reported values and check seed stability.
+- **Expected result:** We expect both overall means to agree with the saved published values within ±0.005, with ClassSplitter scoring higher than Bavota.
 
-### Cases and published target
+### Reproduction target (the saved published values)
 
-- Source/version: upstream commit `459d796d3256de428330bff693f14cf442097338`, subject to the project pack's version requirement.
-- Sample size/range: [FILL IN: exact bounded size/range from the pack or justified group decision]. The catalogue contains 133 cases; this does not automatically make all 133 the M1 sample.
-- Runner catalogue: `upstream/Implementation/experienments/GodClassRefactorDictionary.csv`.
-- Sample IDs: [FILL IN: exact runner indices, or an unambiguous rule producing them].
-- Selection rule and exclusions: [FILL IN: rule, reasons and handling of excluded cases].
-- Unit of analysis: one historical class-refactoring case. Cases from the same project may be related; this limits claims of independence.
-- ID mapping: runner `index` is different from the catalogue's `last index` and the filename prefix. Record both IDs and the data filename with results.
-- Paper table/page: [FILL IN: table number, page and source link].
-- Published overall means: ClassSplitter [FILL IN: value]; Bavota [FILL IN: value].
-- Paper score scale: [FILL IN: 0–1 or 0–100; convert consistently to 0–1].
+The artefact README states that "the main experiment results can be checked in experienments/experienment_result.ipynb". We use that notebook's saved outputs as the reported values (cells 0 and 2, printed to 3 decimal places):
 
-### Method and measurements
+| Measure (mean over 133 cases) | Bavota (`Baseline1`) | ClassSplitter | W/T/L (ClassSplitter vs Bavota) | Upstream `ttest_ind` p |
+| --- | --- | --- | --- | --- |
+| **Overall MoJoFM (primary)** | **0.334** | **0.496** | 83 / 17 / 33 | 8.75e-08 |
+| Method-level MoJoFM | 0.325 | 0.526 | 82 / 17 / 34 | 7.79e-11 |
+| Field-level MoJoFM | 0.441 | 0.449 | 40 / 56 / 37 | 0.854 |
 
-Proposed procedure, to confirm against the assigned RQ: use `repro/run_repro.py`, the documented D1 fix and the shipped embedding cache. Preserve all original case records. Run sequentially because upstream writes shared temporary files.
+- Scale: MoJoFM on 0–1, higher = closer to the developers' actual split.
+- Paper cross-reference (not used for the decision rule): [FILL IN: paper table/page, if the group wants to note whether the paper's printed values match the notebook].
+- The Bavota baseline is upstream `baseline1.py` (`Baseline1`), as used in the notebook.
 
-Formal command: [FILL IN: exact command with selected IDs, seed and output path].
+### Cases
 
-Seed configuration: [FILL IN: seed(s), repetitions and why they are needed for the assigned target]. Thirty seeds (0 through 29) were previously suggested as a randomness audit; they are not a requirement of the supplied Week 5 specification.
+- Sample: **all 133 cases**, runner IDs 1–133 (the `index` column of `upstream/Implementation/experienments/GodClassRefactorDictionary.csv`).
+- The 133 cases come from 50 projects (`upstream/dataset/GodClassRefactorDictionary.csv`). Cases from the same project are not independent; we report this as a threat.
+- ID mapping: runner ID ≠ dataset `index`/`last index` ≠ filename prefix. The output CSV records the runner ID and data filename for every case.
+- Exclusions: none planned. A case that errors is logged with its error message and reported, not silently dropped.
 
-If repeating seeds, report a paper-compatible reproduction separately from the randomness audit and state which run/aggregation answers the original claim. For an across-seed paired analysis, average scores within each case and treat cases, rather than repeated runs, as the observations. Do not claim to reproduce a single-draw paper mean with a seed average without explaining the methodological difference.
+### Method
 
-- Primary metric: [FILL IN: metric matching the assigned target, e.g. overall MoJoFM].
-- Secondary metrics: [FILL IN: include only relevant metrics, e.g. method-only/field-only MoJoFM and wins/ties/losses].
-- Comparison/analysis: [FILL IN: the paper's analysis and any explicitly justified group audit]. A paired Wilcoxon test was suggested earlier but is not an automatic requirement. Any test must match the claim and sample; record treatment of zero differences and related cases.
-- Ties: absolute score difference at most [FILL IN: numerical tolerance, e.g. 0.000001].
-- If auditing upstream `ttest_ind`, report it separately and explain that both techniques were evaluated on the same cases.
-- Randomness audit: report the range of baseline means across seeds and whether the overall advantage changes direction. This concerns the variation covered by the runner's seed, not a guarantee that every source of nondeterminism is controlled.
-- Failed/invalid cases: record the error and retain the case in the failure log. Report achieved coverage. If missing or invalid evidence prevents the planned comparison, classify it as INCONCLUSIVE / BLOCKED rather than NOT REPRODUCED.
+Environment: Python 3.12.3 (`.venv312`, `requirements.txt`), Java 23.0.2 (README asks for JDK 21; logged as a deviation), shipped embedding cache `cache_time_all-mpnet-base-v2.json`, D1 fix applied. Runs are sequential (upstream writes `group.rsf`/`example.rsf` into its own folder).
 
-### Decision rules — agree before the formal runs
+**Run A — reproduction (answers "does it reproduce"):**
 
-- Criterion for the original claim: [FILL IN: exact defensible rule matching the source result, including any numerical tolerance and its justification]. A universal tolerance or p-value is not appropriate for every target.
-- REPRODUCED: a valid completed bounded run satisfies the criterion above.
-- NOT REPRODUCED: a valid completed bounded run fails that criterion. Explain the observed difference; a nonsignificant test alone does not prove equivalence.
-- INCONCLUSIVE / BLOCKED: the comparison cannot be interpreted because execution, data, environment or evidence is incomplete or invalid.
-- If randomness sensitivity is part of the assigned RQ: [FILL IN: audit scope and quantitative instability criterion].
+```
+python repro/run_repro.py --out results/m2_repro_seed2026.csv --seed 2026
+```
 
-Expected result: [FILL IN: prediction tied to the assigned source claim]. Earlier notes suggest full-dataset means near 0.50 versus 0.33, but these do not define expected values for a smaller bounded sample. Verify the paper anchor and explain the prediction.
+**Run B — seed stability (answers "which properties affect stability"):** the same command with seeds 0–29 (`--seed N --out results/m2_seeds/seed_N.csv`). Only the baseline uses randomness, so ClassSplitter's scores should be identical across seeds; we will check this rather than assume it.
 
-Evidence: per-case CSVs, environment records, seeds, failure logs, analysis scripts, summaries and the committed code state.
+Measurements (per case, written to CSV):
 
-## 3. Assigned RQ2 and its target
+- **Primary:** overall MoJoFM, mean over the 133 cases, for each tool.
+- **Secondary:** method-level and field-level MoJoFM; wins/ties/losses (tie = absolute difference ≤ 1e-6).
+- **Statistical tests (reported, not part of the decision rule):** upstream `ttest_ind` (to compare with the notebook), plus paired t-test and Wilcoxon signed-rank, because the scores are paired by case.
 
-**Assigned RQ2: [FILL IN: copy exactly from the project pack, if assigned].**
+### Stability properties to examine (bounded list)
 
-### Cases and target comparison
+1. **Baseline randomness:** `Baseline1.handel_fields()` assigns never-visited fields to `random.randint` groups with no seed. Measured by Run B.
+2. **Choice of statistical test:** upstream `ttest_ind` treats the two tools' scores as independent samples; paired t-test and Wilcoxon do not.
+3. **The D1 fix:** the baseline cannot run without it. We check that it is a two-token attribute rename that changes no logic.
+4. **Cached vs recomputed embeddings (optional):** recompute ClassSplitter's embeddings with `sentence-transformers/all-mpnet-base-v2` for cases 1–10 and compare scores. Done only if time allows after Runs A and B; otherwise reported as a limitation.
 
-- Proposed sample: exactly **3 external historical Extract Class cases**, subject to coordinator approval.
-- Sources: [FILL IN: repository names/URLs and fixed commit ranges], outside the authors' datasets.
-- Case identifiers: record each repository, original class file, pre-refactoring commit and refactoring commit.
-- Selection rule: select the first three eligible cases chronologically, breaking ties by repository URL and commit hash; exclude authors' dataset cases and cases without traceable member mappings.
-- God-class eligibility: [FILL IN: specify the detection rule/tool and version].
-- Unit of analysis: one historical Extract Class refactoring case; cases from the same project may be related.
-- Reference decomposition: the developer's actual split, with original methods and fields mapped to their resulting classes.
-- Source anchor: [FILL IN: paper section/table establishing the original ClassSplitter–Bavota advantage], plus the selected refactoring commits.
-- Target comparison: compare ClassSplitter and Bavota's mean MoJoFM on the three external cases; there are no published external-case means to reproduce.
-- Score scale: report MoJoFM consistently on the **0–1 scale**, where higher means closer agreement with the developer's split.
-- Detailed case: choose the first selected case with passing, runnable baseline tests, before inspecting comparative scores.
+**Instability criterion:** a property affects stability if varying it (a) moves either overall mean outside ±0.005 of the saved value, (b) flips which tool has the higher overall mean, or (c) moves a significance test across p = 0.05. For Run B we report the min/max/mean of the baseline's overall MoJoFM across the 30 seeds and the share of seeds that fall within ±0.005 of 0.334.
 
-- Inputs and preparation: [FILL IN].
-- Procedure, tool/configuration and material parameters: [FILL IN].
-- Metric and comparison with the original claim: [FILL IN].
-- Expected result and source-based reason: [FILL IN].
-- REPRODUCED criterion: [FILL IN].
-- NOT REPRODUCED: valid completed evidence fails that criterion.
-- INCONCLUSIVE / BLOCKED: incomplete or invalid evidence prevents interpretation.
-- Evidence files/commands: [FILL IN].
-- Out of scope at M1 and material reserved for later release: [FILL IN].
+### Decision rules (agreed before the formal runs)
 
-Do not replace the assigned RQ with the earlier new-project transfer or position-perturbation suggestions. If later transfer/design work is required, follow the pack's scope and release schedule and preserve pre-event predictions.
+Applied to Run A:
 
-## 4. Completed feasibility check
+- **REPRODUCED:** both overall means are within ±0.005 of the saved values (ClassSplitter 0.491–0.501; Bavota 0.329–0.339) **and** ClassSplitter's overall mean is higher than Bavota's.
+- **PARTIALLY REPRODUCED:** ClassSplitter is higher than Bavota, but at least one overall mean falls outside ±0.005.
+- **NOT REPRODUCED:** ClassSplitter's overall mean is not higher than Bavota's.
+- **INCONCLUSIVE / BLOCKED:** fewer than 127 of the 133 cases (95%) complete validly, or the environment fails.
+
+±0.005 is a group-chosen tolerance. Rounding to 3 decimals alone accounts for at most ±0.0005; the remaining margin allows for the baseline’s unseeded randomness, whose size Run B measures. It is strict enough that a materially different result (e.g. a 1-point MoJoFM drop) would fail. Because the baseline has unseeded randomness, a fail on the Bavota value at seed 2026 alone is reported with Run B's seed range, not reinterpreted. We do not swap in a 30-seed average to judge reproduction.
+
+### Expected result
+
+As recorded by the group: both overall means agree with the saved values within ±0.005, with ClassSplitter scoring higher than Bavota (i.e. REPRODUCED). We also expect the baseline's overall mean to vary across seeds by less than 0.01, and ClassSplitter's to be identical across seeds.
+
+## 3. Completed feasibility check
 
 Sean ran this command before M1 on 2026-10-07:
 
@@ -126,18 +104,20 @@ Sean ran this command before M1 on 2026-10-07:
 - Overall means observed: Bavota 0.4665; ClassSplitter 0.6790; ClassSplitter won 3/3 cases.
 - Environment: Python 3.12.3; Java 23.0.2; package versions recorded in the JSON.
 - Code commit recorded: `7fad2afe991d8fe721b5d50e4e91ce70afbe7da8`; working tree was dirty. This was a feasibility run, not a frozen formal reproduction.
-- Evidence: `results/smoke_sean.csv` and `results/smoke_sean.json` (currently local; [FILL IN: durable evidence location accessible to the group/coordinator]).
+- Evidence: `results/smoke_sean.csv` and `results/smoke_sean.json`.
 
-These outcomes are prior observations and will be disclosed. They demonstrate feasibility for three cases, not full-study reproduction. Do not select the formal sample or change success criteria to favour these observed scores.
+These outcomes are prior observations and will be disclosed. They demonstrate feasibility for three cases, not full-study reproduction.
 
-## 5. Coordinator checkpoint, freeze and amendments
+## 4. Evidence to be produced
 
-Complete the blanks using the assigned pack and source study, obtain group review and enter concise evidence-linked M1 entries in Student Tracker.xlsx. Show the coordinator the exact RQs, source anchors, bounded sample, executable method, expected results, decision rules and feasibility evidence.
+- `results/m2_repro_seed2026.csv` + `.json` (Run A), `results/m2_seeds/` (Run B), and a summary script/table comparing them with the saved notebook values.
+- Deviations logged in [DEVIATIONS.md](DEVIATIONS.md): D1, unseeded baseline randomness, Java 23 vs 21, `ttest_ind` on paired data.
+- Material AI contributions logged in [AI_USE.md](AI_USE.md).
 
-Only after the coordinator confirms READY, freeze the plan and tag the reviewed commit `M1_PLAN`. Then begin the bounded reproduction. READY, NOT YET and BLOCKED are formative checkpoint statuses.
+## 5. Freeze and amendments
 
-After freezing, preserve the original plan. Add dated amendments explaining changes, their reasons and whether relevant results had already been inspected. Record predictions before executing each later Change Event analysis.
+After the coordinator confirms READY, tag the reviewed commit `M1_PLAN`. After freezing, the text above is not edited; changes go in the table below with the date, the reason and whether results had already been seen.
 
 | Date | Amendment | Reason | Results already inspected? | Evidence |
 | --- | --- | --- | --- | --- |
-| [FILL IN if needed] | | | | |
+| | | | | |
