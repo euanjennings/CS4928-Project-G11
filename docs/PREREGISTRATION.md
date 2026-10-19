@@ -6,7 +6,7 @@
 - Date agreed by the group: 2026-10-19
 - Coordinator status: READY
 - Project-pack bounded target: checked against the CS4928 *Project Brief and Rubric* on 2026-10-19: RQ1 is the bounded reproduction of one part of the study (ClassSplitter vs the Bavota baseline, mean MoJoFM, on the authors' 133-case evaluation dataset) and RQ2 is the transfer/design question, both using the pack's assigned paper and repository.
-- Scope: RQ1 is fully specified (§2). RQ2 (§3) freezes the group's question, sample, method and hypothesis; its case-level details are added as a dated amendment before any RQ2 tool run.
+- Scope: RQ1 is fully specified (#2). RQ2 (#3) freezes the group's question, sample, method and hypothesis; its case-level details are added as a dated amendment before any RQ2 tool run.
 - Timing note: At the time of freezing, no formal (full-dataset) run has been made; only the 3-case feasibility check in §4 exists. See §1 for everything seen beforehand.
 
 ## 1. Prior knowledge (disclosed before freezing)
