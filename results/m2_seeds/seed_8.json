@@ -1,0 +1,61 @@
+{
+  "args": {
+    "ids": null,
+    "out": "results/m2_seeds/seed_8.csv",
+    "seed": 8
+  },
+  "runtime_s": 626,
+  "summary": {
+    "mojofm": {
+      "n": 133,
+      "baseline_mean": 0.336,
+      "classsplitter_mean": 0.4958,
+      "wins": 82,
+      "ties": 18,
+      "losses": 33,
+      "upstream_ttest_ind_p": 1.3927697558482784e-07,
+      "paired_ttest_rel_p": 2.0815200631891844e-09,
+      "wilcoxon_signed_rank_p": 4.612219555140244e-09
+    },
+    "method_mojofm": {
+      "n": 133,
+      "baseline_mean": 0.3254,
+      "classsplitter_mean": 0.5263,
+      "wins": 82,
+      "ties": 17,
+      "losses": 34,
+      "upstream_ttest_ind_p": 7.794948201206006e-11,
+      "paired_ttest_rel_p": 1.1789284906396647e-10,
+      "wilcoxon_signed_rank_p": 9.849794146141902e-10
+    },
+    "field_mojofm": {
+      "n": 133,
+      "baseline_mean": 0.4429,
+      "classsplitter_mean": 0.4489,
+      "wins": 40,
+      "ties": 54,
+      "losses": 39,
+      "upstream_ttest_ind_p": 0.8893428744713247,
+      "paired_ttest_rel_p": 0.8528992906437359,
+      "wilcoxon_signed_rank_p": 0.5673487490176907
+    }
+  },
+  "environment": {
+    "timestamp_utc": "2026-10-20T00:12:04+00:00",
+    "git_commit": "15d7eb2570dad97018fe028b9d4079535f0dedc1",
+    "git_dirty": true,
+    "python": "3.12.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "java": "java version \"23.0.2\" 2025-01-21",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.3",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.9.1",
+      "networkx": "3.6.1",
+      "gensim": "4.4.0",
+      "openai": "3.14.1",
+      "sentence-transformers": "6.0.1"
+    }
+  }
+}

@@ -6,14 +6,14 @@
 - Date agreed by the group: 2026-10-19
 - Coordinator status: READY
 - Project-pack bounded target: checked against the CS4928 *Project Brief and Rubric* on 2026-10-19: RQ1 is the bounded reproduction of one part of the study (ClassSplitter vs the Bavota baseline, mean MoJoFM, on the authors' 133-case evaluation dataset) and RQ2 is the transfer/design question, both using the pack's assigned paper and repository.
-- Scope: RQ1 is fully specified (#2). RQ2 (#3) freezes the group's question, sample, method and hypothesis; its case-level details are added as a dated amendment before any RQ2 tool run.
-- Timing note: At the time of freezing, no formal (full-dataset) run has been made; only the 3-case feasibility check in #4 exists. See #1 for everything seen beforehand.
+- Scope: RQ1 is fully specified (§2). RQ2 (§3) freezes the group's question, sample, method and hypothesis; its case-level details are added as a dated amendment before any RQ2 tool run.
+- Timing note: At the time of freezing, no formal (full-dataset) run has been made; only the 3-case feasibility check in §4 exists. See §1 for everything seen beforehand.
 
 ## 1. Prior knowledge (disclosed before freezing)
 
-- **Saved artefact results.** We have read the saved outputs in `upstream/Implementation/experienments/experienment_result.ipynb` (#2), because they are the reproduction target.
+- **Saved artefact results.** We have read the saved outputs in `upstream/Implementation/experienments/experienment_result.ipynb` (§2), because they are the reproduction target.
 - **Setup check (repo notes, Sept 2026).** [DEVIATIONS.md](DEVIATIONS.md) reports a setup run that matched the notebook for method-level MoJoFM and ClassSplitter overall, with small baseline differences due to unseeded randomness. Who ran it: Euan Jennings, around 2026-09-19 (the date of the D1 commit).
-- **Feasibility check #4).** Cases 1–3 only.
+- **Feasibility check (§4).** Cases 1–3 only.
 
 We will not change the sample, metrics or decision rules to favour any of these observations.
 
@@ -121,7 +121,7 @@ This is a hand-selected convenience sample, so an RQ2 result describes these cas
 
 ### Still to be fixed before any RQ2 tool run
 
-The following will be added as a dated amendment (#6) **before** either tool is run on an external case:
+The following will be added as a dated amendment (§6) **before** either tool is run on an external case:
 
 - for each case: repository URL, class path, before/after commit IDs, extraction link, confirmation that it is a real Extract Class (e.g. RefactoringMiner or a manual diff check), and build/test outcome at the parent commit;
 - confirmation that every method and field can be mapped to the developer's split (needed for MoJoFM);
