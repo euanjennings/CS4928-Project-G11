@@ -96,8 +96,28 @@ We did not carry out the optional embedding recomputation described in M1. Our r
 
 ## 5. Decision and answer to RQ1
 
-TBA
+Under the M1 preregistered decision rule, we classify the result as **REPRODUCED** if both overall means are within ±0.005 of the notebook values and ClassSplitter scores higher than Bavota. Run A meets both conditions, and all **133 cases** completed successfully, above the M1 minimum of **127** valid cases.
+
+We therefore reproduced the reported overall result: **0.4958 for ClassSplitter and 0.3353 for Bavota**, compared with **0.496 and 0.334**, respectively, in the authors' saved notebook. ClassSplitter also retained its reported advantage over the Bavota baseline. We used **Run A** for the reproduction decision, as specified in M1. **Run B** shows that randomness in the baseline causes small changes to its scores but does not change the verdict across the 30 tested seeds.
 
 ## 6. Evidence, deviations and limitations
 
-TBA
+The evidence is saved under [`results/`](./) in the repository: Run A's [CSV](m2_repro_seed2026.csv) and [JSON](m2_repro_seed2026.json), and Run B's [30 CSV/JSON pairs](m2_seeds/). The CSV files contain scores for individual cases, while the JSON files record summary statistics and execution details. These files allow the reported values to be traced to individual cases and the recorded environment.
+
+For example, the overall ClassSplitter mean of **0.4958** can be traced as follows:
+
+1. Run A's JSON records the mean under `summary.mojofm.classsplitter_mean`.
+2. The value is the reported mean of the `classsplitter_mojofm` column across the 133 rows of [Run A's CSV](m2_repro_seed2026.csv), rounded for display.
+3. The JSON records seed **2026**, a clean Git working tree at commit `b4ca046`, and timestamp `2026-10-19T13:52:56+00:00`.
+4. The first CSV row identifies the case `46+Activiti_Activiti+16e4a+ModelServiceImpl+ModelImageService.csv` in `upstream/Implementation/experienments/god_class_refactor_examples/`. For that case, the overall scores are **0.8696** for ClassSplitter and **0.4348** for Bavota.
+
+The following deviations and limitations qualify our reproduction result. The baseline repair and related audit notes are documented in [DEVIATIONS.md](../docs/DEVIATIONS.md):
+
+- **Java version:** We used **Java 23.0.2** instead of the Java Development Kit (JDK) 21 specified in the team README. We did not test whether this difference affects the results.
+- **Run B working tree:** Run B's JSON files record uncommitted changes. The committed changes between Runs A and B affected documentation only. Seán reported that the uncommitted changes concerned documentation and results files, but the JSON records do not identify the files individually.
+- **Tie handling:** The runner uses exact equality to identify ties, while M1 defines a tie as an absolute score difference of at most `1e-6`. Applying the M1 rule changes none of the recorded counts.
+- **Plan freeze timing:** The plan commit was made before Run A, but the `M1_PLAN` tag was added later. The preregistration records coordinator status as READY; the repository does not independently establish the exact time that approval was given.
+- **Related cases:** The 133 cases came from **50 projects**, so cases belonging to the same project may not be statistically independent. The reported significance tests do not account for possible within-project dependence.
+- **Bounded scope:** We reused the authors' shipped similarity cache and compared our outputs with the notebook's saved results. We did not independently recompute the embeddings or check the paper's printed table. The two-token fix required to run the Bavota baseline is documented in D1 of `DEVIATIONS.md`.
+
+These limitations apply to the **RQ1 bounded reproduction**. Testing whether the approach performs similarly on Java projects outside the authors' dataset, and evaluating a concrete refactoring decision, remain part of **RQ2**.
