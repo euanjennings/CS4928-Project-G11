@@ -10,3 +10,7 @@
 # Keep the upstream import byte-for-byte identical (it mixes CRLF and LF files).
 # Without this, Git can rewrite line endings and pollute the audit diff.
 upstream/** -text
+
+# Preserve checksummed Event A evidence on every platform.
+extension/event_a/** -text
+results/event_a/** -text

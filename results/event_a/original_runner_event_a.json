@@ -1,0 +1,61 @@
+{
+  "args": {
+    "ids": null,
+    "out": "/workspace/scratch/1bca51086ea8/event-a-rebuild/results/event_a/recovery_run/original_runner_event_a.csv",
+    "seed": 2026
+  },
+  "runtime_s": 5,
+  "summary": {
+    "mojofm": {
+      "n": 2,
+      "baseline_mean": 0.4386,
+      "classsplitter_mean": 0.3839,
+      "wins": 0,
+      "ties": 0,
+      "losses": 2,
+      "upstream_ttest_ind_p": 0.851527717119628,
+      "paired_ttest_rel_p": 0.14964442949874557,
+      "wilcoxon_signed_rank_p": 0.5
+    },
+    "method_mojofm": {
+      "n": 2,
+      "baseline_mean": 0.3842,
+      "classsplitter_mean": 0.3397,
+      "wins": 0,
+      "ties": 1,
+      "losses": 1,
+      "upstream_ttest_ind_p": 0.796569701482379,
+      "paired_ttest_rel_p": 0.5000000000000001,
+      "wilcoxon_signed_rank_p": 1.0
+    },
+    "field_mojofm": {
+      "n": 2,
+      "baseline_mean": 0.5455,
+      "classsplitter_mean": 0.3462,
+      "wins": 0,
+      "ties": 0,
+      "losses": 2,
+      "upstream_ttest_ind_p": 0.7605165522981814,
+      "paired_ttest_rel_p": 0.3168860139579394,
+      "wilcoxon_signed_rank_p": 0.5
+    }
+  },
+  "environment": {
+    "timestamp_utc": "2026-11-02T12:45:03+00:00",
+    "git_commit": "c71b2cb6fac2bba14db1c5e2b8c62f65590c8951",
+    "git_dirty": true,
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+    "java": "openjdk version \"17.0.20\" 2026-07-21",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.3",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.9.1",
+      "networkx": "3.6.1",
+      "gensim": "4.4.0",
+      "openai": "3.14.1",
+      "sentence-transformers": "6.0.1"
+    }
+  }
+}

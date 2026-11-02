@@ -1,0 +1,4 @@
+index,project name,commit hash,parent hash,extract type,origin class,new class,commit message,url,data path,class path
+13,abel533_Mapper,0586a42d5e36d8eab6a6e85f1a19d96adf861094,5fda159c7bcf1ec423ba27bd1bb4bacdcdd4b521,Extract Class,com.github.abel533.mapper.MapperHelper,com.github.abel533.mapper.MapperHelper com.github.abel533.mapper.MapperTemplate,refactor,https://github.com/abel533/Mapper/commit/0586a42d5e36d8eab6a6e85f1a19d96adf861094,../../dataset/refactor_example_position/13+MapperHelper+MapperTemplate.csv,src/main/java/com/github/abel533/mapper/MapperHelper.java
+3490,Anuken_Mindustry,82742339a3f001ac5ddd7d1c5002738d999c8bfa,a64efce5a0a171d88675f3beccaa617641b8ba78,Extract Class,mindustry.core.NetClient,mindustry.core.NetClient mindustry.ui.Menus,"Implementation of #5280
+",https://github.com/Anuken/Mindustry/commit/82742339a3f001ac5ddd7d1c5002738d999c8bfa,../../dataset/refactor_example_position/3490+NetClient+Menus.csv,core/src/mindustry/core/NetClient.java

@@ -1,0 +1,1034 @@
+{
+  "status": "completed",
+  "provenance": "Regenerated recovery run; not the original October execution",
+  "started_utc": "2026-11-02T12:36:15.992405+00:00",
+  "seed": 2,
+  "diagnostic": null,
+  "environment": {
+    "timestamp_utc": "2026-11-02T12:36:16+00:00",
+    "git_commit": "c71b2cb6fac2bba14db1c5e2b8c62f65590c8951",
+    "git_dirty": true,
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+    "java": "openjdk version \"17.0.20\" 2026-07-21",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.3",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.9.1",
+      "networkx": "3.6.1",
+      "gensim": "4.4.0",
+      "openai": "3.14.1",
+      "sentence-transformers": "6.0.1"
+    }
+  },
+  "input_manifest": {
+    "created_utc": "2026-11-02T12:34:32.907658+00:00",
+    "purpose": "Recovery replay input freeze, created after original results were known; not a retrospective preregistration",
+    "base_commit": "c71b2cb6fac2bba14db1c5e2b8c62f65590c8951",
+    "sha256": {
+      "repro/run_repro.py": "04d4836eea5598835bb49df3453126a61b048c369a267de6f11a560fde61a477",
+      "requirements.txt": "741ba36e1eb841673f48e174ff621d5d64a5333bc82200ded466180e873ac26a",
+      "extension/event_a/cases.csv": "5ec0141b325686263b179ceb8feef5b39162a02d23b50e2425bed9d235a4eeb6",
+      "extension/event_a/run_event_a.py": "86a674492b0d99eb7caceeb31960468efb7c9d5ff1cf6f311762d037a999f212",
+      "upstream/Implementation/experienments/cache_time_all-mpnet-base-v2.json": "6780cfab2750d000671496be1ed81dac7b7c0b458a6aedbd5b553fe4f0ccc46a",
+      "upstream/dataset/GodClassRefactorForPositionStudyDictionary.csv": "007ed10c25f96deaea15c64bd127629ff9669135ffc815dd2526558ff633e735",
+      "results/m2_repro_seed2026.csv": "2776c733512adc1900ae330abb79d5203bbe2958a782ba096f7731b549a5eaf4",
+      "upstream/Implementation/experienments/e_statistics.py": "12387211453c014fa0cabd828ab7271c89753deed08af7151ca78f80482d0f2a",
+      "upstream/Implementation/experienments/cluster.py": "a7524460194a121309c5c52d1f8bb67d4d5115cd16c65d511e9113036ce4540a",
+      "upstream/Implementation/experienments/baseline1.py": "617bd3d6ed03e642fdcfe83a2599bad631bbb2175a3f9fb6ac0e48e006fe5207",
+      "upstream/Implementation/experienments/god_class.py": "27b8efe430cd210a11e4f1bf3abfb20878c2c54d91dfc2c9868b0b27e86a2bcf",
+      "upstream/Implementation/experienments/show_result.py": "167b7e0c3e132c145b81d14d087fdcb510cefb9e14467f3ffcbd768302d46c8d",
+      "upstream/Implementation/experienments/timer.py": "216016760a409a99d87fb37dd79a9d36899761bb04441fb81963d28996215af9",
+      "upstream/Implementation/experienments/approach.py": "4b93cf56e3fb8f2dd80c96da43ac5c98729464a64cd4210ed15965a2d7f8b02b",
+      "upstream/Implementation/experienments/baseline2.py": "2d7845fdd30579578567412f7f33d589c134fbe0796cadb9f96ef4248fe356a4",
+      "upstream/Implementation/experienments/baseline3.py": "61282d68a5c43638ba2ca614740b15fd328fa989a2650b308ad2740893158e29",
+      "upstream/Implementation/experienments/commit_statistic.py": "ce502ee880ebb4ba64955fda354fb90d4a6e8be4b2ee18eeee1d8e7e6314d8e4",
+      "upstream/Implementation/experienments/lda.py": "9f2592443a432cf1d1fcd0ef4f4f4a6a726fc7b32fe635901c57927eeabe879e",
+      "upstream/Implementation/experienments/mojo/MoJo.class": "a8b41786f4f5d454f96f7c0768784e9f9d5dc85698b3d2c17df899a0517d7076",
+      "upstream/Implementation/experienments/mojo/Vertex.class": "123a2fb9f415902e38fd8e7671b67f86751d67c89f04e1827c8d9275cf94cab9",
+      "upstream/Implementation/experienments/mojo/BipartiteGraph.class": "6b080be57a9c778fc7e42cd0a6a12c7590d0ab76eca345e57fcfa7effb53e948",
+      "upstream/Implementation/experienments/mojo/MoJoCalculator.class": "d16fa9e7f44b93c15173c0b88b576cbd296fcd37ba10c749a3581edc6cb74870",
+      "upstream/Implementation/experienments/mojo/Cluster.java": "09f7a2873fb894666ad49fbcd480b15332172d49154a9d7507ac472470c9767c",
+      "upstream/Implementation/experienments/mojo/Cluster.class": "da17fc3c275c2c3cfb973df2836d1ce397f97deb3782d8514c9d6d4e9237735f",
+      "upstream/Implementation/experienments/mojo/mojo.iml": "d5baf08c5a96059e9a415a9f94ff00ca8472297398583e590b7d02dbf56331e3",
+      "upstream/Implementation/experienments/mojo/MoJoCalculator.java": "a31c138c40857b4c9c5c188c9597d1c41bd4356819ab51083a2a1493dc8737fb",
+      "upstream/Implementation/experienments/mojo/distra.rsf": "ac96493b5324a1c9b7cab814034309e1498876ef8990aa9101a579c7b5c73d12",
+      "upstream/Implementation/experienments/mojo/distrb.rsf": "66f5def838dbd49aa797a173891cc3f2399a2606cea0d8b540386b3ed74cfb1c",
+      "upstream/Implementation/experienments/mojo/README": "3cbbac12766dc3bf7556d40216e1f1b70a6b078c0425517229305c9462ca59e3",
+      "upstream/Implementation/experienments/mojo/MoJo.java": "af1460394ae060fef56730559996408401d20d38a223601314d2e602fb0acaab",
+      "upstream/Implementation/experienments/mojo/BipartiteGraph.java": "bb1937867a74d2f63b4f6c300f0bbaa8b9f3e3fdd61a772df8bbedf1d7b89a05",
+      "upstream/dataset/refactor_example_position/13+MapperHelper+MapperTemplate.csv": "d3e0b62b6f8764ad25d63cda979828f53b699ad10a2781a9953ac9c5900543f7",
+      "upstream/dataset/refactor_example_position/3490+NetClient+Menus.csv": "cd73c6b35bb3364cb77f156ddb06878c454c73dea69594ce61fcd76607c11df4"
+    }
+  },
+  "cases": [
+    {
+      "id": 13,
+      "name": "com.github.abel533.mapper.MapperHelper",
+      "data_file": "13+MapperHelper+MapperTemplate.csv",
+      "baseline_groups": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12,
+          13,
+          15,
+          17,
+          19,
+          20,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          31
+        ],
+        [
+          9,
+          14,
+          16,
+          18,
+          21,
+          22,
+          30,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50
+        ]
+      ],
+      "classsplitter_groups": [
+        [
+          1,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "stages": {
+        "separate_to_group": [
+          [
+            3,
+            4,
+            12
+          ],
+          [
+            5
+          ],
+          [
+            11,
+            15
+          ],
+          [
+            13,
+            17
+          ],
+          [
+            14,
+            18
+          ],
+          [
+            16
+          ],
+          [
+            23
+          ],
+          [
+            26
+          ],
+          [
+            27,
+            29
+          ],
+          [
+            28
+          ],
+          [
+            30,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50
+          ],
+          [
+            31
+          ],
+          [
+            32
+          ]
+        ],
+        "split_group_by_position": [
+          [
+            3,
+            4
+          ],
+          [
+            5
+          ],
+          [
+            11
+          ],
+          [
+            12
+          ],
+          [
+            13
+          ],
+          [
+            14
+          ],
+          [
+            15
+          ],
+          [
+            16
+          ],
+          [
+            17
+          ],
+          [
+            18
+          ],
+          [
+            23
+          ],
+          [
+            26
+          ],
+          [
+            27
+          ],
+          [
+            28
+          ],
+          [
+            29
+          ],
+          [
+            30
+          ],
+          [
+            31
+          ],
+          [
+            32
+          ],
+          [
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50
+          ]
+        ],
+        "merge_adjacent_single_method": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            23,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32
+          ],
+          [
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50
+          ]
+        ],
+        "merge_separate_group": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            23,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50
+          ]
+        ],
+        "handle_fields": [
+          [
+            1,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50
+          ],
+          [
+            2,
+            3,
+            4
+          ]
+        ]
+      },
+      "baseline": {
+        "overall": {
+          "reported": 0.25,
+          "raw_percent": 62.5
+        },
+        "method": {
+          "reported": 0.2572,
+          "raw_percent": 62.86
+        },
+        "field": {
+          "reported": 0.09099999999999994,
+          "raw_percent": 54.55
+        }
+      },
+      "classsplitter": {
+        "overall": {
+          "reported": 0.20840000000000003,
+          "raw_percent": 60.42
+        },
+        "method": {
+          "reported": 0.2572,
+          "raw_percent": 62.86
+        },
+        "field": {
+          "reported": 0.0,
+          "raw_percent": 45.45
+        }
+      }
+    },
+    {
+      "id": 3490,
+      "name": "mindustry.core.NetClient",
+      "data_file": "3490+NetClient+Menus.csv",
+      "baseline_groups": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61
+        ]
+      ],
+      "classsplitter_groups": [
+        [
+          1,
+          4,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12,
+          13,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59
+        ],
+        [
+          2,
+          3,
+          5,
+          10,
+          15,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          60,
+          61
+        ],
+        [
+          14,
+          16,
+          17
+        ]
+      ],
+      "stages": {
+        "separate_to_group": [
+          [
+            15,
+            18,
+            19,
+            20,
+            21,
+            22,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            32,
+            33,
+            34,
+            35,
+            36,
+            39,
+            40,
+            42,
+            44,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56
+          ],
+          [
+            16,
+            17
+          ],
+          [
+            23
+          ],
+          [
+            31
+          ],
+          [
+            37,
+            38,
+            41,
+            43
+          ],
+          [
+            45,
+            46,
+            47,
+            60
+          ],
+          [
+            57,
+            58,
+            59
+          ],
+          [
+            61
+          ]
+        ],
+        "split_group_by_position": [
+          [
+            15
+          ],
+          [
+            16,
+            17
+          ],
+          [
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          [
+            23
+          ],
+          [
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          [
+            31
+          ],
+          [
+            32,
+            33,
+            34,
+            35,
+            36
+          ],
+          [
+            37,
+            38
+          ],
+          [
+            39,
+            40
+          ],
+          [
+            41
+          ],
+          [
+            42
+          ],
+          [
+            43
+          ],
+          [
+            44
+          ],
+          [
+            45,
+            46,
+            47
+          ],
+          [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56
+          ],
+          [
+            57,
+            58,
+            59
+          ],
+          [
+            60
+          ],
+          [
+            61
+          ]
+        ],
+        "merge_adjacent_single_method": [
+          [
+            15
+          ],
+          [
+            16,
+            17
+          ],
+          [
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          [
+            23
+          ],
+          [
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          [
+            31
+          ],
+          [
+            32,
+            33,
+            34,
+            35,
+            36
+          ],
+          [
+            37,
+            38
+          ],
+          [
+            39,
+            40
+          ],
+          [
+            41,
+            42,
+            43,
+            44
+          ],
+          [
+            45,
+            46,
+            47
+          ],
+          [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56
+          ],
+          [
+            57,
+            58,
+            59
+          ],
+          [
+            60,
+            61
+          ]
+        ],
+        "merge_separate_group": [
+          [
+            15,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            60,
+            61
+          ],
+          [
+            16,
+            17
+          ],
+          [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59
+          ]
+        ],
+        "handle_fields": [
+          [
+            1,
+            4,
+            6,
+            7,
+            8,
+            9,
+            11,
+            12,
+            13,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59
+          ],
+          [
+            2,
+            3,
+            5,
+            10,
+            15,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            60,
+            61
+          ],
+          [
+            14,
+            16,
+            17
+          ]
+        ]
+      },
+      "baseline": {
+        "overall": {
+          "reported": 0.6272,
+          "raw_percent": 81.36
+        },
+        "method": {
+          "reported": 0.5112000000000001,
+          "raw_percent": 75.56
+        },
+        "field": {
+          "reported": 1.0,
+          "raw_percent": 100.0
+        }
+      },
+      "classsplitter": {
+        "overall": {
+          "reported": 0.5594,
+          "raw_percent": 77.97
+        },
+        "method": {
+          "reported": 0.42219999999999996,
+          "raw_percent": 71.11
+        },
+        "field": {
+          "reported": 0.6924000000000001,
+          "raw_percent": 84.62
+        }
+      }
+    }
+  ],
+  "means": {
+    "baseline": {
+      "overall": 0.4386,
+      "method": 0.38420000000000004,
+      "field": 0.5455
+    },
+    "classsplitter": {
+      "overall": 0.3839,
+      "method": 0.3397,
+      "field": 0.34620000000000006
+    }
+  },
+  "gap": -0.05469999999999997,
+  "completed_utc": "2026-11-02T12:36:23.208528+00:00"
+}

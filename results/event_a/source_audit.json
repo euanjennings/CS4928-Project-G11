@@ -1,0 +1,84 @@
+{
+  "class_overlap_with_m2": [],
+  "project_overlap_with_m2": [],
+  "netclient_moved_method_checks": [
+    {
+      "index": 30,
+      "name": "setHudText",
+      "in_before": true,
+      "in_after": false,
+      "in_Menus": true
+    },
+    {
+      "index": 31,
+      "name": "hideHudText",
+      "in_before": true,
+      "in_after": false,
+      "in_Menus": true
+    },
+    {
+      "index": 32,
+      "name": "setHudTextReliable",
+      "in_before": true,
+      "in_after": false,
+      "in_Menus": true
+    },
+    {
+      "index": 33,
+      "name": "announce",
+      "in_before": true,
+      "in_after": false,
+      "in_Menus": true
+    },
+    {
+      "index": 34,
+      "name": "infoMessage",
+      "in_before": true,
+      "in_after": false,
+      "in_Menus": true
+    },
+    {
+      "index": 35,
+      "name": "infoPopup",
+      "in_before": true,
+      "in_after": false,
+      "in_Menus": true
+    },
+    {
+      "index": 36,
+      "name": "label",
+      "in_before": true,
+      "in_after": false,
+      "in_Menus": true
+    },
+    {
+      "index": 37,
+      "name": "effect",
+      "in_before": true,
+      "in_after": false,
+      "in_Menus": true
+    },
+    {
+      "index": 38,
+      "name": "effectReliable",
+      "in_before": true,
+      "in_after": false,
+      "in_Menus": true
+    },
+    {
+      "index": 39,
+      "name": "infoToast",
+      "in_before": true,
+      "in_after": false,
+      "in_Menus": true
+    },
+    {
+      "index": 40,
+      "name": "warningToast",
+      "in_before": true,
+      "in_after": false,
+      "in_Menus": true
+    }
+  ],
+  "mapper_msIdSkip_still_declared_after": true
+}

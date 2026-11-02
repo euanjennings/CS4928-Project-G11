@@ -1,0 +1,35 @@
+{
+  "provenance": "Seed-2026 reference scores retained from the initial Event A analysis; independently checked by the M2 runner.",
+  "seed": 2026,
+  "scores": {
+    "13": {
+      "classsplitter": [
+        0.2084,
+        0.2572,
+        0.0
+      ],
+      "baseline": [
+        0.25,
+        0.2572,
+        0.091
+      ]
+    },
+    "3490": {
+      "classsplitter": [
+        0.5594,
+        0.4222,
+        0.6924
+      ],
+      "baseline": [
+        0.6272,
+        0.5112,
+        1.0
+      ]
+    }
+  },
+  "metric_order": [
+    "overall",
+    "method",
+    "field"
+  ]
+}
