@@ -1,0 +1,24 @@
+{
+  "previous_scores_matched": 12,
+  "repeat_scores_and_partitions_match": true,
+  "baseline_higher_mean_seeds": 30,
+  "seed_count": 30,
+  "diagnostic_no_method_position_cs_mean": 0.5544,
+  "diagnostic_recomputed_ms_cs_mean": 0.44239999999999996,
+  "m2_scores_compared": 798,
+  "m2_max_absolute_difference": 0.0,
+  "original_runner_event_a_scores_matched": 12,
+  "primary_means": {
+    "baseline": {
+      "overall": 0.4386,
+      "method": 0.38420000000000004,
+      "field": 0.5455
+    },
+    "classsplitter": {
+      "overall": 0.3839,
+      "method": 0.3397,
+      "field": 0.34620000000000006
+    }
+  },
+  "primary_gap": -0.05469999999999997
+}

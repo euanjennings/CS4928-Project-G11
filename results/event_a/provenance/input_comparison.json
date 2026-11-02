@@ -1,0 +1,53 @@
+{
+  "provenance": "Historical hashes transcribed from prior conversation; compared to restored repository inputs. This is not the lost original manifest.",
+  "checks": [
+    {
+      "path": "repro/run_repro.py",
+      "previously_recorded_sha256": "04d4836eea5598835bb49df3453126a61b048c369a267de6f11a560fde61a477",
+      "current_sha256": "04d4836eea5598835bb49df3453126a61b048c369a267de6f11a560fde61a477",
+      "matches": true
+    },
+    {
+      "path": "requirements.txt",
+      "previously_recorded_sha256": "741ba36e1eb841673f48e174ff621d5d64a5333bc82200ded466180e873ac26a",
+      "current_sha256": "741ba36e1eb841673f48e174ff621d5d64a5333bc82200ded466180e873ac26a",
+      "matches": true
+    },
+    {
+      "path": "results/m2_repro_seed2026.csv",
+      "previously_recorded_sha256": "2776c733512adc1900ae330abb79d5203bbe2958a782ba096f7731b549a5eaf4",
+      "current_sha256": "2776c733512adc1900ae330abb79d5203bbe2958a782ba096f7731b549a5eaf4",
+      "matches": true
+    },
+    {
+      "path": "upstream/Implementation/experienments/cache_time_all-mpnet-base-v2.json",
+      "previously_recorded_sha256": "6780cfab2750d000671496be1ed81dac7b7c0b458a6aedbd5b553fe4f0ccc46a",
+      "current_sha256": "6780cfab2750d000671496be1ed81dac7b7c0b458a6aedbd5b553fe4f0ccc46a",
+      "matches": true
+    },
+    {
+      "path": "upstream/dataset/GodClassRefactorForPositionStudyDictionary.csv",
+      "previously_recorded_sha256": "007ed10c25f96deaea15c64bd127629ff9669135ffc815dd2526558ff633e735",
+      "current_sha256": "007ed10c25f96deaea15c64bd127629ff9669135ffc815dd2526558ff633e735",
+      "matches": true
+    },
+    {
+      "path": "upstream/dataset/refactor_example_position/13+MapperHelper+MapperTemplate.csv",
+      "previously_recorded_sha256": "d3e0b62b6f8764ad25d63cda979828f53b699ad10a2781a9953ac9c5900543f7",
+      "current_sha256": "d3e0b62b6f8764ad25d63cda979828f53b699ad10a2781a9953ac9c5900543f7",
+      "matches": true
+    },
+    {
+      "path": "upstream/dataset/refactor_example_position/3490+NetClient+Menus.csv",
+      "previously_recorded_sha256": "cd73c6b35bb3364cb77f156ddb06878c454c73dea69594ce61fcd76607c11df4",
+      "current_sha256": "cd73c6b35bb3364cb77f156ddb06878c454c73dea69594ce61fcd76607c11df4",
+      "matches": true
+    },
+    {
+      "path": "extension/event_a/cases.csv",
+      "previously_recorded_sha256": "5ec0141b325686263b179ceb8feef5b39162a02d23b50e2425bed9d235a4eeb6",
+      "current_sha256": "5ec0141b325686263b179ceb8feef5b39162a02d23b50e2425bed9d235a4eeb6",
+      "matches": true
+    }
+  ]
+}

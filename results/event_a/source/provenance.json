@@ -1,0 +1,32 @@
+[
+  {
+    "file": "Mapper_before.java",
+    "url": "https://raw.githubusercontent.com/abel533/Mapper/5fda159c7bcf1ec423ba27bd1bb4bacdcdd4b521/src/main/java/com/github/abel533/mapper/MapperHelper.java",
+    "bytes": 35944
+  },
+  {
+    "file": "Mapper_after.java",
+    "url": "https://raw.githubusercontent.com/abel533/Mapper/0586a42d5e36d8eab6a6e85f1a19d96adf861094/src/main/java/com/github/abel533/mapper/MapperHelper.java",
+    "bytes": 14149
+  },
+  {
+    "file": "MapperTemplate.java",
+    "url": "https://raw.githubusercontent.com/abel533/Mapper/0586a42d5e36d8eab6a6e85f1a19d96adf861094/src/main/java/com/github/abel533/mapper/MapperTemplate.java",
+    "bytes": 14708
+  },
+  {
+    "file": "NetClient_before.java",
+    "url": "https://raw.githubusercontent.com/Anuken/Mindustry/a64efce5a0a171d88675f3beccaa617641b8ba78/core/src/mindustry/core/NetClient.java",
+    "bytes": 22580
+  },
+  {
+    "file": "NetClient_after.java",
+    "url": "https://raw.githubusercontent.com/Anuken/Mindustry/82742339a3f001ac5ddd7d1c5002738d999c8bfa/core/src/mindustry/core/NetClient.java",
+    "bytes": 20309
+  },
+  {
+    "file": "Menus.java",
+    "url": "https://raw.githubusercontent.com/Anuken/Mindustry/82742339a3f001ac5ddd7d1c5002738d999c8bfa/core/src/mindustry/ui/Menus.java",
+    "bytes": 3689
+  }
+]

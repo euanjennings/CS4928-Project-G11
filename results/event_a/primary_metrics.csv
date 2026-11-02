@@ -1,0 +1,13 @@
+case,class,tool,metric,reported,raw_percent
+13,com.github.abel533.mapper.MapperHelper,classsplitter,overall,0.20840000000000003,60.42
+13,com.github.abel533.mapper.MapperHelper,classsplitter,method,0.2572,62.86
+13,com.github.abel533.mapper.MapperHelper,classsplitter,field,0.0,45.45
+13,com.github.abel533.mapper.MapperHelper,baseline,overall,0.25,62.5
+13,com.github.abel533.mapper.MapperHelper,baseline,method,0.2572,62.86
+13,com.github.abel533.mapper.MapperHelper,baseline,field,0.09099999999999994,54.55
+3490,mindustry.core.NetClient,classsplitter,overall,0.5594,77.97
+3490,mindustry.core.NetClient,classsplitter,method,0.42219999999999996,71.11
+3490,mindustry.core.NetClient,classsplitter,field,0.6924000000000001,84.62
+3490,mindustry.core.NetClient,baseline,overall,0.6272,81.36
+3490,mindustry.core.NetClient,baseline,method,0.5112000000000001,75.56
+3490,mindustry.core.NetClient,baseline,field,1.0,100.0
