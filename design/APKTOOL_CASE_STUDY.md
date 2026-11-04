@@ -40,15 +40,61 @@ reasonable. Our group's final recommendation is not yet confirmed.
 
 ## 6. Tests and Results
 
-We downloaded the code before and after the change.
+### What We Tested
 
-We ran the same Gradle library tests on both versions.
+We downloaded two versions of Apktool:
 
-Before: BUILD SUCCESSFUL
-After: BUILD SUCCESSFUL
+- Before refactoring: `9c495cae`
+- After refactoring: `40d427e5`
 
-This shows the selected tests passed in both versions.
-It does not prove the design is better.
+The second version contains the Extract Class change.
+
+### Test Command
+
+We ran this command on both versions:
+
+    .\gradlew.bat :brut.apktool:apktool-lib:test --no-daemon --console=plain
+
+We used Java 17 and Gradle 8.1.1.
+
+### Test Results
+
+| Version | Result | Build time |
+| --- | --- | --- |
+| Before refactoring | BUILD SUCCESSFUL | 1m 45s |
+| After refactoring | BUILD SUCCESSFUL | 1m 26s |
+
+Both versions passed the selected library tests.
+
+The second run reused previously completed build tasks,
+so the build times cannot be used to compare performance.
+
+### Code Changes
+
+We also ran:
+
+    git diff --stat 9c495cae 40d427e5
+
+Results:
+
+- 6 files changed.
+- 261 lines added.
+- 224 lines removed.
+- A new class called `Framework.java` was created.
+- `AndrolibResources.java` had much of its framework-related
+  code removed.
+
+### What These Results Mean
+
+The selected tests passed before and after the refactoring.
+
+This suggests the change did not introduce failures
+detected by those tests.
+
+However, passing tests does not prove the design improved.
+
+We have not yet measured cohesion or coupling, or compared
+ClassSplitter against Bavota on this example.
 
 ## 7. Work Still to Do
 
