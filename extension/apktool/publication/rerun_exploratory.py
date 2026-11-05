@@ -1,4 +1,4 @@
-"""Opt-in algorithm rerun on archived candidate features; NOT validation evidence.
+"""Opt-in algorithm rerun on the published candidate features; not validation evidence.
 
 Copies the existing runner and evaluator dependencies into a temporary workspace
 so original outputs, upstream RSF files, and the Git index are never overwritten.
@@ -34,7 +34,7 @@ def main():
     spec.loader.exec_module(module)
     module.EXPERIMENTS = exp
     module.CANDIDATE = HERE / "inputs" / f"apktool_classsplitter_candidate_v{args.version}.csv"
-    module.GROUND_TRUTH = HERE / "inputs/apktool_ground_truth.csv"
+    module.GROUND_TRUTH = HERE.parent / "apktool_ground_truth.csv"
     module.RESULTS = results
     print("EXPLORATORY ONLY. Output:", results)
     module.main()

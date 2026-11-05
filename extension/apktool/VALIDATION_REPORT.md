@@ -4,9 +4,9 @@
 
 ## Evidence and checks
 
-The reference pair is [`Mapper_before.java`](../../results/event_a/source/Mapper_before.java) and the authors' [`13+MapperHelper+MapperTemplate.csv`](../../upstream/dataset/refactor_example_position/13+MapperHelper+MapperTemplate.csv). Both original Windows diagnostic folders are preserved under [handover evidence](publication/evidence/). Their metadata records source, reference and extractor SHA-256 hashes and javalang 0.13.0.
+The reference pair is [`Mapper_before.java`](../../results/event_a/source/Mapper_before.java) and the authors' [`13+MapperHelper+MapperTemplate.csv`](../../upstream/dataset/refactor_example_position/13+MapperHelper+MapperTemplate.csv). Both original Windows diagnostic folders are preserved in the private archive. Their metadata records source, reference and extractor SHA-256 hashes and javalang 0.13.0.
 
-We independently reran both archived diagnostic scripts in isolated temporary layouts. Their candidate CSVs, comparison CSVs and summaries reproduce the originals. The original Apktool extractors were not modified. [Recomputed counts](publication/verified/validation.json) also agree with the saved comparison CSVs.
+We independently reran both archived diagnostic scripts in isolated temporary layouts. Their candidate CSVs, comparison CSVs and summaries reproduce the originals. The original Apktool extractors were not modified. [Recomputed counts](RESULTS_SUMMARY.json) also agree with the saved comparison CSVs.
 
 | Check | Original v2 diagnostic | Targeted member/signature correction |
 | --- | ---: | ---: |
@@ -26,7 +26,7 @@ The external-invocation comparison matches empty representations. It does not te
 
 ## Concrete remaining mismatches
 
-The [raw examples](publication/verified/mismatch_examples.json) retain both reference and candidate values.
+The raw examples, including both reference and candidate values, remain in the private archive. The compact summary identifies representative failures.
 
 - Nested signatures: the original diagnostic collapsed `newSelectKeyMappedStatement(MappedStatement,EntityHelper.EntityColumn)` to `...EntityColumn`, and erased `List<ResultMapping>` in `processMap` and `toPropertySet`. The targeted diagnostic restores these identities and nested enum/class members.
 - Ownership and incoming calls: the reference attributes calls to `Config`, including `getSelectReturnType`, `getBEFORE` and `getIDENTITY`. The candidate uses `MapperHelper` for those tokens and misses `EntityHelper.EntityColumn` calls such as `getGenerator` and `getProperty`.
@@ -34,12 +34,12 @@ The [raw examples](publication/verified/mismatch_examples.json) retain both refe
 - Shadowing: `processMap` declares a local `Map cameHumpMap` (source line 825), whereas the nested Config also declares a field of that name (line 110). The candidate emits two `MapperHelper+cameHumpMap` field visits for the local map; the reference has no field visits for this method.
 - Missing calls: `getDatabaseDialect(String)` has 18 reference `String+equalsIgnoreCase(String)` occurrences and no candidate calls. Across the 50 identities, **563 reference call-token occurrences are absent**, independently counted as the reference-minus-candidate multiset difference.
 
-These failures affect structural input, not merely formatting. No full binding-aware extractor was attempted after reaching the handover's stop condition. There is no validated structural matrix or valid external transfer verdict.
+These failures affect structural input, not merely formatting. The group did not implement a binding-aware extractor after the diagnostic showed substantial call and field-visit disagreement; the external comparison was therefore treated as exploratory. There is no validated structural matrix or valid external transfer verdict.
 
 ## Version lineage and interpretation
 
-The [archived scripts](publication/scripts_original/) retain v1–v4 and both diagnostics. Inspection confirms v2 repairs declaration-text/modifier handling and field-qualifier handling; v3 adds local inner-invocation information and a bounded overload correction; v4 adds heuristic client-call information. Human review identified problems in the earlier extractor. The targeted Mapper correction is a separate diagnostic and was **not** silently substituted into the Apktool algorithm inputs.
+The private archive retains v1–v4 and both diagnostics. Inspection confirms v2 repairs declaration-text/modifier handling and field-qualifier handling; v3 adds local inner-invocation information and a bounded overload correction; v4 adds heuristic client-call information. Human review identified problems in the earlier extractor. The targeted Mapper correction is a separate diagnostic and was **not** silently substituted into the Apktool algorithm inputs.
 
-The preserved v2/v3/v4 algorithm inputs and their result hashes are recorded in [provenance.json](publication/verified/provenance.json). All three result files name seed 2026 and `sentence-transformers/all-mpnet-base-v2`. Input hashes match the copied originals. Historical package versions and the exact edited invocation used for v3/v4 were not recorded in those JSONs, so provenance is incomplete at that level. The portable runner supplies explicit version selection for future reproduction.
+The preserved v2/v3/v4 algorithm inputs and their result hashes are recorded in [RESULTS_SUMMARY.json](RESULTS_SUMMARY.json). All three result files name seed 2026 and `sentence-transformers/all-mpnet-base-v2`. Input hashes match the copied originals. Historical package versions and the exact edited invocation used for v3/v4 were not recorded in those JSONs, so provenance is incomplete at that level. The archived portable runner supplies explicit version selection for future reproduction.
 
-See [the runbook](publication/README.md) for diagnostic reruns and [the ground-truth sensitivity report](GROUND_TRUTH_SENSITIVITY.md). Exploratory results are pipeline checks only. MapperHelper and NetClient are from the authors' dataset and do not supply the missing external cases.
+See [README](README.md) for diagnostic reruns and [the ground-truth sensitivity report](GROUND_TRUTH_SENSITIVITY.md). Exploratory results are pipeline checks only. MapperHelper and NetClient are from the authors' dataset and do not supply the missing external cases.

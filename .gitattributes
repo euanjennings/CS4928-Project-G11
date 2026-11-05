@@ -15,5 +15,10 @@ upstream/** -text
 extension/event_a/** -text
 results/event_a/** -text
 
-# Preserve Apktool input/output checksums across Git and platform checkouts.
-extension/apktool/** -text
+# Preserve checksummed scientific inputs and caches byte-for-byte.
+extension/apktool/*.csv -text
+extension/apktool/publication/inputs/*.csv -text
+extension/apktool/results/apktool_similarity_cache.json -text
+extension/apktool/results_v3/apktool_similarity_cache.json -text
+extension/apktool/results_v4/apktool_similarity_cache.json -text
+extension/apktool/publication/cleanup.patch -text
