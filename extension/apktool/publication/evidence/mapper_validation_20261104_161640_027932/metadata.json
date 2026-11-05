@@ -1,0 +1,12 @@
+{
+  "timestamp_utc": "2026-11-04T16:16:40.032549+00:00",
+  "javalang_version": "0.13.0",
+  "source_sha256": "d8ce1b47270dca8cb608a94f5d8c580683f1dc3873a9b177e1cc0d12546d7dd1",
+  "reference_sha256": "d3e0b62b6f8764ad25d63cda979828f53b699ad10a2781a9953ac9c5900543f7",
+  "extractor_v1_sha256": "8183e3e141edeb6d7ac4a50a45a66ab2097fd4a7e306ffdc1ca9905c438bfbf9",
+  "extractor_v2_sha256": "8eddbb151f834899ba9cc42deafa4b8ea477f89ad043294701e4d3f1c0fbe8b6",
+  "reference_rows": 50,
+  "candidate_rows": 41,
+  "matched_member_rows": 38,
+  "status": "diagnostic_only"
+}

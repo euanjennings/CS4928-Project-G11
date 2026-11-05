@@ -1,0 +1,28 @@
+{
+  "brut.androlib.res.AndrolibResources": {
+    "lcom*": {
+      "pristine": "0.8971428",
+      "cleanup": "0.8897959"
+    },
+    "totalFieldsQty": {
+      "pristine": "15",
+      "cleanup": "14"
+    },
+    "privateFieldsQty": {
+      "pristine": "14",
+      "cleanup": "13"
+    },
+    "loc": {
+      "pristine": "613",
+      "cleanup": "612"
+    },
+    "assignmentsQty": {
+      "pristine": "99",
+      "cleanup": "98"
+    },
+    "variablesQty": {
+      "pristine": "73",
+      "cleanup": "72"
+    }
+  }
+}

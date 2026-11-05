@@ -1,0 +1,414 @@
+{
+  "date": "2026-11-05",
+  "originals": "Retained locally in handover_20261104, excluded from publication",
+  "files": [
+    {
+      "path": "ck_cleanup_20261104/class.csv",
+      "original_sha256": "e89f51f32253535c95bea696719ffe7a1f880e93f941312ac7769137734dd6b5",
+      "published_sha256": "5d44a64fe8d16389e8c2db7714d188dd014b33887348ffa9afd1cb7bdf575fd2",
+      "transformation": "file column made repository-relative; every other CSV value unchanged"
+    },
+    {
+      "path": "ck_cleanup_20261104/method.csv",
+      "original_sha256": "f346064331ebb703c378b74dd3a8f71395aaed586ddde12f094753e3fc74056a",
+      "published_sha256": "14a7da00ee05010e5a960b6bec0fe879d616e2f0ad62e4955f7a1305f727a969",
+      "transformation": "file column made repository-relative; every other CSV value unchanged"
+    },
+    {
+      "path": "ck_cleanup_20261104/run.log",
+      "original_sha256": "d372c63cfb5e109d0d8a8a806ad0e61e49dd4f629c7d567fef220b2a74d5e084",
+      "published_sha256": "d372c63cfb5e109d0d8a8a806ad0e61e49dd4f629c7d567fef220b2a74d5e084",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "ck_pristine_20261104/class.csv",
+      "original_sha256": "5e650636d8b29df823ee672d123b954c8d934938a5f44cecec46f1d64f245d74",
+      "published_sha256": "5bc6ef596bd19616a16b4aacbe6a8e52e7d2ef29bb14ffee74369f5b62a77df2",
+      "transformation": "file column made repository-relative; every other CSV value unchanged"
+    },
+    {
+      "path": "ck_pristine_20261104/method.csv",
+      "original_sha256": "a76c06de87ec8c180fae52ff03b770bca3bf7cdf665c63926dcd7e84f12f908a",
+      "published_sha256": "4808aa02df961cd8df0e1b63a1f0ddc0ca2676f254b2804d12144d5087d8b5fb",
+      "transformation": "file column made repository-relative; every other CSV value unchanged"
+    },
+    {
+      "path": "ck_pristine_20261104/run.log",
+      "original_sha256": "d372c63cfb5e109d0d8a8a806ad0e61e49dd4f629c7d567fef220b2a74d5e084",
+      "published_sha256": "d372c63cfb5e109d0d8a8a806ad0e61e49dd4f629c7d567fef220b2a74d5e084",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "cleanup.patch",
+      "original_sha256": "a510830874df6cd18cd948f6d6e3998091800082f0bd62564c216af8eb2dbd9b",
+      "published_sha256": "a510830874df6cd18cd948f6d6e3998091800082f0bd62564c216af8eb2dbd9b",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "evidence/apktool-after-baseline_20261104_165610.log",
+      "original_sha256": "dbf0ee6a9fc32d634040b309e8a48b997cd34287482b05c89abc395b1df5f121",
+      "published_sha256": "dd1eb7d822ccb6d13aebbfbee84d80459c88e6adcfb68698d19c6ff71bb1e721",
+      "transformation": "UTF-16 decoded to UTF-8 with LF lines; javac local source-path prefix replaced by <APKTOOL>; build/test output retained"
+    },
+    {
+      "path": "evidence/apktool-cleanup-tests_20261104_170145.log",
+      "original_sha256": "189344151c264302febb2baf75141578224a55b1180a5d1370c8832134d49656",
+      "published_sha256": "bceb1f28133770c4f8af765da18c0acd20398f48ee33d7f41961bb5909f63a38",
+      "transformation": "UTF-16 decoded to UTF-8 with LF lines; javac local source-path prefix replaced by <APKTOOL>; build/test output retained"
+    },
+    {
+      "path": "evidence/baseline_xml.zip",
+      "original_sha256": "c3252a782e3fb7bcec194784dff847ee82b6c3bc4ddc4259248ec10784df981b",
+      "published_sha256": "cb0529e4d9e6e046b3eee45c4a8a151be5c5c3c3819a9600943b2559e994cf0a",
+      "transformation": "XML hostname, properties and console streams removed; all test result attributes/nodes retained"
+    },
+    {
+      "path": "evidence/cleanup_xml.zip",
+      "original_sha256": "9293a49f3ed42b0f805258be4cb6608ac7968a8decec5690d057b6a2c52cdb40",
+      "published_sha256": "68b11b1fc7a2a2d458fa634e0ac11f7614051d87af1be0216e92308c21e6f939",
+      "transformation": "XML hostname, properties and console streams removed; all test result attributes/nodes retained"
+    },
+    {
+      "path": "evidence/mapper_members_v2_20261104_164526_337995/mapper_candidate.csv",
+      "original_sha256": "529daa98df5b33c213588ac14c8b0e1cba9d3253e4c4cebd59701a43c479d256",
+      "published_sha256": "529daa98df5b33c213588ac14c8b0e1cba9d3253e4c4cebd59701a43c479d256",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "evidence/mapper_members_v2_20261104_164526_337995/matched_member_comparison.csv",
+      "original_sha256": "6147bc9641b084760a0122fd066a98c4bc844b9dea850bf028de187fbe3f1240",
+      "published_sha256": "6147bc9641b084760a0122fd066a98c4bc844b9dea850bf028de187fbe3f1240",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "evidence/mapper_members_v2_20261104_164526_337995/metadata.json",
+      "original_sha256": "b9ef3f3fbb52ea80a4b744e9b84ee472ce67f6fe9eb900a0007491a89b62fd5d",
+      "published_sha256": "b9ef3f3fbb52ea80a4b744e9b84ee472ce67f6fe9eb900a0007491a89b62fd5d",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "evidence/mapper_members_v2_20261104_164526_337995/summary.txt",
+      "original_sha256": "c7b1fabce87e7402a3577a66aa21f78c737d0d171ed86955ce199b1d6f476e0d",
+      "published_sha256": "c7b1fabce87e7402a3577a66aa21f78c737d0d171ed86955ce199b1d6f476e0d",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "evidence/mapper_validation_20261104_161640_027932/mapper_candidate.csv",
+      "original_sha256": "06d52861070be0b6b1ef24b708046dcaa16dd03b1296c7d069fc5fab35d9bd52",
+      "published_sha256": "06d52861070be0b6b1ef24b708046dcaa16dd03b1296c7d069fc5fab35d9bd52",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "evidence/mapper_validation_20261104_161640_027932/matched_member_comparison.csv",
+      "original_sha256": "75c11acfcc29200022cfd07e666d34c6e5c26760247d4585b7c03c4fa5241177",
+      "published_sha256": "75c11acfcc29200022cfd07e666d34c6e5c26760247d4585b7c03c4fa5241177",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "evidence/mapper_validation_20261104_161640_027932/metadata.json",
+      "original_sha256": "667e6897752df2de1a1352430a6c32b2e3bc38871f0ffcf1c703fea40923dced",
+      "published_sha256": "667e6897752df2de1a1352430a6c32b2e3bc38871f0ffcf1c703fea40923dced",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "evidence/mapper_validation_20261104_161640_027932/summary.txt",
+      "original_sha256": "5000ab5e1fe5e81d44e19e8d853e0069dad0d3ad203dfef815540c7e398d465f",
+      "published_sha256": "5000ab5e1fe5e81d44e19e8d853e0069dad0d3ad203dfef815540c7e398d465f",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "evidence/metrics-after/class.csv",
+      "original_sha256": "6cd553d7f46cc7e5e53696e027804798d3af3043cb1c6cea4c7c8c072ba19d70",
+      "published_sha256": "5bc6ef596bd19616a16b4aacbe6a8e52e7d2ef29bb14ffee74369f5b62a77df2",
+      "transformation": "file column made repository-relative; every other CSV value unchanged"
+    },
+    {
+      "path": "evidence/metrics-after/method.csv",
+      "original_sha256": "9af29ecfac194fd93b2abbf3a2e1d3bc83f126ecee49077cf46e94cb0f427f1a",
+      "published_sha256": "4808aa02df961cd8df0e1b63a1f0ddc0ca2676f254b2804d12144d5087d8b5fb",
+      "transformation": "file column made repository-relative; every other CSV value unchanged"
+    },
+    {
+      "path": "evidence/metrics-before/class.csv",
+      "original_sha256": "5232e34452548aa0f332bed4416d3326726337aee1f19aef5a0259f0c4657b47",
+      "published_sha256": "e30470d570afce31c4d4e63d0472c6fefd4aa7fb86d8f91c16c284453b1b2e49",
+      "transformation": "file column made repository-relative; every other CSV value unchanged"
+    },
+    {
+      "path": "evidence/metrics-before/method.csv",
+      "original_sha256": "392277e35bb978ab238e1c034419ea0ace8b05be5f365c835d1a38f8a7538665",
+      "published_sha256": "f22e9fdbf8befd2f22cae7901e99cb7cb9733dba917ac2365bcb270e8aef8635",
+      "transformation": "file column made repository-relative; every other CSV value unchanged"
+    },
+    {
+      "path": "historical_refactoring.patch",
+      "original_sha256": "1aa8d8f7e1226ef93a1580a1435fe723940f165677ddd6bf0658aa07ba9c3d45",
+      "published_sha256": "1aa8d8f7e1226ef93a1580a1435fe723940f165677ddd6bf0658aa07ba9c3d45",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "inputs/apktool_classsplitter_candidate.csv",
+      "original_sha256": "1071c52afde3ae2e168f73b9e65e0c1ff7fd06765b5ff4add1c0560ad3369316",
+      "published_sha256": "1071c52afde3ae2e168f73b9e65e0c1ff7fd06765b5ff4add1c0560ad3369316",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "inputs/apktool_classsplitter_candidate_v2.csv",
+      "original_sha256": "73d3ed26862dd1087559ff3c6a5546115c154b64d943eb17c128e84dca191a3f",
+      "published_sha256": "73d3ed26862dd1087559ff3c6a5546115c154b64d943eb17c128e84dca191a3f",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "inputs/apktool_classsplitter_candidate_v3.csv",
+      "original_sha256": "b4ca274228d614213268865b96f545aba21b51924d62710a257dba30ebec2d13",
+      "published_sha256": "b4ca274228d614213268865b96f545aba21b51924d62710a257dba30ebec2d13",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "inputs/apktool_classsplitter_candidate_v4.csv",
+      "original_sha256": "2221aff0197ceaa70b746ee4452a04862a4e1752baea4d16e8614a222d126c35",
+      "published_sha256": "2221aff0197ceaa70b746ee4452a04862a4e1752baea4d16e8614a222d126c35",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "inputs/apktool_ground_truth.csv",
+      "original_sha256": "7b6b8819b6930a1dc28e6d32cb9e4e6b2f30917827bc3e45baac55bb725d6ab5",
+      "published_sha256": "7b6b8819b6930a1dc28e6d32cb9e4e6b2f30917827bc3e45baac55bb725d6ab5",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "inputs/ground_truth_semantic.csv",
+      "original_sha256": "e275b2900e21430df5dbb1c9057b7c2f472a02c0b7d845967d2fc855207612e6",
+      "published_sha256": "e275b2900e21430df5dbb1c9057b7c2f472a02c0b7d845967d2fc855207612e6",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "rerun_exploratory.py",
+      "original_sha256": "513751c1e66268010fecc30fef0470fe6f59b98ac88e4f0470d9c85be4a01304",
+      "published_sha256": "513751c1e66268010fecc30fef0470fe6f59b98ac88e4f0470d9c85be4a01304",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "rerun_validation.py",
+      "original_sha256": "e14897cc61b30b0be1dcde83b74ea4110007b95f27e73357bc47e11d57061d18",
+      "published_sha256": "e14897cc61b30b0be1dcde83b74ea4110007b95f27e73357bc47e11d57061d18",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "run_ck_pair.py",
+      "original_sha256": "89d79c74cf7c631b0c8890ffb3e06a7cb55fc4c2ba8ae2930adc8d9357b7252c",
+      "published_sha256": "89d79c74cf7c631b0c8890ffb3e06a7cb55fc4c2ba8ae2930adc8d9357b7252c",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "scripts_original/apktool_ground_truth.py",
+      "original_sha256": "77f867e8401e353652c1526cbebc75288af5fa8a6cce6847f2d206a604f6e0b8",
+      "published_sha256": "77f867e8401e353652c1526cbebc75288af5fa8a6cce6847f2d206a604f6e0b8",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "scripts_original/apktool_input_extractor.py",
+      "original_sha256": "8183e3e141edeb6d7ac4a50a45a66ab2097fd4a7e306ffdc1ca9905c438bfbf9",
+      "published_sha256": "8183e3e141edeb6d7ac4a50a45a66ab2097fd4a7e306ffdc1ca9905c438bfbf9",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "scripts_original/apktool_input_extractor_v2.py",
+      "original_sha256": "8eddbb151f834899ba9cc42deafa4b8ea477f89ad043294701e4d3f1c0fbe8b6",
+      "published_sha256": "8eddbb151f834899ba9cc42deafa4b8ea477f89ad043294701e4d3f1c0fbe8b6",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "scripts_original/apktool_input_extractor_v3.py",
+      "original_sha256": "b148a7798b51ee652b3e40dcf299bed54436fe090816551a5d7565f190352ffe",
+      "published_sha256": "b148a7798b51ee652b3e40dcf299bed54436fe090816551a5d7565f190352ffe",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "scripts_original/apktool_input_extractor_v4.py",
+      "original_sha256": "e7d54229c943be993e45f2d08f803ab5a10814f9b70a805d0c737da2c7c91ea5",
+      "published_sha256": "e7d54229c943be993e45f2d08f803ab5a10814f9b70a805d0c737da2c7c91ea5",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "scripts_original/mapper_validation.py",
+      "original_sha256": "5cfd3c5f2ed651d590fda3dd35e363d060649320e24f527f4c07f01c4dfaca0e",
+      "published_sha256": "5cfd3c5f2ed651d590fda3dd35e363d060649320e24f527f4c07f01c4dfaca0e",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "scripts_original/mapper_validation_members_v2.py",
+      "original_sha256": "672979148b0878580b64ed13a6e7f34d0359d5b90960c3bb9d657e6e37f30174",
+      "published_sha256": "672979148b0878580b64ed13a6e7f34d0359d5b90960c3bb9d657e6e37f30174",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "source/after_AndrolibResources.java",
+      "original_sha256": "a1d9fe3ea5fd9ec0b26d24ae3a2ba31be877ed962e25f41ce24d0d5d56713f65",
+      "published_sha256": "a1d9fe3ea5fd9ec0b26d24ae3a2ba31be877ed962e25f41ce24d0d5d56713f65",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "source/after_ApkBuilder.java",
+      "original_sha256": "62e1aae371d50edcff4d643f26acee85e8897200bfb37af24c83b9e22e5ac215",
+      "published_sha256": "62e1aae371d50edcff4d643f26acee85e8897200bfb37af24c83b9e22e5ac215",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "source/after_Framework.java",
+      "original_sha256": "4a0c624e1e66aba4b21c157c057b7d3508c2cdbb31572c403dd3a4a1cad030bf",
+      "published_sha256": "4a0c624e1e66aba4b21c157c057b7d3508c2cdbb31572c403dd3a4a1cad030bf",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "source/before_AndrolibResources.java",
+      "original_sha256": "7b8357bf86ebf417e2519a5b1015093ce149946967336e4762da2a1c8d3a4bef",
+      "published_sha256": "7b8357bf86ebf417e2519a5b1015093ce149946967336e4762da2a1c8d3a4bef",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "source/before_ApkBuilder.java",
+      "original_sha256": "8487e58e4115a1ce05a547a6e668a4b1543901d54505bae788585fa12876018c",
+      "published_sha256": "8487e58e4115a1ce05a547a6e668a4b1543901d54505bae788585fa12876018c",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "source/ck_LCOMNormalized.java",
+      "original_sha256": "5b87007dc11e8265e54a164c3d4f089dc6bec53873760dbc45ea376ced227521",
+      "published_sha256": "5b87007dc11e8265e54a164c3d4f089dc6bec53873760dbc45ea376ced227521",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "source/ck_LICENSE",
+      "original_sha256": "27a409a5c15c4dade660f914bffcd381b04ad53bfceac3a9dbc8bcf238be66e3",
+      "published_sha256": "27a409a5c15c4dade660f914bffcd381b04ad53bfceac3a9dbc8bcf238be66e3",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "source/ck_pom.xml",
+      "original_sha256": "a6131d758287538e61ce3646809f937d645f66be577df2e287e03f593823ea8f",
+      "published_sha256": "a6131d758287538e61ce3646809f937d645f66be577df2e287e03f593823ea8f",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "source/cleanup_AndrolibResources.java",
+      "original_sha256": "9edc6e06dd63b046798d502c58e2f15d54fdb1f77384e126f745b45eaca9cd0b",
+      "published_sha256": "9edc6e06dd63b046798d502c58e2f15d54fdb1f77384e126f745b45eaca9cd0b",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/ck_delta.json",
+      "original_sha256": "f82ff269b2a286773eb0295d34488a5e2fc8a8d4aeca79f8aa6665b4ba68a55d",
+      "published_sha256": "f82ff269b2a286773eb0295d34488a5e2fc8a8d4aeca79f8aa6665b4ba68a55d",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/ck_source_hashes.json",
+      "original_sha256": "b2594528ec01bb962137620f856dc9ca1443a4df2634b3979b4c5885f29990b5",
+      "published_sha256": "b2594528ec01bb962137620f856dc9ca1443a4df2634b3979b4c5885f29990b5",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/declarations_zero_fields_bavota.rsf",
+      "original_sha256": "535d04636dd3419adf649b351ab106ef9280efeef973ee8f599d804e9c21880f",
+      "published_sha256": "535d04636dd3419adf649b351ab106ef9280efeef973ee8f599d804e9c21880f",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/declarations_zero_fields_classsplitter.rsf",
+      "original_sha256": "cf304c1e519dac54162dffbec87ef9f778873a8b6290ea28866e35e7051fbd16",
+      "published_sha256": "cf304c1e519dac54162dffbec87ef9f778873a8b6290ea28866e35e7051fbd16",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/declarations_zero_fields_classsplitter_without_position.rsf",
+      "original_sha256": "a92ff64e7ed4b4dd662f58a4f68ca7adb31caf53858547b3cbb06517f82212f6",
+      "published_sha256": "a92ff64e7ed4b4dd662f58a4f68ca7adb31caf53858547b3cbb06517f82212f6",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/declarations_zero_fields_truth.rsf",
+      "original_sha256": "c506adeffb033473566dbaa0dd169d5ee6610e533029a0a0a4c8e884de58493e",
+      "published_sha256": "c506adeffb033473566dbaa0dd169d5ee6610e533029a0a0a4c8e884de58493e",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/method_mapping.json",
+      "original_sha256": "7c705e0d6ac6d1b99f5aefe1160265cf263a506b2c0199e0b4c2b2c4301d32af",
+      "published_sha256": "7c705e0d6ac6d1b99f5aefe1160265cf263a506b2c0199e0b4c2b2c4301d32af",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/mismatch_examples.json",
+      "original_sha256": "5be33ec0835460dac5a6207795f110b5a764f8345ccaf420f273c073c75c9a5d",
+      "published_sha256": "5be33ec0835460dac5a6207795f110b5a764f8345ccaf420f273c073c75c9a5d",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/provenance.json",
+      "original_sha256": "b9a5d322767e2ccc3f35fb54539f0e45afe6f85ecc19288ceb9d31ca40ca1d56",
+      "published_sha256": "b9a5d322767e2ccc3f35fb54539f0e45afe6f85ecc19288ceb9d31ca40ca1d56",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/semantic_one_field_bavota.rsf",
+      "original_sha256": "535d04636dd3419adf649b351ab106ef9280efeef973ee8f599d804e9c21880f",
+      "published_sha256": "535d04636dd3419adf649b351ab106ef9280efeef973ee8f599d804e9c21880f",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/semantic_one_field_classsplitter.rsf",
+      "original_sha256": "cf304c1e519dac54162dffbec87ef9f778873a8b6290ea28866e35e7051fbd16",
+      "published_sha256": "cf304c1e519dac54162dffbec87ef9f778873a8b6290ea28866e35e7051fbd16",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/semantic_one_field_classsplitter_without_position.rsf",
+      "original_sha256": "a92ff64e7ed4b4dd662f58a4f68ca7adb31caf53858547b3cbb06517f82212f6",
+      "published_sha256": "a92ff64e7ed4b4dd662f58a4f68ca7adb31caf53858547b3cbb06517f82212f6",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/semantic_one_field_truth.rsf",
+      "original_sha256": "4bd73f7c2325491d11eb7cf09a0792683c3ebce747dd0c0930e23d4850d03860",
+      "published_sha256": "4bd73f7c2325491d11eb7cf09a0792683c3ebce747dd0c0930e23d4850d03860",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/sensitivity.json",
+      "original_sha256": "cd975b6ce1acfd25126f9ecdb226bed14a32051b4459409819b19e43c290a315",
+      "published_sha256": "cd975b6ce1acfd25126f9ecdb226bed14a32051b4459409819b19e43c290a315",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/testcases.csv",
+      "original_sha256": "cab795f671ee340433d5b6d865cdabee49256bf4389d7a8e53f20bfe143a84ac",
+      "published_sha256": "cab795f671ee340433d5b6d865cdabee49256bf4389d7a8e53f20bfe143a84ac",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/tests.json",
+      "original_sha256": "9eadcf6ef3bf03f4025c52f0005188dfe741891d94cc859bf64eefe79af6e609",
+      "published_sha256": "9eadcf6ef3bf03f4025c52f0005188dfe741891d94cc859bf64eefe79af6e609",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verified/validation.json",
+      "original_sha256": "1b3bd776b5afbc5813427b90419219759b1f78d7d9b8494c626a6fa93f4f1b72",
+      "published_sha256": "1b3bd776b5afbc5813427b90419219759b1f78d7d9b8494c626a6fa93f4f1b72",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "verify_evidence.py",
+      "original_sha256": "0dc7a1b888ec928dc77f3e2a8e9d8f2f4ad5a9ccca76592ae3f311d0b7c4a04c",
+      "published_sha256": "0dc7a1b888ec928dc77f3e2a8e9d8f2f4ad5a9ccca76592ae3f311d0b7c4a04c",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "path": "ck_run_manifest.json",
+      "original_sha256": "cd4b08b8b9eaca6c0d1fc824c65730d133e7e49fb3bf6afc0a4e359f4c75ed53",
+      "published_sha256": "e84fb50e6846b28bd44cad3f80ec9b59e0602973dd008ed61f04d7f0a81aa34c",
+      "transformation": "absolute paths replaced by portable placeholders; original and derivative CSV hashes distinguished"
+    }
+  ]
+}

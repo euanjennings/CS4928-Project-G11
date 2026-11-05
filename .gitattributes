@@ -14,3 +14,6 @@ upstream/** -text
 # Preserve checksummed Event A evidence on every platform.
 extension/event_a/** -text
 results/event_a/** -text
+
+# Preserve Apktool input/output checksums across Git and platform checkouts.
+extension/apktool/** -text

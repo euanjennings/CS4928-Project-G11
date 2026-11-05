@@ -1,0 +1,46 @@
+MAPPERHELPER EXTRACTOR DIAGNOSTIC (NOT A VALIDATION PASS)
+Original Apktool v2 logic applied to Mapper_before.java without changing it.
+Nested Java members and external Java bindings are not added by this tool.
+
+Reference members: 50
+Extractor members: 41
+Exactly matched identities (name and type): 38
+Missing reference members: 12
+Extra extractor members: 3
+Extraction errors: 0
+
+AGREEMENT AMONG MATCHED IDENTITIES
+  index: 0/38
+  inner invocations: 31/38
+  external invocations: 38/38
+  calls: 13/38
+  visits: 21/38
+  length: 14/38
+  lines: 14/38
+  modifier: 38/38
+  annotation: 14/38
+  full text: 34/38
+
+MISSING FROM EXTRACTOR (FIRST 30)
+  - IdentityDialect
+  - identityRetrievalStatement
+  - IdentityDialect(String)
+  - getIdentityRetrievalStatement()
+  - getDatabaseDialect(String)
+  - UUID
+  - IDENTITY
+  - BEFORE
+  - cameHumpMap
+  - newSelectKeyMappedStatement(MappedStatement,EntityHelper.EntityColumn)
+  - processMap(Map,List<ResultMapping>)
+  - toPropertySet(List<ResultMapping>)
+
+EXTRA IN EXTRACTOR (FIRST 30)
+  - newSelectKeyMappedStatement(MappedStatement,EntityColumn)
+  - processMap(Map,List)
+  - toPropertySet(List)
+
+EXTRACTION ERRORS (FIRST 30)
+
+CAUTION: Equal token sequences do not establish equivalent symbol binding.
+Do not use this diagnostic output as an algorithm input.

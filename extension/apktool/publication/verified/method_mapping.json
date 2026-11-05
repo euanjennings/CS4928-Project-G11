@@ -1,0 +1,31 @@
+{
+  "before_ordinary_methods": 43,
+  "after_ordinary_methods": 33,
+  "framework_ordinary_methods": 10,
+  "moved_before_signatures": [
+    "emptyFrameworkDirectory()",
+    "getAndroidFrameworkResourcesAsStream()",
+    "getFrameworkApk(int,String)",
+    "getFrameworkDirectory()",
+    "installFramework(File)",
+    "installFramework(File,String)",
+    "listFrameworkDirectory()",
+    "publicizeResources(File)",
+    "publicizeResources(byte[])",
+    "publicizeResources(byte[],FlagsOffset[])"
+  ],
+  "framework_after_signatures": [
+    "emptyFrameworkDirectory()",
+    "getAndroidFrameworkResourcesAsStream()",
+    "getFrameworkApk(int,String)",
+    "getFrameworkDirectory()",
+    "installFramework(File)",
+    "installFramework(File,String)",
+    "listFrameworkDirectory()",
+    "publicizeResources(File)",
+    "publicizeResources(byte[])",
+    "publicizeResources(byte[],ARSCDecoder.FlagsOffset[])"
+  ],
+  "qualification_note": "Framework uses ARSCDecoder.FlagsOffset where the original imports FlagsOffset. Same nested type, checked source imports.",
+  "classsplitter_has_group_containing_all_moved_methods": false
+}

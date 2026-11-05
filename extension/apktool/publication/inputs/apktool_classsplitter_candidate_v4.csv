@@ -1,0 +1,955 @@
+index,name,type,inner invocations,external invocations,calls,visits,length,lines,modifier,annotation,full text,removed
+1,config,Field,"AndrolibResources(Config) AndrolibResources() loadMainPkg(ResTable,ExtFile) loadFrameworkPkg(ResTable,int) decodeManifestWithResources(ResTable,ExtFile,File) createDoNotCompressExtensionsFile(Config) aapt2Package(File,File,File,File,File,File[],List,boolean) aapt1Package(File,File,File,File,File,File[],List,boolean) aaptPackage(File,File,File,File,File,File[]) zipPackage(File,File,File) emptyFrameworkDirectory() installFramework(File) getFrameworkDirectory() getAaptVersion()",,,,28,1,18,,private final Config config;,False
+2,mResFileMapping,Field,"decode(ResTable,ExtFile,File)","brut.androlib.ApkDecoder+recordUncompressedFiles(ExtFile,Collection) brut.androlib.ApkDecoder+recordUncompressedFiles(ExtFile,Collection)",,,61,1,1,,"public Map<String, String> mResFileMapping = new HashMap<>();",False
+3,LOGGER,Field,"loadMainPkg(ResTable,ExtFile) loadFrameworkPkg(ResTable,int) decodeManifest(ResTable,ExtFile,File) adjustPackageManifest(ResTable,String) decodeManifestWithResources(ResTable,ExtFile,File) decode(ResTable,ExtFile,File) aapt2Package(File,File,File,File,File,File[],List,boolean) aapt1Package(File,File,File,File,File,File[],List,boolean) aaptPackage(File,File,File,File,File,File[]) emptyFrameworkDirectory() listFrameworkDirectory() installFramework(File,String) getFrameworkDirectory()",,,,89,1,26,,private final static Logger LOGGER = Logger.getLogger(AndrolibResources.class.getName());,False
+4,mFrameworkDirectory,Field,getFrameworkDirectory(),,,,40,1,2,,private File mFrameworkDirectory = null;,False
+5,mFramework,Field,"loadFrameworkPkg(ResTable,int) close()",,,,34,1,2,,private ExtFile mFramework = null;,False
+6,mMinSdkVersion,Field,"setSdkInfo(Map) checkTargetSdkVersionBounds() aapt2Package(File,File,File,File,File,File[],List,boolean) aapt1Package(File,File,File,File,File,File[],List,boolean)",,,,37,1,2,,private String mMinSdkVersion = null;,False
+7,mMaxSdkVersion,Field,"setSdkInfo(Map) checkTargetSdkVersionBounds() aapt1Package(File,File,File,File,File,File[],List,boolean)",,,,37,1,2,,private String mMaxSdkVersion = null;,False
+8,mTargetSdkVersion,Field,"setSdkInfo(Map) checkTargetSdkVersionBounds() aapt2Package(File,File,File,File,File,File[],List,boolean) aapt1Package(File,File,File,File,File,File[],List,boolean)",,,,40,1,2,,private String mTargetSdkVersion = null;,False
+9,mVersionCode,Field,"setVersionInfo(VersionInfo) aapt2Package(File,File,File,File,File,File[],List,boolean) aapt1Package(File,File,File,File,File,File[],List,boolean)",,,,35,1,2,,private String mVersionCode = null;,False
+10,mVersionName,Field,"setVersionInfo(VersionInfo) aapt2Package(File,File,File,File,File,File[],List,boolean) aapt1Package(File,File,File,File,File,File[],List,boolean)",,,,35,1,2,,private String mVersionName = null;,False
+11,mPackageRenamed,Field,"adjustPackageManifest(ResTable,String) setPackageRenamed(PackageInfo) aapt2Package(File,File,File,File,File,File[],List,boolean) aapt1Package(File,File,File,File,File,File[],List,boolean)",,,,38,1,2,,private String mPackageRenamed = null;,False
+12,mPackageId,Field,"decodeManifestWithResources(ResTable,ExtFile,File) setPackageId(PackageInfo) aapt2Package(File,File,File,File,File,File[],List,boolean) aapt1Package(File,File,File,File,File,File[],List,boolean)",,,,33,1,2,,private String mPackageId = null;,False
+13,mSharedLibrary,Field,"setSharedLibrary(boolean) aapt2Package(File,File,File,File,File,File[],List,boolean) aapt1Package(File,File,File,File,File,File[],List,boolean)",,,,39,1,2,,private boolean mSharedLibrary = false;,False
+14,mSparseResources,Field,"setSparseResources(boolean) aapt2Package(File,File,File,File,File,File[],List,boolean)",,,,41,1,2,,private boolean mSparseResources = false;,False
+15,IGNORED_PACKAGES,Field,"adjustPackageManifest(ResTable,String)",,,,201,3,26,,"private final static String[] IGNORED_PACKAGES = new String[] {
+        ""android"", ""com.htc"", ""com.lge"", ""com.lge.internal"", ""yi"", ""flyme"", ""air.com.adobe.appentry"",
+        ""FFFFFFFFFFFFFFFFFFFFFF"" };",False
+16,AndrolibResources(Config),Method,,"brut.apktool.Main+cmdInstallFramework(CommandLine,Config) brut.apktool.Main+cmdListFrameworks(CommandLine,Config) brut.apktool.Main+cmdPublicizeResources(CommandLine,Config) brut.apktool.Main+cmdEmptyFrameworkDirectory(CommandLine,Config) brut.androlib.ApkBuilder+ApkBuilder(Config,ExtFile) brut.androlib.ApkDecoder+ApkDecoder(Config,ExtFile) brut.androlib.TestUtils+getFrameworkDirectory() brut.androlib.aapt1.SharedLibraryTest+isFrameworkTaggingWorking() brut.androlib.aapt1.SharedLibraryTest+isFrameworkInstallingWorking() brut.androlib.aapt1.SharedLibraryTest+isSharedResourceDecodingAndRebuildingWorking()",,brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config,77,3,1,,"public AndrolibResources(Config config) {
+        this.config = config;
+    }",False
+17,AndrolibResources(),Method,,brut.androlib.androlib.InvalidSdkBoundingTest+checkIfInvalidValuesPass() brut.androlib.androlib.InvalidSdkBoundingTest+checkIfMissingMinPasses() brut.androlib.androlib.InvalidSdkBoundingTest+checkIfMissingMaxPasses() brut.androlib.androlib.InvalidSdkBoundingTest+checkIfMissingBothPasses() brut.androlib.androlib.InvalidSdkBoundingTest+checkForShortHandSTag() brut.androlib.androlib.InvalidSdkBoundingTest+checkForShortHandSdkTag() brut.androlib.androlib.InvalidSdkBoundingTest+checkForSdkDevelopmentInsaneTestValue(),,brut.androlib.res.AndrolibResources+config,83,3,1,,"public AndrolibResources() {
+        this.config = Config.getDefaultConfig();
+    }",False
+18,getResTable(ExtFile),Method,,,"brut.androlib.res.AndrolibResources+getResTable(ExtFile,boolean)",,120,3,1,,"public ResTable getResTable(ExtFile apkFile) throws AndrolibException {
+        return getResTable(apkFile, true);
+    }",False
+19,"getResTable(ExtFile,boolean)",Method,getResTable(ExtFile),brut.androlib.ApkDecoder+getResTable(),"brut.androlib.res.AndrolibResources+loadMainPkg(ResTable,ExtFile)",,264,8,1,,"public ResTable getResTable(ExtFile apkFile, boolean loadMainPkg)
+            throws AndrolibException {
+        ResTable resTable = new ResTable(this);
+        if (loadMainPkg) {
+            loadMainPkg(resTable, apkFile);
+        }
+        return resTable;
+    }",False
+20,"loadMainPkg(ResTable,ExtFile)",Method,"getResTable(ExtFile,boolean)",,"brut.androlib.res.AndrolibResources+getResPackagesFromApk(ExtFile,ResTable,boolean) brut.androlib.res.AndrolibResources+selectPkgWithMostResSpecs(ResPackage[])",brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+LOGGER brut.androlib.res.AndrolibResources+LOGGER,812,25,1,,"public ResPackage loadMainPkg(ResTable resTable, ExtFile apkFile)
+            throws AndrolibException {
+        LOGGER.info(""Loading resource table..."");
+        ResPackage[] pkgs = getResPackagesFromApk(apkFile, resTable, config.keepBrokenResources);
+        ResPackage pkg;
+
+        switch (pkgs.length) {
+            case 0:
+                pkg = new ResPackage(resTable, 0, null);
+                break;
+            case 1:
+                pkg = pkgs[0];
+                break;
+            case 2:
+                LOGGER.warning(""Skipping package group: "" + pkgs[0].getName());
+                pkg = pkgs[1];
+                break;
+            default:
+                pkg = selectPkgWithMostResSpecs(pkgs);
+                break;
+        }
+
+        resTable.addPackage(pkg, true);
+        return pkg;
+    }",False
+21,selectPkgWithMostResSpecs(ResPackage[]),Method,"loadMainPkg(ResTable,ExtFile) loadFrameworkPkg(ResTable,int)",,,,613,17,1,,"public ResPackage selectPkgWithMostResSpecs(ResPackage[] pkgs) {
+        int id = 0;
+        int value = 0;
+        int index = 0;
+
+        for (int i = 0; i < pkgs.length; i++) {
+            ResPackage resPackage = pkgs[i];
+            if (resPackage.getResSpecCount() > value && ! resPackage.getName().equalsIgnoreCase(""android"")) {
+                value = resPackage.getResSpecCount();
+                id = resPackage.getId();
+                index = i;
+            }
+        }
+
+        // if id is still 0, we only have one pkgId which is ""android"" -> 1
+        return (id == 0) ? pkgs[0] : pkgs[index];
+    }",False
+22,"loadFrameworkPkg(ResTable,int)",Method,,brut.androlib.res.data.ResTable+getPackage(int),"brut.androlib.res.AndrolibResources+getFrameworkApk(int,String) brut.androlib.res.AndrolibResources+getResPackagesFromApk(ExtFile,ResTable,boolean) brut.androlib.res.AndrolibResources+selectPkgWithMostResSpecs(ResPackage[])",brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+mFramework brut.androlib.res.AndrolibResources+mFramework brut.androlib.res.AndrolibResources+LOGGER,839,24,1,,"public ResPackage loadFrameworkPkg(ResTable resTable, int id)
+            throws AndrolibException {
+        File apk = getFrameworkApk(id, config.frameworkTag);
+
+        LOGGER.info(""Loading resource table from file: "" + apk);
+        mFramework = new ExtFile(apk);
+        ResPackage[] pkgs = getResPackagesFromApk(mFramework, resTable, true);
+
+        ResPackage pkg;
+        if (pkgs.length > 1) {
+            pkg = selectPkgWithMostResSpecs(pkgs);
+        } else if (pkgs.length == 0) {
+            throw new AndrolibException(""Arsc files with zero or multiple packages"");
+        } else {
+            pkg = pkgs[0];
+        }
+
+        if (pkg.getId() != id) {
+            throw new AndrolibException(""Expected pkg of id: "" + id + "", got: "" + pkg.getId());
+        }
+
+        resTable.addPackage(pkg, false);
+        return pkg;
+    }",False
+23,"decodeManifest(ResTable,ExtFile,File)",Method,,"brut.androlib.ApkDecoder+decodeManifestFull(ExtFile,File,ResTable)",brut.androlib.res.AndrolibResources+getManifestFileDecoder(boolean),brut.androlib.res.AndrolibResources+LOGGER,920,25,1,,"public void decodeManifest(ResTable resTable, ExtFile apkFile, File outDir)
+            throws AndrolibException {
+
+        Duo<ResFileDecoder, AXmlResourceParser> duo = getManifestFileDecoder(false);
+        ResFileDecoder fileDecoder = duo.m1;
+
+        // Set ResAttrDecoder
+        duo.m2.setAttrDecoder(new ResAttrDecoder());
+        ResAttrDecoder attrDecoder = duo.m2.getAttrDecoder();
+
+        // Fake ResPackage
+        attrDecoder.setCurrentPackage(new ResPackage(resTable, 0, null));
+
+        Directory inApk, out;
+        try {
+            inApk = apkFile.getDirectory();
+            out = new FileDirectory(outDir);
+
+            LOGGER.info(""Decoding AndroidManifest.xml with only framework resources..."");
+            fileDecoder.decodeManifest(inApk, ""AndroidManifest.xml"", out, ""AndroidManifest.xml"");
+
+        } catch (DirectoryException ex) {
+            throw new AndrolibException(ex);
+        }
+    }",False
+24,"adjustPackageManifest(ResTable,String)",Method,"decodeManifestWithResources(ResTable,ExtFile,File)",,,brut.androlib.res.AndrolibResources+mPackageRenamed brut.androlib.res.AndrolibResources+mPackageRenamed brut.androlib.res.AndrolibResources+IGNORED_PACKAGES brut.androlib.res.AndrolibResources+mPackageRenamed brut.androlib.res.AndrolibResources+LOGGER brut.androlib.res.AndrolibResources+LOGGER,1101,22,1,,"public void adjustPackageManifest(ResTable resTable, String filePath)
+            throws AndrolibException {
+
+        // compare resources.arsc package name to the one present in AndroidManifest
+        ResPackage resPackage = resTable.getCurrentResPackage();
+        String pkgOriginal = resPackage.getName();
+        mPackageRenamed = resTable.getPackageRenamed();
+
+        resTable.setPackageId(resPackage.getId());
+        resTable.setPackageOriginal(pkgOriginal);
+
+        // 1) Check if pkgOriginal is null (empty resources.arsc)
+        // 2) Check if pkgOriginal === mPackageRenamed
+        // 3) Check if pkgOriginal is ignored via IGNORED_PACKAGES
+        if (pkgOriginal == null || pkgOriginal.equalsIgnoreCase(mPackageRenamed)
+                || (Arrays.asList(IGNORED_PACKAGES).contains(pkgOriginal))) {
+            LOGGER.info(""Regular manifest package..."");
+        } else {
+            LOGGER.info(""Renamed manifest package found! Replacing "" + mPackageRenamed + "" with "" + pkgOriginal);
+            ResXmlPatcher.renameManifestPackage(new File(filePath), pkgOriginal);
+        }
+    }",False
+25,"decodeManifestWithResources(ResTable,ExtFile,File)",Method,,"brut.androlib.ApkDecoder+decodeManifestWithResources(ExtFile,File,ResTable)","brut.androlib.res.AndrolibResources+getManifestFileDecoder(boolean) brut.androlib.res.AndrolibResources+adjustPackageManifest(ResTable,String)",brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+mPackageId brut.androlib.res.AndrolibResources+LOGGER,1685,35,1,,"public void decodeManifestWithResources(ResTable resTable, ExtFile apkFile, File outDir)
+            throws AndrolibException {
+
+        Duo<ResFileDecoder, AXmlResourceParser> duo = getManifestFileDecoder(true);
+        ResFileDecoder fileDecoder = duo.m1;
+        ResAttrDecoder attrDecoder = duo.m2.getAttrDecoder();
+
+        attrDecoder.setCurrentPackage(resTable.listMainPackages().iterator().next());
+
+        Directory inApk, out;
+        try {
+            inApk = apkFile.getDirectory();
+            out = new FileDirectory(outDir);
+            LOGGER.info(""Decoding AndroidManifest.xml with resources..."");
+
+            fileDecoder.decodeManifest(inApk, ""AndroidManifest.xml"", out, ""AndroidManifest.xml"");
+
+            // Remove versionName / versionCode (aapt API 16)
+            if (!config.analysisMode) {
+
+                // check for a mismatch between resources.arsc package and the package listed in AndroidManifest
+                // also remove the android::versionCode / versionName from manifest for rebuild
+                // this is a required change to prevent aapt warning about conflicting versions
+                // it will be passed as a parameter to aapt like ""--min-sdk-version"" via apktool.yml
+                adjustPackageManifest(resTable, outDir.getAbsolutePath() + File.separator + ""AndroidManifest.xml"");
+
+                ResXmlPatcher.removeManifestVersions(new File(
+                        outDir.getAbsolutePath() + File.separator + ""AndroidManifest.xml""));
+
+                mPackageId = String.valueOf(resTable.getPackageId());
+            }
+        } catch (DirectoryException ex) {
+            throw new AndrolibException(ex);
+        }
+    }",False
+26,"decode(ResTable,ExtFile,File)",Method,,"brut.androlib.ApkDecoder+decodeResourcesFull(ExtFile,File,ResTable)","brut.androlib.res.AndrolibResources+getResFileDecoder() brut.androlib.res.AndrolibResources+getResXmlSerializer() brut.androlib.res.AndrolibResources+generateValuesFile(ResValuesFile,Directory,ExtXmlSerializer) brut.androlib.res.AndrolibResources+generatePublicXml(ResPackage,Directory,XmlSerializer)",brut.androlib.res.AndrolibResources+mResFileMapping brut.androlib.res.AndrolibResources+LOGGER brut.androlib.res.AndrolibResources+LOGGER,1425,38,1,,"public void decode(ResTable resTable, ExtFile apkFile, File outDir)
+            throws AndrolibException {
+        Duo<ResFileDecoder, AXmlResourceParser> duo = getResFileDecoder();
+        ResFileDecoder fileDecoder = duo.m1;
+        ResAttrDecoder attrDecoder = duo.m2.getAttrDecoder();
+
+        attrDecoder.setCurrentPackage(resTable.listMainPackages().iterator().next());
+        Directory in, out;
+
+        try {
+            out = new FileDirectory(outDir);
+            in = apkFile.getDirectory();
+            out = out.createDir(""res"");
+        } catch (DirectoryException ex) {
+            throw new AndrolibException(ex);
+        }
+
+        ExtMXSerializer xmlSerializer = getResXmlSerializer();
+        for (ResPackage pkg : resTable.listMainPackages()) {
+            attrDecoder.setCurrentPackage(pkg);
+
+            LOGGER.info(""Decoding file-resources..."");
+            for (ResResource res : pkg.listFiles()) {
+                fileDecoder.decode(res, in, out, mResFileMapping);
+            }
+
+            LOGGER.info(""Decoding values */* XMLs..."");
+            for (ResValuesFile valuesFile : pkg.listValuesFiles()) {
+                generateValuesFile(valuesFile, out, xmlSerializer);
+            }
+            generatePublicXml(pkg, out, xmlSerializer);
+        }
+
+        AndrolibException decodeError = duo.m2.getFirstError();
+        if (decodeError != null) {
+            throw decodeError;
+        }
+    }",False
+27,setSdkInfo(Map),Method,,brut.androlib.ApkBuilder+build(File) brut.androlib.androlib.InvalidSdkBoundingTest+checkIfInvalidValuesPass() brut.androlib.androlib.InvalidSdkBoundingTest+checkIfMissingMinPasses() brut.androlib.androlib.InvalidSdkBoundingTest+checkIfMissingMaxPasses() brut.androlib.androlib.InvalidSdkBoundingTest+checkIfMissingBothPasses() brut.androlib.androlib.InvalidSdkBoundingTest+checkForShortHandSTag() brut.androlib.androlib.InvalidSdkBoundingTest+checkForShortHandSdkTag() brut.androlib.androlib.InvalidSdkBoundingTest+checkForSdkDevelopmentInsaneTestValue(),,brut.androlib.res.AndrolibResources+mMinSdkVersion brut.androlib.res.AndrolibResources+mTargetSdkVersion brut.androlib.res.AndrolibResources+mMaxSdkVersion,263,7,1,,"public void setSdkInfo(Map<String, String> map) {
+        if (map != null) {
+            mMinSdkVersion = map.get(""minSdkVersion"");
+            mTargetSdkVersion = map.get(""targetSdkVersion"");
+            mMaxSdkVersion = map.get(""maxSdkVersion"");
+        }
+    }",False
+28,setVersionInfo(VersionInfo),Method,,brut.androlib.ApkBuilder+build(File),,brut.androlib.res.AndrolibResources+mVersionCode brut.androlib.res.AndrolibResources+mVersionName,208,6,1,,"public void setVersionInfo(VersionInfo versionInfo) {
+        if (versionInfo != null) {
+            mVersionCode = versionInfo.versionCode;
+            mVersionName = versionInfo.versionName;
+        }
+    }",False
+29,setPackageRenamed(PackageInfo),Method,,brut.androlib.ApkBuilder+build(File),,brut.androlib.res.AndrolibResources+mPackageRenamed,172,5,1,,"public void setPackageRenamed(PackageInfo packageInfo) {
+        if (packageInfo != null) {
+            mPackageRenamed = packageInfo.renameManifestPackage;
+        }
+    }",False
+30,setPackageId(PackageInfo),Method,,brut.androlib.ApkBuilder+build(File),,brut.androlib.res.AndrolibResources+mPackageId,156,5,1,,"public void setPackageId(PackageInfo packageInfo) {
+        if (packageInfo != null) {
+            mPackageId = packageInfo.forcedPackageId;
+        }
+    }",False
+31,setSharedLibrary(boolean),Method,,brut.androlib.ApkBuilder+build(File),,brut.androlib.res.AndrolibResources+mSharedLibrary,81,3,1,,"public void setSharedLibrary(boolean flag) {
+        mSharedLibrary = flag;
+    }",False
+32,setSparseResources(boolean),Method,,brut.androlib.ApkBuilder+build(File),,brut.androlib.res.AndrolibResources+mSparseResources,85,3,1,,"public void setSparseResources(boolean flag) {
+        mSparseResources = flag;
+    }",False
+33,checkTargetSdkVersionBounds(),Method,"aapt2Package(File,File,File,File,File,File[],List,boolean) aapt1Package(File,File,File,File,File,File[],List,boolean)",brut.androlib.androlib.InvalidSdkBoundingTest+checkIfInvalidValuesPass() brut.androlib.androlib.InvalidSdkBoundingTest+checkIfMissingMinPasses() brut.androlib.androlib.InvalidSdkBoundingTest+checkIfMissingMaxPasses() brut.androlib.androlib.InvalidSdkBoundingTest+checkIfMissingBothPasses() brut.androlib.androlib.InvalidSdkBoundingTest+checkForShortHandSTag() brut.androlib.androlib.InvalidSdkBoundingTest+checkForShortHandSdkTag() brut.androlib.androlib.InvalidSdkBoundingTest+checkForSdkDevelopmentInsaneTestValue(),brut.androlib.res.AndrolibResources+mapSdkShorthandToVersion(String) brut.androlib.res.AndrolibResources+mapSdkShorthandToVersion(String) brut.androlib.res.AndrolibResources+mapSdkShorthandToVersion(String),brut.androlib.res.AndrolibResources+mTargetSdkVersion brut.androlib.res.AndrolibResources+mMinSdkVersion brut.androlib.res.AndrolibResources+mMinSdkVersion brut.androlib.res.AndrolibResources+mMaxSdkVersion brut.androlib.res.AndrolibResources+mMaxSdkVersion,427,10,1,,"public String checkTargetSdkVersionBounds() {
+        int target = mapSdkShorthandToVersion(mTargetSdkVersion);
+
+        int min = (mMinSdkVersion != null) ? mapSdkShorthandToVersion(mMinSdkVersion) : 0;
+        int max = (mMaxSdkVersion != null) ? mapSdkShorthandToVersion(mMaxSdkVersion) : target;
+
+        target = Math.min(max, target);
+        target = Math.max(min, target);
+        return Integer.toString(target);
+    }",False
+34,createDoNotCompressExtensionsFile(Config),Method,"aapt2Package(File,File,File,File,File,File[],List,boolean) aapt1Package(File,File,File,File,File,File[],List,boolean)",,,brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config,784,22,2,,"private File createDoNotCompressExtensionsFile(Config config) throws AndrolibException {
+        if (config.doNotCompress == null || config.doNotCompress.isEmpty()) {
+            return null;
+        }
+
+        File doNotCompressFile;
+        try {
+            doNotCompressFile = File.createTempFile(""APKTOOL"", null);
+            doNotCompressFile.deleteOnExit();
+
+            BufferedWriter fileWriter = new BufferedWriter(new FileWriter(doNotCompressFile));
+            for (String extension : config.doNotCompress) {
+                fileWriter.write(extension);
+                fileWriter.newLine();
+            }
+            fileWriter.close();
+
+            return doNotCompressFile;
+        } catch (IOException ex) {
+            throw new AndrolibException(ex);
+        }
+    }",False
+35,"aapt2Package(File,File,File,File,File,File[],List,boolean)",Method,"aaptPackage(File,File,File,File,File,File[])",,brut.androlib.res.AndrolibResources+checkTargetSdkVersionBounds() brut.androlib.res.AndrolibResources+createDoNotCompressExtensionsFile(Config),brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+mPackageId brut.androlib.res.AndrolibResources+mSharedLibrary brut.androlib.res.AndrolibResources+mPackageId brut.androlib.res.AndrolibResources+mSharedLibrary brut.androlib.res.AndrolibResources+mMinSdkVersion brut.androlib.res.AndrolibResources+mMinSdkVersion brut.androlib.res.AndrolibResources+mTargetSdkVersion brut.androlib.res.AndrolibResources+mPackageRenamed brut.androlib.res.AndrolibResources+mPackageRenamed brut.androlib.res.AndrolibResources+mPackageRenamed brut.androlib.res.AndrolibResources+mVersionCode brut.androlib.res.AndrolibResources+mVersionCode brut.androlib.res.AndrolibResources+mVersionName brut.androlib.res.AndrolibResources+mVersionName brut.androlib.res.AndrolibResources+mSparseResources brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+LOGGER brut.androlib.res.AndrolibResources+LOGGER brut.androlib.res.AndrolibResources+LOGGER brut.androlib.res.AndrolibResources+LOGGER,4812,165,2,,"private void aapt2Package(File apkFile, File manifest, File resDir, File rawDir, File assetDir, File[] include,
+                              List<String> cmd, boolean customAapt)
+            throws AndrolibException {
+
+        List<String> compileCommand = new ArrayList<>(cmd);
+        File resourcesZip = null;
+
+        if (resDir != null) {
+            File buildDir = new File(resDir.getParent(), ""build"");
+            resourcesZip = new File(buildDir, ""resources.zip"");
+        }
+
+        if (resDir != null && !resourcesZip.exists()) {
+
+            // Compile the files into flat arsc files
+            cmd.add(""compile"");
+
+            cmd.add(""--dir"");
+            cmd.add(resDir.getAbsolutePath());
+
+            // Treats error that used to be valid in aapt1 as warnings in aapt2
+            cmd.add(""--legacy"");
+
+            File buildDir = new File(resDir.getParent(), ""build"");
+            resourcesZip = new File(buildDir, ""resources.zip"");
+
+            cmd.add(""-o"");
+            cmd.add(resourcesZip.getAbsolutePath());
+
+            if (config.verbose) {
+                cmd.add(""-v"");
+            }
+
+            if (config.noCrunch) {
+                cmd.add(""--no-crunch"");
+            }
+
+            try {
+                OS.exec(cmd.toArray(new String[0]));
+                LOGGER.fine(""aapt2 compile command ran: "");
+                LOGGER.fine(cmd.toString());
+            } catch (BrutException ex) {
+                throw new AndrolibException(ex);
+            }
+        }
+
+        if (manifest == null) {
+            return;
+        }
+
+        // Link them into the final apk, reusing our old command after clearing for the aapt2 binary
+        cmd = new ArrayList<>(compileCommand);
+        cmd.add(""link"");
+
+        cmd.add(""-o"");
+        cmd.add(apkFile.getAbsolutePath());
+
+        if (mPackageId != null && ! mSharedLibrary) {
+            cmd.add(""--package-id"");
+            cmd.add(mPackageId);
+        }
+
+        if (mSharedLibrary) {
+            cmd.add(""--shared-lib"");
+        }
+
+        if (mMinSdkVersion != null) {
+            cmd.add(""--min-sdk-version"");
+            cmd.add(mMinSdkVersion);
+        }
+
+        if (mTargetSdkVersion != null) {
+            cmd.add(""--target-sdk-version"");
+            cmd.add(checkTargetSdkVersionBounds());
+        }
+
+        if (mPackageRenamed != null) {
+            cmd.add(""--rename-manifest-package"");
+            cmd.add(mPackageRenamed);
+
+            cmd.add(""--rename-instrumentation-target-package"");
+            cmd.add(mPackageRenamed);
+        }
+
+        if (mVersionCode != null) {
+            cmd.add(""--version-code"");
+            cmd.add(mVersionCode);
+        }
+
+        if (mVersionName != null) {
+            cmd.add(""--version-name"");
+            cmd.add(mVersionName);
+        }
+
+        // Disable automatic changes
+        cmd.add(""--no-auto-version"");
+        cmd.add(""--no-version-vectors"");
+        cmd.add(""--no-version-transitions"");
+        cmd.add(""--no-resource-deduping"");
+
+        cmd.add(""--allow-reserved-package-id"");
+
+        if (mSparseResources) {
+            cmd.add(""--enable-sparse-encoding"");
+        }
+
+        if (config.isFramework) {
+            cmd.add(""-x"");
+        }
+
+        if (config.doNotCompress != null && !customAapt) {
+            // Use custom -e option to avoid limits on commandline length.
+            // Can only be used when custom aapt binary is not used.
+            String extensionsFilePath =
+                Objects.requireNonNull(createDoNotCompressExtensionsFile(config)).getAbsolutePath();
+            cmd.add(""-e"");
+            cmd.add(extensionsFilePath);
+        } else if (config.doNotCompress != null) {
+            for (String file : config.doNotCompress) {
+                cmd.add(""-0"");
+                cmd.add(file);
+            }
+        }
+
+        if (!config.resourcesAreCompressed) {
+            cmd.add(""-0"");
+            cmd.add(""arsc"");
+        }
+
+        if (include != null) {
+            for (File file : include) {
+                cmd.add(""-I"");
+                cmd.add(file.getPath());
+            }
+        }
+
+        cmd.add(""--manifest"");
+        cmd.add(manifest.getAbsolutePath());
+
+        if (assetDir != null) {
+            cmd.add(""-A"");
+            cmd.add(assetDir.getAbsolutePath());
+        }
+
+        if (rawDir != null) {
+            cmd.add(""-R"");
+            cmd.add(rawDir.getAbsolutePath());
+        }
+
+        if (config.verbose) {
+            cmd.add(""-v"");
+        }
+
+        if (resourcesZip != null) {
+            cmd.add(resourcesZip.getAbsolutePath());
+        }
+
+        try {
+            OS.exec(cmd.toArray(new String[0]));
+            LOGGER.fine(""aapt2 link command ran: "");
+            LOGGER.fine(cmd.toString());
+        } catch (BrutException ex) {
+            throw new AndrolibException(ex);
+        }
+    }",False
+36,"aapt1Package(File,File,File,File,File,File[],List,boolean)",Method,"aaptPackage(File,File,File,File,File,File[])",,brut.androlib.res.AndrolibResources+checkTargetSdkVersionBounds() brut.androlib.res.AndrolibResources+createDoNotCompressExtensionsFile(Config),brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+mPackageId brut.androlib.res.AndrolibResources+mSharedLibrary brut.androlib.res.AndrolibResources+mPackageId brut.androlib.res.AndrolibResources+mSharedLibrary brut.androlib.res.AndrolibResources+mMinSdkVersion brut.androlib.res.AndrolibResources+mMinSdkVersion brut.androlib.res.AndrolibResources+mTargetSdkVersion brut.androlib.res.AndrolibResources+mMaxSdkVersion brut.androlib.res.AndrolibResources+mMaxSdkVersion brut.androlib.res.AndrolibResources+mMaxSdkVersion brut.androlib.res.AndrolibResources+mPackageRenamed brut.androlib.res.AndrolibResources+mPackageRenamed brut.androlib.res.AndrolibResources+mVersionCode brut.androlib.res.AndrolibResources+mVersionCode brut.androlib.res.AndrolibResources+mVersionName brut.androlib.res.AndrolibResources+mVersionName brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+LOGGER brut.androlib.res.AndrolibResources+LOGGER,3847,115,2,,"private void aapt1Package(File apkFile, File manifest, File resDir, File rawDir, File assetDir, File[] include,
+                              List<String> cmd, boolean customAapt)
+            throws AndrolibException {
+
+        cmd.add(""p"");
+
+        if (config.verbose) { // output aapt verbose
+            cmd.add(""-v"");
+        }
+        if (config.updateFiles) {
+            cmd.add(""-u"");
+        }
+        if (config.debugMode) { // inject debuggable=""true"" into manifest
+            cmd.add(""--debug-mode"");
+        }
+        if (config.noCrunch) {
+            cmd.add(""--no-crunch"");
+        }
+        // force package id so that some frameworks build with correct id
+        // disable if user adds own aapt (can't know if they have this feature)
+        if (mPackageId != null && ! customAapt && ! mSharedLibrary) {
+            cmd.add(""--forced-package-id"");
+            cmd.add(mPackageId);
+        }
+        if (mSharedLibrary) {
+            cmd.add(""--shared-lib"");
+        }
+        if (mMinSdkVersion != null) {
+            cmd.add(""--min-sdk-version"");
+            cmd.add(mMinSdkVersion);
+        }
+        if (mTargetSdkVersion != null) {
+            cmd.add(""--target-sdk-version"");
+
+            // Ensure that targetSdkVersion is between minSdkVersion/maxSdkVersion if
+            // they are specified.
+            cmd.add(checkTargetSdkVersionBounds());
+        }
+        if (mMaxSdkVersion != null) {
+            cmd.add(""--max-sdk-version"");
+            cmd.add(mMaxSdkVersion);
+
+            // if we have max sdk version, set --max-res-version
+            // so we can ignore anything over that during build.
+            cmd.add(""--max-res-version"");
+            cmd.add(mMaxSdkVersion);
+        }
+        if (mPackageRenamed != null) {
+            cmd.add(""--rename-manifest-package"");
+            cmd.add(mPackageRenamed);
+        }
+        if (mVersionCode != null) {
+            cmd.add(""--version-code"");
+            cmd.add(mVersionCode);
+        }
+        if (mVersionName != null) {
+            cmd.add(""--version-name"");
+            cmd.add(mVersionName);
+        }
+        cmd.add(""--no-version-vectors"");
+        cmd.add(""-F"");
+        cmd.add(apkFile.getAbsolutePath());
+
+        if (config.isFramework) {
+            cmd.add(""-x"");
+        }
+
+        if (config.doNotCompress != null && !customAapt) {
+            // Use custom -e option to avoid limits on commandline length.
+            // Can only be used when custom aapt binary is not used.
+            String extensionsFilePath =
+                Objects.requireNonNull(createDoNotCompressExtensionsFile(config)).getAbsolutePath();
+            cmd.add(""-e"");
+            cmd.add(extensionsFilePath);
+        } else if (config.doNotCompress != null) {
+            for (String file : config.doNotCompress) {
+                cmd.add(""-0"");
+                cmd.add(file);
+            }
+        }
+
+        if (!config.resourcesAreCompressed) {
+            cmd.add(""-0"");
+            cmd.add(""arsc"");
+        }
+
+        if (include != null) {
+            for (File file : include) {
+                cmd.add(""-I"");
+                cmd.add(file.getPath());
+            }
+        }
+        if (resDir != null) {
+            cmd.add(""-S"");
+            cmd.add(resDir.getAbsolutePath());
+        }
+        if (manifest != null) {
+            cmd.add(""-M"");
+            cmd.add(manifest.getAbsolutePath());
+        }
+        if (assetDir != null) {
+            cmd.add(""-A"");
+            cmd.add(assetDir.getAbsolutePath());
+        }
+        if (rawDir != null) {
+            cmd.add(rawDir.getAbsolutePath());
+        }
+        try {
+            OS.exec(cmd.toArray(new String[0]));
+            LOGGER.fine(""command ran: "");
+            LOGGER.fine(cmd.toString());
+        } catch (BrutException ex) {
+            throw new AndrolibException(ex);
+        }
+    }",False
+37,"aaptPackage(File,File,File,File,File,File[])",Method,,"brut.androlib.ApkBuilder+buildResourcesFull(File,UsesFramework) brut.androlib.ApkBuilder+buildManifest(ExtFile,UsesFramework)","brut.androlib.res.AndrolibResources+getAaptBinaryFile() brut.androlib.res.AndrolibResources+getAaptVersion() brut.androlib.res.AndrolibResources+aapt2Package(File,File,File,File,File,File[],List,boolean) brut.androlib.res.AndrolibResources+aapt1Package(File,File,File,File,File,File[],List,boolean)",brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+LOGGER brut.androlib.res.AndrolibResources+config,904,21,1,,"public void aaptPackage(File apkFile, File manifest, File resDir, File rawDir, File assetDir, File[] include)
+            throws AndrolibException {
+
+        String aaptPath = config.aaptPath;
+        boolean customAapt = !aaptPath.isEmpty();
+        List<String> cmd = new ArrayList<>();
+
+        try {
+            String aaptCommand = AaptManager.getAaptExecutionCommand(aaptPath, getAaptBinaryFile());
+            cmd.add(aaptCommand);
+        } catch (BrutException ex) {
+            LOGGER.warning(""aapt: "" + ex.getMessage() + "" (defaulting to $PATH binary)"");
+            cmd.add(AaptManager.getAaptBinaryName(getAaptVersion()));
+        }
+
+        if (config.isAapt2()) {
+            aapt2Package(apkFile, manifest, resDir, rawDir, assetDir, include, cmd, customAapt);
+            return;
+        }
+        aapt1Package(apkFile, manifest, resDir, rawDir, assetDir, include, cmd, customAapt);
+    }",False
+38,"zipPackage(File,File,File)",Method,,"brut.androlib.ApkBuilder+buildApk(File,File)",,brut.androlib.res.AndrolibResources+config,312,9,1,,"public void zipPackage(File apkFile, File rawDir, File assetDir)
+            throws AndrolibException {
+
+        try {
+            ZipUtils.zipFolders(rawDir, apkFile, assetDir, config.doNotCompress);
+        } catch (IOException | BrutException ex) {
+            throw new AndrolibException(ex);
+        }
+    }",False
+39,"getMinSdkVersionFromAndroidCodename(MetaInfo,String)",Method,,brut.androlib.ApkBuilder+build(File),brut.androlib.res.AndrolibResources+mapSdkShorthandToVersion(String),,311,8,1,,"public int getMinSdkVersionFromAndroidCodename(MetaInfo meta, String sdkVersion) {
+        int sdkNumber = mapSdkShorthandToVersion(sdkVersion);
+
+        if (sdkNumber == ResConfigFlags.SDK_BASE) {
+            return Integer.parseInt(meta.sdkInfo.get(""minSdkVersion""));
+        }
+        return sdkNumber;
+    }",False
+40,mapSdkShorthandToVersion(String),Method,"checkTargetSdkVersionBounds() checkTargetSdkVersionBounds() checkTargetSdkVersionBounds() getMinSdkVersionFromAndroidCodename(MetaInfo,String)",,,,848,25,2,,"private int mapSdkShorthandToVersion(String sdkVersion) {
+        switch (sdkVersion.toUpperCase()) {
+            case ""M"":
+                return ResConfigFlags.SDK_MNC;
+            case ""N"":
+                return ResConfigFlags.SDK_NOUGAT;
+            case ""O"":
+                return ResConfigFlags.SDK_OREO;
+            case ""P"":
+                return ResConfigFlags.SDK_P;
+            case ""Q"":
+                return ResConfigFlags.SDK_Q;
+            case ""R"":
+                return ResConfigFlags.SDK_R;
+            case ""S"":
+                return ResConfigFlags.SDK_S;
+            case ""SV2"":
+                return ResConfigFlags.SDK_S_V2;
+            case ""T"":
+            case ""TIRAMISU"":
+                return ResConfigFlags.SDK_DEVELOPMENT;
+            default:
+                return Integer.parseInt(sdkVersion);
+        }
+    }",False
+41,detectWhetherAppIsFramework(File),Method,,,,,653,19,1,,"public boolean detectWhetherAppIsFramework(File appDir)
+            throws AndrolibException {
+        File publicXml = new File(appDir, ""res/values/public.xml"");
+        if (! publicXml.exists()) {
+            return false;
+        }
+
+        Iterator<String> it;
+        try {
+            it = IOUtils.lineIterator(new FileReader(new File(appDir,
+                    ""res/values/public.xml"")));
+        } catch (FileNotFoundException ex) {
+            throw new AndrolibException(
+                    ""Could not detect whether app is framework one"", ex);
+        }
+        it.next();
+        it.next();
+        return it.next().contains(""0x01"");
+    }",False
+42,getResFileDecoder(),Method,"decode(ResTable,ExtFile,File)",,brut.androlib.res.AndrolibResources+getResXmlSerializer(),,574,11,1,,"public Duo<ResFileDecoder, AXmlResourceParser> getResFileDecoder() {
+        ResStreamDecoderContainer decoders = new ResStreamDecoderContainer();
+        decoders.setDecoder(""raw"", new ResRawStreamDecoder());
+        decoders.setDecoder(""9patch"", new Res9patchStreamDecoder());
+
+        AXmlResourceParser axmlParser = new AXmlResourceParser();
+        axmlParser.setAttrDecoder(new ResAttrDecoder());
+        decoders.setDecoder(""xml"", new XmlPullStreamDecoder(axmlParser, getResXmlSerializer()));
+
+        return new Duo<>(new ResFileDecoder(decoders), axmlParser);
+    }",False
+43,getManifestFileDecoder(boolean),Method,"decodeManifest(ResTable,ExtFile,File) decodeManifestWithResources(ResTable,ExtFile,File)",,brut.androlib.res.AndrolibResources+getResXmlSerializer(),,522,11,1,,"public Duo<ResFileDecoder, AXmlResourceParser> getManifestFileDecoder(boolean withResources) {
+        ResStreamDecoderContainer decoders = new ResStreamDecoderContainer();
+
+        AXmlResourceParser axmlParser = new AndroidManifestResourceParser();
+        if (withResources) {
+            axmlParser.setAttrDecoder(new ResAttrDecoder());
+        }
+        decoders.setDecoder(""xml"", new XmlPullStreamDecoder(axmlParser, getResXmlSerializer()));
+
+        return new Duo<>(new ResFileDecoder(decoders), axmlParser);
+    }",False
+44,getResXmlSerializer(),Method,"decode(ResTable,ExtFile,File) getResFileDecoder() getManifestFileDecoder(boolean)",,,,461,8,1,,"public ExtMXSerializer getResXmlSerializer() {
+        ExtMXSerializer serial = new ExtMXSerializer();
+        serial.setProperty(ExtXmlSerializer.PROPERTY_SERIALIZER_INDENTATION, ""    "");
+        serial.setProperty(ExtXmlSerializer.PROPERTY_SERIALIZER_LINE_SEPARATOR, System.getProperty(""line.separator""));
+        serial.setProperty(ExtXmlSerializer.PROPERTY_DEFAULT_ENCODING, ""utf-8"");
+        serial.setDisabledAttrEscape(true);
+        return serial;
+    }",False
+45,"generateValuesFile(ResValuesFile,Directory,ExtXmlSerializer)",Method,"decode(ResTable,ExtFile,File)",,,,1008,24,2,,"private void generateValuesFile(ResValuesFile valuesFile, Directory out,
+                                    ExtXmlSerializer serial) throws AndrolibException {
+        try {
+            OutputStream outStream = out.getFileOutput(valuesFile.getPath());
+            serial.setOutput((outStream), null);
+            serial.startDocument(null, null);
+            serial.startTag(null, ""resources"");
+
+            for (ResResource res : valuesFile.listResources()) {
+                if (valuesFile.isSynthesized(res)) {
+                    continue;
+                }
+                ((ResValuesXmlSerializable) res.getValue()).serializeToResValuesXml(serial, res);
+            }
+
+            serial.endTag(null, ""resources"");
+            serial.newLine();
+            serial.endDocument();
+            serial.flush();
+            outStream.close();
+        } catch (IOException | DirectoryException ex) {
+            throw new AndrolibException(""Could not generate: "" + valuesFile.getPath(), ex);
+        }
+    }",False
+46,"generatePublicXml(ResPackage,Directory,XmlSerializer)",Method,"decode(ResTable,ExtFile,File)",,,,1066,24,2,,"private void generatePublicXml(ResPackage pkg, Directory out,
+                                   XmlSerializer serial) throws AndrolibException {
+        try {
+            OutputStream outStream = out.getFileOutput(""values/public.xml"");
+            serial.setOutput(outStream, null);
+            serial.startDocument(null, null);
+            serial.startTag(null, ""resources"");
+
+            for (ResResSpec spec : pkg.listResSpecs()) {
+                serial.startTag(null, ""public"");
+                serial.attribute(null, ""type"", spec.getType().getName());
+                serial.attribute(null, ""name"", spec.getName());
+                serial.attribute(null, ""id"", String.format(""0x%08x"", spec.getId().id));
+                serial.endTag(null, ""public"");
+            }
+
+            serial.endTag(null, ""resources"");
+            serial.endDocument();
+            serial.flush();
+            outStream.close();
+        } catch (IOException | DirectoryException ex) {
+            throw new AndrolibException(""Could not generate public.xml file"", ex);
+        }
+    }",False
+47,"getResPackagesFromApk(ExtFile,ResTable,boolean)",Method,"loadMainPkg(ResTable,ExtFile) loadFrameworkPkg(ResTable,int)",,,,604,11,2,,"private ResPackage[] getResPackagesFromApk(ExtFile apkFile, ResTable resTable, boolean keepBrokenResources)
+            throws AndrolibException {
+        try {
+            Directory dir = apkFile.getDirectory();
+            try (BufferedInputStream bfi = new BufferedInputStream(dir.getFileInput(""resources.arsc""))) {
+                return ARSCDecoder.decode(bfi, false, keepBrokenResources, resTable).getPackages();
+            }
+        } catch (DirectoryException | IOException ex) {
+            throw new AndrolibException(""Could not load resources.arsc from file: "" + apkFile, ex);
+        }
+    }",False
+48,"getFrameworkApk(int,String)",Method,"loadFrameworkPkg(ResTable,int)",brut.androlib.ApkBuilder+parseUsesFramework(UsesFramework),brut.androlib.res.AndrolibResources+getFrameworkDirectory() brut.androlib.res.AndrolibResources+getAndroidFrameworkResourcesAsStream(),,866,29,1,,"public File getFrameworkApk(int id, String frameTag)
+            throws AndrolibException {
+        File dir = getFrameworkDirectory();
+        File apk;
+
+        if (frameTag != null) {
+            apk = new File(dir, String.valueOf(id) + '-' + frameTag + "".apk"");
+            if (apk.exists()) {
+                return apk;
+            }
+        }
+
+        apk = new File(dir, id + "".apk"");
+        if (apk.exists()) {
+            return apk;
+        }
+
+        if (id == 1) {
+            try (InputStream in = getAndroidFrameworkResourcesAsStream();
+                 OutputStream out = Files.newOutputStream(apk.toPath())) {
+                IOUtils.copy(in, out);
+                return apk;
+            } catch (IOException ex) {
+                throw new AndrolibException(ex);
+            }
+        }
+
+        throw new CantFindFrameworkResException(id);
+    }",True
+49,emptyFrameworkDirectory(),Method,,"brut.apktool.Main+cmdEmptyFrameworkDirectory(CommandLine,Config)",brut.androlib.res.AndrolibResources+getFrameworkDirectory(),brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+LOGGER brut.androlib.res.AndrolibResources+LOGGER brut.androlib.res.AndrolibResources+LOGGER,1193,26,1,,"public void emptyFrameworkDirectory() throws AndrolibException {
+        File dir = getFrameworkDirectory();
+        File apk;
+
+        apk = new File(dir, ""1.apk"");
+
+        if (! apk.exists()) {
+            LOGGER.warning(""Can't empty framework directory, no file found at: "" + apk.getAbsolutePath());
+        } else {
+            try {
+                if (apk.exists() && Objects.requireNonNull(dir.listFiles()).length > 1 && ! config.forceDeleteFramework) {
+                    LOGGER.warning(""More than default framework detected. Please run command with `--force` parameter to wipe framework directory."");
+                } else {
+                    for (File file : Objects.requireNonNull(dir.listFiles())) {
+                        if (file.isFile() && file.getName().endsWith("".apk"")) {
+                            LOGGER.info(""Removing "" + file.getName() + "" framework file..."");
+                            //noinspection ResultOfMethodCallIgnored
+                            file.delete();
+                        }
+                    }
+                }
+            } catch (NullPointerException e) {
+                throw new AndrolibException(e);
+            }
+        }
+    }",True
+50,listFrameworkDirectory(),Method,,"brut.apktool.Main+cmdListFrameworks(CommandLine,Config)",brut.androlib.res.AndrolibResources+getFrameworkDirectory(),brut.androlib.res.AndrolibResources+LOGGER brut.androlib.res.AndrolibResources+LOGGER,453,13,1,,"public void listFrameworkDirectory() throws AndrolibException {
+        File dir = getFrameworkDirectory();
+        if (dir == null) {
+            LOGGER.severe(""No framework directory found. Nothing to list."");
+            return;
+        }
+
+        for (File file : Objects.requireNonNull(dir.listFiles())) {
+            if (file.isFile() && file.getName().endsWith("".apk"")) {
+                LOGGER.info(file.getName());
+            }
+        }
+    }",True
+51,installFramework(File),Method,,"brut.apktool.Main+cmdInstallFramework(CommandLine,Config) brut.androlib.aapt1.SharedLibraryTest+isFrameworkTaggingWorking() brut.androlib.aapt1.SharedLibraryTest+isFrameworkInstallingWorking() brut.androlib.aapt1.SharedLibraryTest+isSharedResourceDecodingAndRebuildingWorking()","brut.androlib.res.AndrolibResources+installFramework(File,String)",brut.androlib.res.AndrolibResources+config,135,3,1,,"public void installFramework(File frameFile) throws AndrolibException {
+        installFramework(frameFile, config.frameworkTag);
+    }",True
+52,"installFramework(File,String)",Method,installFramework(File),,"brut.androlib.res.AndrolibResources+publicizeResources(byte[],FlagsOffset[]) brut.androlib.res.AndrolibResources+getFrameworkDirectory()",brut.androlib.res.AndrolibResources+LOGGER,2262,59,1,,"public void installFramework(File frameFile, String tag)
+            throws AndrolibException {
+        InputStream in = null;
+        ZipOutputStream out = null;
+        try {
+            ZipFile zip = new ZipFile(frameFile);
+            ZipEntry entry = zip.getEntry(""resources.arsc"");
+
+            if (entry == null) {
+                throw new AndrolibException(""Can't find resources.arsc file"");
+            }
+
+            in = zip.getInputStream(entry);
+            byte[] data = IOUtils.toByteArray(in);
+
+            ARSCData arsc = ARSCDecoder.decode(new ByteArrayInputStream(data), true, true);
+            publicizeResources(data, arsc.getFlagsOffsets());
+
+            File outFile = new File(getFrameworkDirectory(), arsc
+                .getOnePackage().getId()
+                    + (tag == null ? """" : '-' + tag)
+                    + "".apk"");
+
+            out = new ZipOutputStream(Files.newOutputStream(outFile.toPath()));
+            out.setMethod(ZipOutputStream.STORED);
+            CRC32 crc = new CRC32();
+            crc.update(data);
+            entry = new ZipEntry(""resources.arsc"");
+            entry.setSize(data.length);
+            entry.setMethod(ZipOutputStream.STORED);
+            entry.setCrc(crc.getValue());
+            out.putNextEntry(entry);
+            out.write(data);
+            out.closeEntry();
+
+            //Write fake AndroidManifest.xml file to support original aapt
+            entry = zip.getEntry(""AndroidManifest.xml"");
+            if (entry != null) {
+                in = zip.getInputStream(entry);
+                byte[] manifest = IOUtils.toByteArray(in);
+                CRC32 manifestCrc = new CRC32();
+                manifestCrc.update(manifest);
+                entry.setSize(manifest.length);
+                entry.setCompressedSize(-1);
+                entry.setCrc(manifestCrc.getValue());
+                out.putNextEntry(entry);
+                out.write(manifest);
+                out.closeEntry();
+            }
+
+            zip.close();
+            LOGGER.info(""Framework installed to: "" + outFile);
+        } catch (IOException ex) {
+            throw new AndrolibException(ex);
+        } finally {
+            IOUtils.closeQuietly(in);
+            IOUtils.closeQuietly(out);
+        }
+    }",True
+53,publicizeResources(File),Method,,"brut.apktool.Main+cmdPublicizeResources(CommandLine,Config)",brut.androlib.res.AndrolibResources+publicizeResources(byte[]),,517,13,1,,"public void publicizeResources(File arscFile) throws AndrolibException {
+        byte[] data = new byte[(int) arscFile.length()];
+
+        try(InputStream in = Files.newInputStream(arscFile.toPath());
+            OutputStream out = Files.newOutputStream(arscFile.toPath())) {
+            //noinspection ResultOfMethodCallIgnored
+            in.read(data);
+            publicizeResources(data);
+            out.write(data);
+        } catch (IOException ex){
+            throw new AndrolibException(ex);
+        }
+    }",True
+54,publicizeResources(byte[]),Method,publicizeResources(File),,"brut.androlib.res.AndrolibResources+publicizeResources(byte[],FlagsOffset[])",,192,3,1,,"public void publicizeResources(byte[] arsc) throws AndrolibException {
+        publicizeResources(arsc, ARSCDecoder.decode(new ByteArrayInputStream(arsc), true, true).getFlagsOffsets());
+    }",True
+55,"publicizeResources(byte[],FlagsOffset[])",Method,"installFramework(File,String) publicizeResources(byte[])",,,,352,10,1,,"public void publicizeResources(byte[] arsc, FlagsOffset[] flagsOffsets) {
+        for (FlagsOffset flags : flagsOffsets) {
+            int offset = flags.offset + 3;
+            int end = offset + 4 * flags.count;
+            while (offset < end) {
+                arsc[offset] |= (byte) 0x40;
+                offset += 4;
+            }
+        }
+    }",True
+56,getFrameworkDirectory(),Method,"getFrameworkApk(int,String) emptyFrameworkDirectory() listFrameworkDirectory() installFramework(File,String)",brut.androlib.TestUtils+getFrameworkDirectory(),,brut.androlib.res.AndrolibResources+mFrameworkDirectory brut.androlib.res.AndrolibResources+mFrameworkDirectory brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+config brut.androlib.res.AndrolibResources+mFrameworkDirectory brut.androlib.res.AndrolibResources+LOGGER brut.androlib.res.AndrolibResources+LOGGER brut.androlib.res.AndrolibResources+LOGGER,1737,45,1,,"public File getFrameworkDirectory() throws AndrolibException {
+        if (mFrameworkDirectory != null) {
+            return mFrameworkDirectory;
+        }
+
+        String path;
+
+        // use default framework path or specified on the command line
+        path = config.frameworkDirectory;
+
+        File dir = new File(path);
+
+        if (!dir.isDirectory() && dir.isFile()) {
+            throw new AndrolibException(""--frame-path is set to a file, not a directory."");
+        }
+
+        if (dir.getParentFile() != null && dir.getParentFile().isFile()) {
+            throw new AndrolibException(""Please remove file at "" + dir.getParentFile());
+        }
+
+        if (! dir.exists()) {
+            if (! dir.mkdirs()) {
+                if (config.frameworkDirectory != null) {
+                    LOGGER.severe(""Can't create Framework directory: "" + dir);
+                }
+                throw new AndrolibException(String.format(
+                        ""Can't create directory: (%s). Pass a writable path with --frame-path {DIR}. "", dir
+                ));
+            }
+        }
+
+        if (config.frameworkDirectory == null) {
+            if (! dir.canWrite()) {
+                LOGGER.severe(String.format(""WARNING: Could not write to (%1$s), using %2$s instead..."",
+                        dir.getAbsolutePath(), System.getProperty(""java.io.tmpdir"")));
+                LOGGER.severe(""Please be aware this is a volatile directory and frameworks could go missing, "" +
+                        ""please utilize --frame-path if the default storage directory is unavailable"");
+
+                dir = new File(System.getProperty(""java.io.tmpdir""));
+            }
+        }
+
+        mFrameworkDirectory = dir;
+        return dir;
+    }",True
+57,getAaptBinaryFile(),Method,"aaptPackage(File,File,File,File,File,File[])",,brut.androlib.res.AndrolibResources+getAaptVersion(),,316,10,2,,"private File getAaptBinaryFile() throws AndrolibException {
+        try {
+            if (getAaptVersion() == 2) {
+                return AaptManager.getAapt2();
+            }
+            return AaptManager.getAapt1();
+        } catch (BrutException ex) {
+            throw new AndrolibException(ex);
+        }
+    }",False
+58,getAaptVersion(),Method,"aaptPackage(File,File,File,File,File,File[]) getAaptBinaryFile()",,,brut.androlib.res.AndrolibResources+config,77,3,2,,"private int getAaptVersion() {
+        return config.isAapt2() ? 2 : 1;
+    }",False
+59,getAndroidFrameworkResourcesAsStream(),Method,"getFrameworkApk(int,String)",,,,151,3,1,,"public InputStream getAndroidFrameworkResourcesAsStream() {
+        return Jar.class.getResourceAsStream(""/brut/androlib/android-framework.jar"");
+    }",True
+60,close(),Method,,brut.androlib.ApkBuilder+close() brut.androlib.ApkDecoder+close(),,brut.androlib.res.AndrolibResources+mFramework brut.androlib.res.AndrolibResources+mFramework,122,5,1,,"public void close() throws IOException {
+        if (mFramework != null) {
+            mFramework.close();
+        }
+    }",False

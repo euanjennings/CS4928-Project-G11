@@ -1,0 +1,121 @@
+path	reason
+extension/apktool/handover_20261104/ck_cleanup_20261104/class.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/ck_cleanup_20261104/method.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/ck_cleanup_20261104/run.log	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/ck_pristine_20261104/class.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/ck_pristine_20261104/method.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/ck_pristine_20261104/run.log	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/ck_run_manifest.json	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/cleanup.patch	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/apktool-after-baseline_20261104_165610.log	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/apktool-cleanup-tests_20261104_170145.log	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/baseline_xml.zip	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/build-detail.log	Environment/build troubleshooting log; unnecessary for outcome verification
+extension/apktool/handover_20261104/evidence/build-final.log	Environment/build troubleshooting log; unnecessary for outcome verification
+extension/apktool/handover_20261104/evidence/build-offline.log	Environment/build troubleshooting log; unnecessary for outcome verification
+extension/apktool/handover_20261104/evidence/build-private.log	Environment/build troubleshooting log; unnecessary for outcome verification
+extension/apktool/handover_20261104/evidence/build-success.log	Environment/build troubleshooting log; unnecessary for outcome verification
+extension/apktool/handover_20261104/evidence/build.log	Environment/build troubleshooting log; unnecessary for outcome verification
+extension/apktool/handover_20261104/evidence/case_study_before_handover.md	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/cleanup_xml.zip	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/mapper_members_v2_20261104_164526_337995/mapper_candidate.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/mapper_members_v2_20261104_164526_337995/matched_member_comparison.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/mapper_members_v2_20261104_164526_337995/metadata.json	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/mapper_members_v2_20261104_164526_337995/summary.txt	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/mapper_validation_20261104_161640_027932/mapper_candidate.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/mapper_validation_20261104_161640_027932/matched_member_comparison.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/mapper_validation_20261104_161640_027932/metadata.json	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/mapper_validation_20261104_161640_027932/summary.txt	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/metrics-after/class.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/metrics-after/method.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/metrics-before/class.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/evidence/metrics-before/method.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/final_diff_stat.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/final_status.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/FINAL_VERIFICATION.json	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/historical_refactoring.patch	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/initial_apktool_before_diff.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_apktool_before_head.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_apktool_before_staged.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_apktool_before_status.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_apktool_before_worktrees.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_apktool_cleanup_diff.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_apktool_cleanup_head.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_apktool_cleanup_staged.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_apktool_cleanup_status.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_apktool_cleanup_worktrees.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_ck_diff.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_ck_head.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_ck_staged.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_ck_status.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_ck_worktrees.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_group_diff.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_group_head.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_group_staged.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_group_status.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/initial_group_worktrees.txt	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/inputs/apktool_classsplitter_candidate.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/inputs/apktool_classsplitter_candidate_v2.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/inputs/apktool_classsplitter_candidate_v3.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/inputs/apktool_classsplitter_candidate_v4.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/inputs/apktool_ground_truth.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/inputs/ground_truth_semantic.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/LOCAL_HANDOVER_PROGRESS.md	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/local_paths.json	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/manifest.json	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/README.md	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/rerun_exploratory.py	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/rerun_validation.py	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/run_ck_pair.py	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/safeguards.json	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/scripts_original/__pycache__/mapper_validation.cpython-312.pyc	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/scripts_original/__pycache__/mapper_validation_members_v2.cpython-312.pyc	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/scripts_original/apktool_ground_truth.py	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/scripts_original/apktool_input_extractor.py	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/scripts_original/apktool_input_extractor_v2.py	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/scripts_original/apktool_input_extractor_v3.py	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/scripts_original/apktool_input_extractor_v4.py	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/scripts_original/mapper_validation.py	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/scripts_original/mapper_validation_members_v2.py	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/source/after_AndrolibResources.java	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/source/after_ApkBuilder.java	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/source/after_Framework.java	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/source/before_AndrolibResources.java	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/source/before_ApkBuilder.java	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/source/ck_LCOMNormalized.java	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/source/ck_LICENSE	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/source/ck_pom.xml	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/source/cleanup_AndrolibResources.java	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/tracker_extract.json	Local audit, paths, stale inventory or unrelated tracker data
+extension/apktool/handover_20261104/verified/ck_delta.json	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/ck_rerun_manifest.json	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/ck_source_hashes.json	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/declarations_zero_fields_bavota.rsf	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/declarations_zero_fields_classsplitter.rsf	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/declarations_zero_fields_classsplitter_without_position.rsf	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/declarations_zero_fields_truth.rsf	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/method_mapping.json	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/mismatch_examples.json	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/provenance.json	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/semantic_one_field_bavota.rsf	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/semantic_one_field_classsplitter.rsf	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/semantic_one_field_classsplitter_without_position.rsf	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/semantic_one_field_truth.rsf	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/sensitivity.json	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/testcases.csv	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/tests.json	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/validation.json	Private original retained; submit curated publication derivative where applicable
+extension/apktool/handover_20261104/verified/validation_initial/mapper_candidate.csv	Duplicate diagnostic rerun; original diagnostic and agreement summary retained
+extension/apktool/handover_20261104/verified/validation_initial/matched_member_comparison.csv	Duplicate diagnostic rerun; original diagnostic and agreement summary retained
+extension/apktool/handover_20261104/verified/validation_initial/metadata.json	Duplicate diagnostic rerun; original diagnostic and agreement summary retained
+extension/apktool/handover_20261104/verified/validation_initial/summary.txt	Duplicate diagnostic rerun; original diagnostic and agreement summary retained
+extension/apktool/handover_20261104/verified/validation_members/mapper_candidate.csv	Duplicate diagnostic rerun; original diagnostic and agreement summary retained
+extension/apktool/handover_20261104/verified/validation_members/matched_member_comparison.csv	Duplicate diagnostic rerun; original diagnostic and agreement summary retained
+extension/apktool/handover_20261104/verified/validation_members/metadata.json	Duplicate diagnostic rerun; original diagnostic and agreement summary retained
+extension/apktool/handover_20261104/verified/validation_members/summary.txt	Duplicate diagnostic rerun; original diagnostic and agreement summary retained
+extension/apktool/handover_20261104/verify_evidence.py	Private original retained; submit curated publication derivative where applicable
+.github/workflows/apktool.yml	Untracked workflow moved to sibling private archive; exclude from submission
+CODEX_HANDOVER_CS4928_G11_P04_2026-11-04.md	Handover moved to sibling private archive; contains machine paths
+docs/AI_USE.md	No edits authorized; existing tracked disclosure retained
+**/__pycache__/**; *.pyc; .venv*/**	Generated interpreter/dependency files
+Temporary CK/Maven directories, complete review ZIP and CK JAR outside repository	Local tools/archives, not a source submission

@@ -1,0 +1,30 @@
+{
+  "declarations_zero_fields": {
+    "bavota": {
+      "raw_mojofm_percent": 82.76,
+      "upstream_transformed_score": 0.6552000000000001
+    },
+    "classsplitter": {
+      "raw_mojofm_percent": 81.03,
+      "upstream_transformed_score": 0.6206
+    },
+    "classsplitter_without_position": {
+      "raw_mojofm_percent": 77.59,
+      "upstream_transformed_score": 0.5518000000000001
+    }
+  },
+  "semantic_one_field": {
+    "bavota": {
+      "raw_mojofm_percent": 81.03,
+      "upstream_transformed_score": 0.6206
+    },
+    "classsplitter": {
+      "raw_mojofm_percent": 79.31,
+      "upstream_transformed_score": 0.5862
+    },
+    "classsplitter_without_position": {
+      "raw_mojofm_percent": 75.86,
+      "upstream_transformed_score": 0.5172
+    }
+  }
+}

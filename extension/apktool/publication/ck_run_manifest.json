@@ -1,0 +1,40 @@
+{
+  "timestamp_utc": "2026-11-04T17:21:54.048814+00:00",
+  "jar_path": "<CK_JAR>",
+  "jar_sha256": "d577a5a119e0fa3ffbd43d9a866ea3eeb4f97150a429aa728668e3f1d233dce5",
+  "scope": "all tracked Java sources at 40d427e5; identical snapshots except cleanup diff; no build outputs",
+  "java": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment Temurin-17.0.20.1+1 (build 17.0.20.1+1)\nOpenJDK 64-Bit Server VM Temurin-17.0.20.1+1 (build 17.0.20.1+1, mixed mode, sharing)\n",
+  "runs": {
+    "pristine": {
+      "command": [
+        "java",
+        "-jar",
+        "<CK_JAR>",
+        "<PRISTINE_JAVA>",
+        "false",
+        "0",
+        "false",
+        "<OUTPUT_PRISTINE>"
+      ],
+      "exit_code": 0,
+      "original_class_csv_sha256": "5e650636d8b29df823ee672d123b954c8d934938a5f44cecec46f1d64f245d74",
+      "published_class_csv_sha256": "5bc6ef596bd19616a16b4aacbe6a8e52e7d2ef29bb14ffee74369f5b62a77df2"
+    },
+    "cleanup": {
+      "command": [
+        "java",
+        "-jar",
+        "<CK_JAR>",
+        "<CLEANUP_JAVA>",
+        "false",
+        "0",
+        "false",
+        "<OUTPUT_CLEANUP>"
+      ],
+      "exit_code": 0,
+      "original_class_csv_sha256": "e89f51f32253535c95bea696719ffe7a1f880e93f941312ac7769137734dd6b5",
+      "published_class_csv_sha256": "5d44a64fe8d16389e8c2db7714d188dd014b33887348ffa9afd1cb7bdf575fd2"
+    }
+  },
+  "publication_note": "Commands use portable placeholders. Original CSV hashes retained separately; published hashes cover path-normalized derivatives."
+}

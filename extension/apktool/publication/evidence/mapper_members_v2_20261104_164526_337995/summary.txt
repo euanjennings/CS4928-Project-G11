@@ -1,0 +1,31 @@
+MAPPERHELPER TARGETED MEMBER/SIGNATURE DIAGNOSTIC (NOT A VALIDATION PASS)
+Apktool v2 logic with nested member and qualified signature corrections.
+External Java bindings remain unresolved; originals are unchanged.
+
+Reference members: 50
+Extractor members: 50
+Exactly matched identities (name and type): 50
+Missing reference members: 0
+Extra extractor members: 0
+Extraction errors: 0
+
+AGREEMENT AMONG MATCHED IDENTITIES
+  index: 50/50
+  inner invocations: 37/50
+  external invocations: 50/50
+  calls: 21/50
+  visits: 30/50
+  length: 22/50
+  lines: 22/50
+  modifier: 50/50
+  annotation: 22/50
+  full text: 45/50
+
+MISSING FROM EXTRACTOR (FIRST 30)
+
+EXTRA IN EXTRACTOR (FIRST 30)
+
+EXTRACTION ERRORS (FIRST 30)
+
+CAUTION: Equal token sequences do not establish equivalent symbol binding.
+Do not use this diagnostic output as an algorithm input.
