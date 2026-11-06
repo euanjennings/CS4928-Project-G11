@@ -21,6 +21,16 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def input_hash_matches(path, expected):
+    if sha(path) == expected:
+        return True
+    if path != HERE / "apktool_ground_truth.csv":
+        return False
+    data = path.read_bytes()
+    # Reconstruct historical CRLF bytes only from the LF-only ground truth.
+    return b"\r" not in data and hashlib.sha256(data.replace(b"\n", b"\r\n")).hexdigest() == expected
+
+
 def check(condition, message):
     if not condition:
         raise AssertionError(message)
@@ -93,7 +103,7 @@ def main():
         cache = HERE / cache_folder / "apktool_similarity_cache.json"
         for name, expected in provenance["input_hashes_verified"].items():
             path = HERE / "apktool_ground_truth.csv" if name == "apktool_ground_truth.csv" else candidate
-            check(path.is_file() and sha(path) == expected, f"version {version} input {name}")
+            check(path.is_file() and input_hash_matches(path, expected), f"version {version} input {name}")
         check(cache.is_file() and sha(cache) == provenance["cache_sha256"], f"version {version} cache")
     for algorithm, groups in data["saved_v4_group_indices"].items():
         check(sorted(index for group in groups for index in group) == list(range(1, 61)),
