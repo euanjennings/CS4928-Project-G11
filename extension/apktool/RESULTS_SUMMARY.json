@@ -1,0 +1,643 @@
+{
+  "scope": "Compact results from the 4 November 2026 Apktool study; original raw files are in the separate private archive",
+  "external_sources": {
+    "apktool": {
+      "repository": "https://github.com/iBotPeaches/Apktool.git",
+      "before": "9c495cae295dbff3aab378da4a889d8b926f081a",
+      "after": "40d427e5bdf5c204c58022cef3b369f34e19b043"
+    },
+    "ck": {
+      "repository": "https://github.com/mauricioaniche/ck.git",
+      "commit": "8a1ef916d597d33ad619d748b616bb7dbc3f0c36",
+      "version": "0.7.1-SNAPSHOT"
+    }
+  },
+  "metrics": {
+    "historical_before": {
+      "brut.androlib.res.AndrolibResources": {
+        "totalMethodsQty": "45",
+        "totalFieldsQty": "15",
+        "privateFieldsQty": "14",
+        "loc": "784",
+        "cbo": "38",
+        "lcom*": "0.9081481",
+        "wmc": "194",
+        "assignmentsQty": "132",
+        "variablesQty": "96"
+      }
+    },
+    "historical_after": {
+      "brut.androlib.res.AndrolibResources": {
+        "totalMethodsQty": "35",
+        "totalFieldsQty": "15",
+        "privateFieldsQty": "14",
+        "loc": "613",
+        "cbo": "35",
+        "lcom*": "0.8971428",
+        "wmc": "150",
+        "assignmentsQty": "99",
+        "variablesQty": "73"
+      },
+      "brut.androlib.res.Framework": {
+        "totalMethodsQty": "11",
+        "totalFieldsQty": "3",
+        "privateFieldsQty": "3",
+        "loc": "180",
+        "cbo": "10",
+        "lcom*": "0.72727275",
+        "wmc": "45",
+        "assignmentsQty": "37",
+        "variablesQty": "27"
+      }
+    },
+    "matched_pristine_after": {
+      "brut.androlib.res.AndrolibResources": {
+        "totalMethodsQty": "35",
+        "totalFieldsQty": "15",
+        "privateFieldsQty": "14",
+        "loc": "613",
+        "cbo": "35",
+        "lcom*": "0.8971428",
+        "wmc": "150",
+        "assignmentsQty": "99",
+        "variablesQty": "73"
+      },
+      "brut.androlib.res.Framework": {
+        "totalMethodsQty": "11",
+        "totalFieldsQty": "3",
+        "privateFieldsQty": "3",
+        "loc": "180",
+        "cbo": "10",
+        "lcom*": "0.72727275",
+        "wmc": "45",
+        "assignmentsQty": "37",
+        "variablesQty": "27"
+      }
+    },
+    "matched_cleanup_after": {
+      "brut.androlib.res.AndrolibResources": {
+        "totalMethodsQty": "35",
+        "totalFieldsQty": "14",
+        "privateFieldsQty": "13",
+        "loc": "612",
+        "cbo": "35",
+        "lcom*": "0.8897959",
+        "wmc": "150",
+        "assignmentsQty": "98",
+        "variablesQty": "72"
+      },
+      "brut.androlib.res.Framework": {
+        "totalMethodsQty": "11",
+        "totalFieldsQty": "3",
+        "privateFieldsQty": "3",
+        "loc": "180",
+        "cbo": "10",
+        "lcom*": "0.72727275",
+        "wmc": "45",
+        "assignmentsQty": "37",
+        "variablesQty": "27"
+      }
+    },
+    "matched_scope": {
+      "java_files": 145,
+      "class_rows": 166,
+      "ck_options": [
+        "false",
+        "0",
+        "false"
+      ],
+      "same_jar": true,
+      "all_other_class_metrics_unchanged": true
+    }
+  },
+  "tests": {
+    "baseline": {
+      "tests": 176,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "xml_files": 42
+    },
+    "cleanup": {
+      "tests": 176,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "xml_files": 42
+    },
+    "identity_outcome_differences": 0
+  },
+  "validation": {
+    "mapper_validation_20261104_161640_027932": {
+      "index_match": 0,
+      "inner invocations_match": 31,
+      "external invocations_match": 38,
+      "calls_match": 13,
+      "visits_match": 21,
+      "length_match": 14,
+      "lines_match": 14,
+      "modifier_match": 38,
+      "annotation_match": 14,
+      "full text_match": 34,
+      "matched": 38
+    },
+    "mapper_members_v2_20261104_164526_337995": {
+      "index_match": 50,
+      "inner invocations_match": 37,
+      "external invocations_match": 50,
+      "calls_match": 21,
+      "visits_match": 30,
+      "length_match": 22,
+      "lines_match": 22,
+      "modifier_match": 50,
+      "annotation_match": 22,
+      "full text_match": 45,
+      "matched": 50
+    }
+  },
+  "sensitivity": {
+    "declarations_zero_fields": {
+      "bavota": {
+        "raw_mojofm_percent": 82.76,
+        "upstream_transformed_score": 0.6552000000000001
+      },
+      "classsplitter": {
+        "raw_mojofm_percent": 81.03,
+        "upstream_transformed_score": 0.6206
+      },
+      "classsplitter_without_position": {
+        "raw_mojofm_percent": 77.59,
+        "upstream_transformed_score": 0.5518000000000001
+      }
+    },
+    "semantic_one_field": {
+      "bavota": {
+        "raw_mojofm_percent": 81.03,
+        "upstream_transformed_score": 0.6206
+      },
+      "classsplitter": {
+        "raw_mojofm_percent": 79.31,
+        "upstream_transformed_score": 0.5862
+      },
+      "classsplitter_without_position": {
+        "raw_mojofm_percent": 75.86,
+        "upstream_transformed_score": 0.5172
+      }
+    }
+  },
+  "algorithm_provenance": {
+    "2": {
+      "json_sha256": "3f7bb4027fd64f1c4540eb91e79cd191c0a542e478ab744faecc8452fc5d040f",
+      "input_hashes_verified": {
+        "apktool_classsplitter_candidate_v2.csv": "73d3ed26862dd1087559ff3c6a5546115c154b64d943eb17c128e84dca191a3f",
+        "apktool_ground_truth.csv": "7b6b8819b6930a1dc28e6d32cb9e4e6b2f30917827bc3e45baac55bb725d6ab5"
+      },
+      "seed": 2026,
+      "model": "sentence-transformers/all-mpnet-base-v2",
+      "cache_sha256": "c8b9be2a57f5adeb0ce9df9c9eac52e2193593ad34289239bb5d143c4ecf92d8",
+      "scores": {
+        "bavota": {
+          "overall": 0.6552000000000001,
+          "methods": 0.5347999999999999,
+          "fields": 1.0
+        },
+        "classsplitter": {
+          "overall": 0.6552000000000001,
+          "methods": 0.5813999999999999,
+          "fields": 0.8572
+        },
+        "classsplitter_without_position": {
+          "overall": 0.5172,
+          "methods": 0.34879999999999994,
+          "fields": 1.0
+        }
+      }
+    },
+    "3": {
+      "json_sha256": "c99f37909177ba48aa2318307aaf3c7cee2fb8a002f7f37406764e19198ef556",
+      "input_hashes_verified": {
+        "apktool_classsplitter_candidate_v3.csv": "b4ca274228d614213268865b96f545aba21b51924d62710a257dba30ebec2d13",
+        "apktool_ground_truth.csv": "7b6b8819b6930a1dc28e6d32cb9e4e6b2f30917827bc3e45baac55bb725d6ab5"
+      },
+      "seed": 2026,
+      "model": "sentence-transformers/all-mpnet-base-v2",
+      "cache_sha256": "9e9ced644203dfab07143700fe63cef994b8c5dd5b0354bf64a3cb3f7cef17ad",
+      "scores": {
+        "bavota": {
+          "overall": 0.6552000000000001,
+          "methods": 0.5347999999999999,
+          "fields": 1.0
+        },
+        "classsplitter": {
+          "overall": 0.6206,
+          "methods": 0.48840000000000006,
+          "fields": 0.8572
+        },
+        "classsplitter_without_position": {
+          "overall": 0.5518000000000001,
+          "methods": 0.3953999999999999,
+          "fields": 0.8572
+        }
+      }
+    },
+    "4": {
+      "json_sha256": "0f8e80545971afaa1e03b759900a70d817e112e98261eca294d4f0163a6626e9",
+      "input_hashes_verified": {
+        "apktool_classsplitter_candidate_v4.csv": "2221aff0197ceaa70b746ee4452a04862a4e1752baea4d16e8614a222d126c35",
+        "apktool_ground_truth.csv": "7b6b8819b6930a1dc28e6d32cb9e4e6b2f30917827bc3e45baac55bb725d6ab5"
+      },
+      "seed": 2026,
+      "model": "sentence-transformers/all-mpnet-base-v2",
+      "cache_sha256": "6ab4ba5305874cf45c4c56c282dfe43a4f15595e924cc0bc3054de77fdfcb65c",
+      "scores": {
+        "bavota": {
+          "overall": 0.6552000000000001,
+          "methods": 0.5347999999999999,
+          "fields": 1.0
+        },
+        "classsplitter": {
+          "overall": 0.6206,
+          "methods": 0.48840000000000006,
+          "fields": 0.8572
+        },
+        "classsplitter_without_position": {
+          "overall": 0.5518000000000001,
+          "methods": 0.3953999999999999,
+          "fields": 0.8572
+        }
+      }
+    }
+  },
+  "method_mapping": {
+    "before_ordinary_methods": 43,
+    "after_ordinary_methods": 33,
+    "framework_ordinary_methods": 10,
+    "moved_before_signatures": [
+      "emptyFrameworkDirectory()",
+      "getAndroidFrameworkResourcesAsStream()",
+      "getFrameworkApk(int,String)",
+      "getFrameworkDirectory()",
+      "installFramework(File)",
+      "installFramework(File,String)",
+      "listFrameworkDirectory()",
+      "publicizeResources(File)",
+      "publicizeResources(byte[])",
+      "publicizeResources(byte[],FlagsOffset[])"
+    ],
+    "framework_after_signatures": [
+      "emptyFrameworkDirectory()",
+      "getAndroidFrameworkResourcesAsStream()",
+      "getFrameworkApk(int,String)",
+      "getFrameworkDirectory()",
+      "installFramework(File)",
+      "installFramework(File,String)",
+      "listFrameworkDirectory()",
+      "publicizeResources(File)",
+      "publicizeResources(byte[])",
+      "publicizeResources(byte[],ARSCDecoder.FlagsOffset[])"
+    ],
+    "qualification_note": "Framework uses ARSCDecoder.FlagsOffset where the original imports FlagsOffset. Same nested type, checked source imports.",
+    "classsplitter_has_group_containing_all_moved_methods": false
+  },
+  "mismatch_example_summary": {
+    "missing_call_occurrences": 563,
+    "examples": [
+      "getDatabaseDialect(String): 18 reference equalsIgnoreCase calls absent",
+      "setUUID(String): Config fields attributed to MapperHelper",
+      "processMap(Map,List<ResultMapping>): local cameHumpMap wrongly counted as field"
+    ]
+  },
+  "original_evidence_sha256": {
+    "evidence/metrics-before/class.csv": "e30470d570afce31c4d4e63d0472c6fefd4aa7fb86d8f91c16c284453b1b2e49",
+    "evidence/metrics-after/class.csv": "5bc6ef596bd19616a16b4aacbe6a8e52e7d2ef29bb14ffee74369f5b62a77df2",
+    "ck_pristine_20261104/class.csv": "5bc6ef596bd19616a16b4aacbe6a8e52e7d2ef29bb14ffee74369f5b62a77df2",
+    "ck_cleanup_20261104/class.csv": "5d44a64fe8d16389e8c2db7714d188dd014b33887348ffa9afd1cb7bdf575fd2",
+    "evidence/baseline_xml.zip": "cb0529e4d9e6e046b3eee45c4a8a151be5c5c3c3819a9600943b2559e994cf0a",
+    "evidence/cleanup_xml.zip": "68b11b1fc7a2a2d458fa634e0ac11f7614051d87af1be0216e92308c21e6f939",
+    "evidence/mapper_members_v2_20261104_164526_337995/matched_member_comparison.csv": "6147bc9641b084760a0122fd066a98c4bc844b9dea850bf028de187fbe3f1240",
+    "verified/testcases.csv": "cab795f671ee340433d5b6d865cdabee49256bf4389d7a8e53f20bfe143a84ac",
+    "cleanup.patch": "a510830874df6cd18cd948f6d6e3998091800082f0bd62564c216af8eb2dbd9b"
+  },
+  "limitations": [
+    "Only one of three planned external cases was studied",
+    "Extractor calls and field visits failed feature-equivalence validation; transfer scores are inconclusive",
+    "Full XML, CK method/class tables, candidate partitions, logs and original scripts are private archive evidence",
+    "Historical before/after CK commands and JAR provenance are incomplete",
+    "Original algorithm producing commit and dirty status were not captured; retrospective v4 rerun differs by one field assignment despite identical displayed scores"
+  ],
+  "historical_before_tests": {
+    "commit": "9c495cae295dbff3aab378da4a889d8b926f081a",
+    "command": ".\\gradlew.bat :brut.apktool:apktool-lib:test --rerun-tasks --no-daemon --console=plain",
+    "exit_code": 0,
+    "build": "SUCCESSFUL",
+    "executed_tasks": 11,
+    "xml_files": 42,
+    "tests": 176,
+    "passed": 175,
+    "skipped": 1,
+    "failures": 0,
+    "errors": 0,
+    "tracked_checkout_clean_after": true,
+    "historical_after_testcase_identity_outcome_differences": 0,
+    "original_xml_zip_sha256": "6890ce255b926f60a0ce262a5e15794ca62a8c32ed71b6b1837fa1c3bc1b7813"
+  },
+  "upstream_context": {
+    "same_field_deletion": "ab6f1b416e0a3f21dea6853bd26bfe672cae12f7",
+    "later_extraction": "a7e2e3e5e10ad223764cdac8c23cb9ee189c569f",
+    "later_extraction_note": "AaptInvoker and ResourcesDecoder introduced; AndrolibResources removed; other source and tests also changed"
+  },
+  "algorithm_execution_provenance": {
+    "original_results": "The comparison JSONs omit producing Git commit and dirty status. Exact original execution states are unknown.",
+    "contemporaneous_snapshot": {
+      "head": "3d2f160779fad45a42d8d37e3eba971003b0540c",
+      "dirty": true,
+      "evidence": "previous private archive initial_group_head.txt and initial_group_status.txt"
+    },
+    "retrospective_rerun_code_revision": "4e189b5e0cbcc776150d70046edc2f443847edf3",
+    "committed_runner_blob": "85a9509106d8dcdab62b2c165fc88f78d42d4c0d",
+    "committed_wrapper_blob": "2560b7013678c862210418280630eb007bcb47e6",
+    "runner": "extension/apktool/run_apktool.py",
+    "wrapper": "extension/apktool/publication/rerun_exploratory.py",
+    "rerun_group_worktree_dirty": true,
+    "isolated_harness_from_committed_code_and_archived_inputs": true,
+    "rerun_environment": {
+      "python": "3.13.9",
+      "numpy": "2.4.1",
+      "pandas": "3.0.0",
+      "scipy": "1.17.0",
+      "scikit-learn": "1.8.0",
+      "networkx": "3.6.1",
+      "matplotlib": "3.10.8",
+      "sentence-transformers": "5.3.0",
+      "torch": "2.12.0.dev20260225+cu130"
+    },
+    "rerun_results": {
+      "v2": {
+        "input_hashes": {
+          "apktool_classsplitter_candidate_v2.csv": "73d3ed26862dd1087559ff3c6a5546115c154b64d943eb17c128e84dca191a3f",
+          "apktool_ground_truth.csv": "7b6b8819b6930a1dc28e6d32cb9e4e6b2f30917827bc3e45baac55bb725d6ab5"
+        },
+        "saved_sha256": "3f7bb4027fd64f1c4540eb91e79cd191c0a542e478ab744faecc8452fc5d040f",
+        "rerun_sha256": "3f7bb4027fd64f1c4540eb91e79cd191c0a542e478ab744faecc8452fc5d040f",
+        "byte_identical": true,
+        "scores_identical": true
+      },
+      "v3": {
+        "input_hashes": {
+          "apktool_classsplitter_candidate_v3.csv": "b4ca274228d614213268865b96f545aba21b51924d62710a257dba30ebec2d13",
+          "apktool_ground_truth.csv": "7b6b8819b6930a1dc28e6d32cb9e4e6b2f30917827bc3e45baac55bb725d6ab5"
+        },
+        "saved_sha256": "c99f37909177ba48aa2318307aaf3c7cee2fb8a002f7f37406764e19198ef556",
+        "rerun_sha256": "c99f37909177ba48aa2318307aaf3c7cee2fb8a002f7f37406764e19198ef556",
+        "byte_identical": true,
+        "scores_identical": true
+      },
+      "v4": {
+        "input_hashes": {
+          "apktool_classsplitter_candidate_v4.csv": "2221aff0197ceaa70b746ee4452a04862a4e1752baea4d16e8614a222d126c35",
+          "apktool_ground_truth.csv": "7b6b8819b6930a1dc28e6d32cb9e4e6b2f30917827bc3e45baac55bb725d6ab5"
+        },
+        "saved_sha256": "0f8e80545971afaa1e03b759900a70d817e112e98261eca294d4f0163a6626e9",
+        "rerun_sha256": "a5e2278e15a411c512d345cc6762ba36ccf3fe2c3d49a1364ac1d90950edc918",
+        "byte_identical": false,
+        "scores_identical": true
+      },
+      "v4_hashseed0": {
+        "input_hashes": {
+          "apktool_classsplitter_candidate_v4.csv": "2221aff0197ceaa70b746ee4452a04862a4e1752baea4d16e8614a222d126c35",
+          "apktool_ground_truth.csv": "7b6b8819b6930a1dc28e6d32cb9e4e6b2f30917827bc3e45baac55bb725d6ab5"
+        },
+        "saved_sha256": "0f8e80545971afaa1e03b759900a70d817e112e98261eca294d4f0163a6626e9",
+        "rerun_sha256": "a5e2278e15a411c512d345cc6762ba36ccf3fe2c3d49a1364ac1d90950edc918",
+        "byte_identical": false,
+        "scores_identical": true
+      }
+    },
+    "v4_partition_difference": "After allowing group-label reversal, mFramework (member index 5) is assigned to the other ClassSplitter group; displayed scores match. Cause unestablished."
+  },
+  "saved_v4_group_indices": {
+    "bavota": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    ],
+    "classsplitter": [
+      [
+        2,
+        3,
+        5,
+        15,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      [
+        1,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    ],
+    "classsplitter_without_position": [
+      [
+        7,
+        8,
+        16,
+        17,
+        27,
+        33,
+        34,
+        39,
+        40,
+        51,
+        58
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        29,
+        30,
+        35,
+        36,
+        37,
+        38,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        52,
+        56,
+        57
+      ],
+      [
+        28
+      ],
+      [
+        31
+      ],
+      [
+        32
+      ],
+      [
+        41
+      ],
+      [
+        53,
+        54,
+        55
+      ],
+      [
+        59
+      ],
+      [
+        60
+      ]
+    ]
+  },
+  "later_resources_decoder_overlap": {
+    "direct_name_matches_in_saved_classsplitter_first_group": [
+      "decodeManifest",
+      "adjustPackageManifest",
+      "decodeManifestWithResources",
+      "getResFileDecoder",
+      "getManifestFileDecoder",
+      "getResXmlSerializer",
+      "generateValuesFile",
+      "generatePublicXml"
+    ],
+    "interpretation": "Names overlap, but signatures and surrounding design changed; the group is not an exact prediction of the later extraction."
+  }
+}
