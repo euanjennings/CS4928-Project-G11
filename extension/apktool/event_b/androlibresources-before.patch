@@ -1,0 +1,32 @@
+diff --git a/brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java b/brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java
+index 48039f7..1d71451 100644
+--- a/brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java
++++ b/brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java
+@@ -875,6 +875,27 @@ final public class AndrolibResources {
+             }
+         }
+     }
++    public String getFrameworkCacheSummary() throws AndrolibException {
++        File dir = getFrameworkDirectory();
++        File[] files = dir.listFiles();
++
++        if (files == null) {
++            throw new AndrolibException("Cannot list framework directory: " + dir);
++        }
++
++        int apkCount = 0;
++        long totalBytes = 0;
++
++        for (File file : files) {
++            if (file.isFile() && file.getName().endsWith(".apk")) {
++                apkCount++;
++                totalBytes += file.length();
++            }
++        }
++
++        return apkCount + " APK files, " + totalBytes + " bytes";
++    }
++
+ 
+     public void listFrameworkDirectory() throws AndrolibException {
+         File dir = getFrameworkDirectory();

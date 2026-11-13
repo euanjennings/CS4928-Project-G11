@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="brut.androlib.res.FrameworkCacheSummaryTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-13T06:36:40" hostname="DESKTOP-318LTB6" time="0.082">
+  <properties/>
+  <testcase name="ignoresDirectoriesNamedApk" classname="brut.androlib.res.FrameworkCacheSummaryTest" time="0.042"/>
+  <testcase name="countsApkFilesAndSizes" classname="brut.androlib.res.FrameworkCacheSummaryTest" time="0.02"/>
+  <testcase name="emptyDirectory" classname="brut.androlib.res.FrameworkCacheSummaryTest" time="0.006"/>
+  <testcase name="ignoresNonApkFiles" classname="brut.androlib.res.FrameworkCacheSummaryTest" time="0.012"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
