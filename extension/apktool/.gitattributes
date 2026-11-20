@@ -7,3 +7,5 @@ results/apktool_similarity_cache.json -text
 results_v3/apktool_similarity_cache.json -text
 results_v4/apktool_similarity_cache.json -text
 publication/cleanup.patch -text
+# Event B follow-up runs: commit harness output exactly as produced.
+event_b/followup/run_*/** -text
