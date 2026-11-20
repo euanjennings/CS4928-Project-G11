@@ -31,7 +31,7 @@ The v2-to-v3 candidate changes 22 `inner invocations` cells; v3-to-v4 changes 60
 
 The historical extraction is the diff between the first two Apktool revisions. The [cleanup patch](publication/cleanup.patch) applies to the after revision and removes only its unused `AndrolibResources.mFrameworkDirectory` declaration and a blank line. Apktool maintainers had already made the identical deletion in a larger change, so the group's independently implemented and tested cleanup is convergent rather than novel.
 
-From a fresh Group 11 clone with the scientific packages in `requirements.txt` and Java available, run:
+From a fresh Group 11 clone with the scientific packages in `requirements.txt` and Java available, run the commands below. The MapperHelper member-identity diagnostic also needs `javalang` (`pip install -r extension/apktool/requirements.txt`); it is kept out of the root `requirements.txt` because that file is hash-locked by Event A's [input manifest](../event_a/input_manifest.json).
 
 ```powershell
 python extension/apktool/verify_evidence.py

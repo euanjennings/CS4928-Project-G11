@@ -1,0 +1,9 @@
+# Preserve checksummed scientific inputs and caches byte-for-byte.
+# Kept here rather than in the root .gitattributes, which is hash-locked
+# by Event A's evidence manifest (results/event_a/evidence_sha256.json).
+/*.csv -text
+publication/inputs/*.csv -text
+results/apktool_similarity_cache.json -text
+results_v3/apktool_similarity_cache.json -text
+results_v4/apktool_similarity_cache.json -text
+publication/cleanup.patch -text
