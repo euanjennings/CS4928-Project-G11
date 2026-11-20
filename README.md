@@ -14,7 +14,7 @@ Questions are shortened here; the frozen wording is in the [preregistration](doc
 | **RQ2, transfer:** Does the advantage transfer to Extract Class refactorings from Java projects outside the authors' dataset? | **Inconclusive.** One external case (Apktool) was studied instead of the planned three, and its feature extractor failed equivalence validation, so the Apktool algorithm scores are exploratory only. | [Case study §1–3](design/APKTOOL_CASE_STUDY.md), [preregistration amendment](docs/PREREGISTRATION.md), D2–D3 in [deviations](docs/DEVIATIONS.md) |
 | **RQ2, design decision (M4):** What does this imply for a concrete Extract Class decision in that system? | Removed the unused `mFrameworkDirectory` field left in `AndrolibResources` after the developers' Framework extraction. 176 tests with identical outcomes before and after; LCOM* 0.8971 → 0.8898, fields 15 → 14 and LOC 613 → 612; methods (35), CBO (35) and WMC (150) unchanged. The maintainers made the same deletion themselves, so this is convergent, not novel. | [Case study §4](design/APKTOOL_CASE_STUDY.md), [cleanup patch](extension/apktool/publication/cleanup.patch), D4–D6 |
 | **Event A:** Does the M2 advantage hold on two held-out cases from the authors' dataset? | **No.** ClassSplitter 0.3839 vs Bavota 0.4386, against a prediction of a smaller positive gap. | [Event A summary](EVENT_A.md), [prediction](extension/event_a/PREDICTION.md), [report](results/event_a/REPORT.md) |
-| **Event B:** Is adding a framework-cache statistics feature easier after the Framework extraction? | **Partly supports keeping Framework.** One production file changed in both versions; the feature sits in `Framework` instead of growing `AndrolibResources`. Prediction and results were committed together (D8). | [Event B](extension/apktool/event_b/README.md) |
+| **Event B:** Is adding a framework-cache statistics feature easier after the Framework extraction? | **Partly supports keeping Framework.** One production file changed in both versions; the feature sits in `Framework` instead of growing `AndrolibResources`. Prediction and results were committed together (D8). A retrospective follow-up with matched patches and the full test suite found the same size of change in both designs (+1 method, +19 LOC, +6 WMC), no change in test outcomes, and no effect from our own M4 cleanup. | [Event B](extension/apktool/event_b/README.md), [follow-up (§8)](extension/apktool/event_b/README.md), D9 |
 
 Every change we have made to upstream code is shown by:
 
@@ -30,8 +30,8 @@ git diff UPSTREAM_IMPORT -- upstream/
 | `repro/` | RQ1 reproduction runner (`run_repro.py`). |
 | `results/` | RQ1 (M2) and Event A raw outputs and reports. Commit these; they are the evidence. |
 | `extension/event_a/` | Event A prediction, cases and scripts, including `verify_results.py`. |
-| `extension/apktool/` | RQ2 Apktool case: ground truth, scripts, compact results and `verify_evidence.py`. |
-| `extension/apktool/event_b/` | Event B patches, tests and JUnit results. |
+| `extension/apktool/` | RQ2 Apktool case: ground truth, scripts, compact results, `verify_evidence.py` and the raw 4–5 Nov evidence in `apktool_raw_archive.zip`. |
+| `extension/apktool/event_b/` | Event B patches, tests and JUnit results; `followup/` holds the retrospective follow-up harness and its run. |
 | `design/` | The M4 design decision ([Apktool case study](design/APKTOOL_CASE_STUDY.md)). |
 | `docs/` | [Preregistration](docs/PREREGISTRATION.md), [deviations log](docs/DEVIATIONS.md) and [AI-use log](docs/AI_USE.md). |
 
@@ -50,7 +50,7 @@ git diff UPSTREAM_IMPORT -- upstream/
 1. **Install**
    - Git.
    - Python 3.12.
-   - A JDK, e.g. Eclipse Temurin. Check that `java -version` works in a *new* terminal, because upstream shells out to `java`. We planned JDK 21 but ran M2 with Java 23.0.2 and Event A and Event B with Java 17 (see D7); the Apktool work needs Java 17.
+   - A JDK, e.g. Eclipse Temurin. Check that `java -version` works in a *new* terminal, because upstream shells out to `java`. We planned JDK 21 but ran M2 with Java 23.0.2, Event A and Event B with Java 17, and one 5 Nov Apktool test run with JDK 21 (see D7 and D9). The Event B follow-up harness needs Java 17.
 2. **Clone and create the environment**
 
    ```bash
