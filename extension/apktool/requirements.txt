@@ -1,0 +1,1 @@
+javalang==0.13.0                # MapperHelper member-identity validation diagnostic (RQ2)
