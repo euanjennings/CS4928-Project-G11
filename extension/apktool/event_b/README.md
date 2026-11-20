@@ -164,6 +164,6 @@ The new method itself has 19 LOC, WMC 6 and CBO 2 in every version. It uses no f
 
 ### Verdict on the Week 9 decision
 
-**Partly supported, unchanged from section 7.** With matched patches and the full test suite, both designs needed the same amount of change and kept all existing behaviour. The extraction's benefit here is placement: the feature sits next to the method it depends on, in a smaller class, instead of enlarging `AndrolibResources`. Our own M4 cleanup had no measurable effect on this feature.
+**Partly supported, unchanged from section 7.** With matched patches and the full test suite, both designs needed the same amount of change and kept all existing test outcomes. The extraction's benefit here is placement: the feature sits next to the method it depends on, in a smaller class, instead of enlarging `AndrolibResources`. Our own M4 cleanup had no measurable effect on this feature.
 
 **What this does not show:** It covers one small feature in one environment (Windows, Java 17). CK measures structure, not effort or readability, and LCOM* is field-based. The feature is still not connected to Apktool's command-line interface, and performance was not tested.
