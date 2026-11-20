@@ -1,0 +1,441 @@
+{
+  "purpose": "Retrospective Event B follow-up; not the original Event B experiment (660e4aa).",
+  "started_utc": "2026-11-20T17:53:26.955842+00:00",
+  "g11_commit": "db385e60e125de804ea0cd609de5b2501b05d905",
+  "g11_harness_inputs_sha256": {
+    "extension/apktool/event_b/followup/run_event_b_followup.py": "0bae47e5407a93e7b761ef3210218bb4002923b93b9a80697a475283ff11ae3a",
+    "extension/apktool/publication/cleanup.patch": "a510830874df6cd18cd948f6d6e3998091800082f0bd62564c216af8eb2dbd9b",
+    "extension/apktool/event_b/followup/framework-after-v2.patch": "05775b9c050608faf91aacb22545b7a278c5391094b3c6dcc97e03bd2b8bb0b2",
+    "extension/apktool/event_b/followup/androlibresources-before-v2.patch": "4e0301ab48fa476aa22c92ed1f49ffd9711da48e560d3e12b04669d52012a8be",
+    "extension/apktool/event_b/followup/FrameworkCacheSummaryTest.java": "f114a065f4b86d4fa29277704bc27ce94fda1b80885566918b1ab4b9b3179ec6",
+    "extension/apktool/event_b/followup/AndrolibResourcesCacheSummaryTest.java": "7e17a3f44c316761767c97e585971266faef4866e0e489461a122fd4d1994eac"
+  },
+  "ck_jar_sha256": "542dd253c967ec6fc4b8477c6bc8ff1699b007201c717788cd538c4887a31535",
+  "ck_options": [
+    "false",
+    "0",
+    "false"
+  ],
+  "states": {
+    "hist_before": {
+      "apktool_commit": "9c495cae295dbff3aab378da4a889d8b926f081a",
+      "patches": [],
+      "added_test": null,
+      "changed_source_sha256": {},
+      "ck": {
+        "command": [
+          "java",
+          "-jar",
+          "ck-0.7.1-SNAPSHOT-jar-with-dependencies.jar",
+          "C:\\t\\w\\hist_before_cksrc",
+          "false",
+          "0",
+          "false",
+          "C:\\t\\run_20261120T175326Z\\hist_before\\ck"
+        ],
+        "java_files": 144,
+        "exit_code": 0,
+        "class_rows": 165,
+        "classes": {
+          "brut.androlib.res.AndrolibResources": {
+            "totalMethodsQty": "45",
+            "totalFieldsQty": "15",
+            "loc": "784",
+            "cbo": "38",
+            "wmc": "194",
+            "lcom*": "0.9081481"
+          }
+        },
+        "class_csv_sha256": "e42a44fb42e4388085ab2401be8ed7855949ad77cb12b04fc51b37b88c93d5f1"
+      },
+      "tests": {
+        "command": [
+          "C:\\t\\w\\hist_before\\gradlew.bat",
+          ":brut.apktool:apktool-lib:test",
+          "--rerun-tasks",
+          "--no-daemon",
+          "--console=plain"
+        ],
+        "exit_code": 0,
+        "existing_tests": {
+          "tests": 176,
+          "passed": 175,
+          "failed": 0,
+          "error": 0,
+          "skipped": 1
+        },
+        "new_tests": {
+          "tests": 0,
+          "passed": 0,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0
+        }
+      }
+    },
+    "hist_before_feature": {
+      "apktool_commit": "9c495cae295dbff3aab378da4a889d8b926f081a",
+      "patches": [
+        {
+          "file": "extension/apktool/event_b/followup/androlibresources-before-v2.patch",
+          "sha256": "4e0301ab48fa476aa22c92ed1f49ffd9711da48e560d3e12b04669d52012a8be"
+        }
+      ],
+      "added_test": {
+        "file": "extension/apktool/event_b/followup/AndrolibResourcesCacheSummaryTest.java",
+        "sha256": "7e17a3f44c316761767c97e585971266faef4866e0e489461a122fd4d1994eac"
+      },
+      "changed_source_sha256": {
+        "brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java": "76b4b8de6f7bd0e76a452711c28b5d0d15d8b136670f0e7d48bab7ef808aeda0",
+        "brut.apktool/apktool-lib/src/test/java/brut/androlib/res/AndrolibResourcesCacheSummaryTest.java": "7e17a3f44c316761767c97e585971266faef4866e0e489461a122fd4d1994eac"
+      },
+      "ck": {
+        "command": [
+          "java",
+          "-jar",
+          "ck-0.7.1-SNAPSHOT-jar-with-dependencies.jar",
+          "C:\\t\\w\\hist_before_feature_cksrc",
+          "false",
+          "0",
+          "false",
+          "C:\\t\\run_20261120T175326Z\\hist_before_feature\\ck"
+        ],
+        "java_files": 145,
+        "exit_code": 0,
+        "class_rows": 166,
+        "classes": {
+          "brut.androlib.res.AndrolibResources": {
+            "totalMethodsQty": "46",
+            "totalFieldsQty": "15",
+            "loc": "803",
+            "cbo": "38",
+            "wmc": "200",
+            "lcom*": "0.9101449"
+          }
+        },
+        "class_csv_sha256": "0097fa32699b388fba1b2c87efb7fc9b5fc80f84f8abc4cc8e670b27495fa186"
+      },
+      "tests": {
+        "command": [
+          "C:\\t\\w\\hist_before_feature\\gradlew.bat",
+          ":brut.apktool:apktool-lib:test",
+          "--rerun-tasks",
+          "--no-daemon",
+          "--console=plain"
+        ],
+        "exit_code": 0,
+        "existing_tests": {
+          "tests": 176,
+          "passed": 175,
+          "failed": 0,
+          "error": 0,
+          "skipped": 1
+        },
+        "new_tests": {
+          "tests": 5,
+          "passed": 5,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0
+        }
+      }
+    },
+    "pre_m4": {
+      "apktool_commit": "40d427e5bdf5c204c58022cef3b369f34e19b043",
+      "patches": [],
+      "added_test": null,
+      "changed_source_sha256": {},
+      "ck": {
+        "command": [
+          "java",
+          "-jar",
+          "ck-0.7.1-SNAPSHOT-jar-with-dependencies.jar",
+          "C:\\t\\w\\pre_m4_cksrc",
+          "false",
+          "0",
+          "false",
+          "C:\\t\\run_20261120T175326Z\\pre_m4\\ck"
+        ],
+        "java_files": 145,
+        "exit_code": 0,
+        "class_rows": 166,
+        "classes": {
+          "brut.androlib.res.AndrolibResources": {
+            "totalMethodsQty": "35",
+            "totalFieldsQty": "15",
+            "loc": "613",
+            "cbo": "35",
+            "wmc": "150",
+            "lcom*": "0.8971428"
+          },
+          "brut.androlib.res.Framework": {
+            "totalMethodsQty": "11",
+            "totalFieldsQty": "3",
+            "loc": "180",
+            "cbo": "10",
+            "wmc": "45",
+            "lcom*": "0.72727275"
+          }
+        },
+        "class_csv_sha256": "7ba71e83507d34f222367c92647b45fb43211baf66f323b19c7e0460544135cb"
+      },
+      "tests": {
+        "command": [
+          "C:\\t\\w\\pre_m4\\gradlew.bat",
+          ":brut.apktool:apktool-lib:test",
+          "--rerun-tasks",
+          "--no-daemon",
+          "--console=plain"
+        ],
+        "exit_code": 0,
+        "existing_tests": {
+          "tests": 176,
+          "passed": 175,
+          "failed": 0,
+          "error": 0,
+          "skipped": 1
+        },
+        "new_tests": {
+          "tests": 0,
+          "passed": 0,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0
+        }
+      }
+    },
+    "pre_m4_feature": {
+      "apktool_commit": "40d427e5bdf5c204c58022cef3b369f34e19b043",
+      "patches": [
+        {
+          "file": "extension/apktool/event_b/followup/framework-after-v2.patch",
+          "sha256": "05775b9c050608faf91aacb22545b7a278c5391094b3c6dcc97e03bd2b8bb0b2"
+        }
+      ],
+      "added_test": {
+        "file": "extension/apktool/event_b/followup/FrameworkCacheSummaryTest.java",
+        "sha256": "f114a065f4b86d4fa29277704bc27ce94fda1b80885566918b1ab4b9b3179ec6"
+      },
+      "changed_source_sha256": {
+        "brut.apktool/apktool-lib/src/main/java/brut/androlib/res/Framework.java": "f20cb5d90e45ba207a20c2776a1fa220167f0f0f26c77a190ff1eae603462498",
+        "brut.apktool/apktool-lib/src/test/java/brut/androlib/res/FrameworkCacheSummaryTest.java": "f114a065f4b86d4fa29277704bc27ce94fda1b80885566918b1ab4b9b3179ec6"
+      },
+      "ck": {
+        "command": [
+          "java",
+          "-jar",
+          "ck-0.7.1-SNAPSHOT-jar-with-dependencies.jar",
+          "C:\\t\\w\\pre_m4_feature_cksrc",
+          "false",
+          "0",
+          "false",
+          "C:\\t\\run_20261120T175326Z\\pre_m4_feature\\ck"
+        ],
+        "java_files": 146,
+        "exit_code": 0,
+        "class_rows": 167,
+        "classes": {
+          "brut.androlib.res.AndrolibResources": {
+            "totalMethodsQty": "35",
+            "totalFieldsQty": "15",
+            "loc": "613",
+            "cbo": "35",
+            "wmc": "150",
+            "lcom*": "0.8971428"
+          },
+          "brut.androlib.res.Framework": {
+            "totalMethodsQty": "12",
+            "totalFieldsQty": "3",
+            "loc": "199",
+            "cbo": "10",
+            "wmc": "51",
+            "lcom*": "0.75"
+          }
+        },
+        "class_csv_sha256": "3693f9cad9bf897fe43cb2fc2273ad47d0395d6da3059fe42a5b0e61cb29de47"
+      },
+      "tests": {
+        "command": [
+          "C:\\t\\w\\pre_m4_feature\\gradlew.bat",
+          ":brut.apktool:apktool-lib:test",
+          "--rerun-tasks",
+          "--no-daemon",
+          "--console=plain"
+        ],
+        "exit_code": 0,
+        "existing_tests": {
+          "tests": 176,
+          "passed": 175,
+          "failed": 0,
+          "error": 0,
+          "skipped": 1
+        },
+        "new_tests": {
+          "tests": 5,
+          "passed": 5,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0
+        }
+      }
+    },
+    "m4": {
+      "apktool_commit": "40d427e5bdf5c204c58022cef3b369f34e19b043",
+      "patches": [
+        {
+          "file": "extension/apktool/publication/cleanup.patch",
+          "sha256": "a510830874df6cd18cd948f6d6e3998091800082f0bd62564c216af8eb2dbd9b"
+        }
+      ],
+      "added_test": null,
+      "changed_source_sha256": {
+        "brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java": "9edc6e06dd63b046798d502c58e2f15d54fdb1f77384e126f745b45eaca9cd0b"
+      },
+      "ck": {
+        "command": [
+          "java",
+          "-jar",
+          "ck-0.7.1-SNAPSHOT-jar-with-dependencies.jar",
+          "C:\\t\\w\\m4_cksrc",
+          "false",
+          "0",
+          "false",
+          "C:\\t\\run_20261120T175326Z\\m4\\ck"
+        ],
+        "java_files": 145,
+        "exit_code": 0,
+        "class_rows": 166,
+        "classes": {
+          "brut.androlib.res.AndrolibResources": {
+            "totalMethodsQty": "35",
+            "totalFieldsQty": "14",
+            "loc": "612",
+            "cbo": "35",
+            "wmc": "150",
+            "lcom*": "0.8897959"
+          },
+          "brut.androlib.res.Framework": {
+            "totalMethodsQty": "11",
+            "totalFieldsQty": "3",
+            "loc": "180",
+            "cbo": "10",
+            "wmc": "45",
+            "lcom*": "0.72727275"
+          }
+        },
+        "class_csv_sha256": "95c5e4faf66dbeff94e2e16a6c1df6ef079e442b8d3f3a3efa9c493006306e1d"
+      },
+      "tests": {
+        "command": [
+          "C:\\t\\w\\m4\\gradlew.bat",
+          ":brut.apktool:apktool-lib:test",
+          "--rerun-tasks",
+          "--no-daemon",
+          "--console=plain"
+        ],
+        "exit_code": 0,
+        "existing_tests": {
+          "tests": 176,
+          "passed": 175,
+          "failed": 0,
+          "error": 0,
+          "skipped": 1
+        },
+        "new_tests": {
+          "tests": 0,
+          "passed": 0,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0
+        }
+      }
+    },
+    "m4_feature": {
+      "apktool_commit": "40d427e5bdf5c204c58022cef3b369f34e19b043",
+      "patches": [
+        {
+          "file": "extension/apktool/publication/cleanup.patch",
+          "sha256": "a510830874df6cd18cd948f6d6e3998091800082f0bd62564c216af8eb2dbd9b"
+        },
+        {
+          "file": "extension/apktool/event_b/followup/framework-after-v2.patch",
+          "sha256": "05775b9c050608faf91aacb22545b7a278c5391094b3c6dcc97e03bd2b8bb0b2"
+        }
+      ],
+      "added_test": {
+        "file": "extension/apktool/event_b/followup/FrameworkCacheSummaryTest.java",
+        "sha256": "f114a065f4b86d4fa29277704bc27ce94fda1b80885566918b1ab4b9b3179ec6"
+      },
+      "changed_source_sha256": {
+        "brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java": "9edc6e06dd63b046798d502c58e2f15d54fdb1f77384e126f745b45eaca9cd0b",
+        "brut.apktool/apktool-lib/src/main/java/brut/androlib/res/Framework.java": "f20cb5d90e45ba207a20c2776a1fa220167f0f0f26c77a190ff1eae603462498",
+        "brut.apktool/apktool-lib/src/test/java/brut/androlib/res/FrameworkCacheSummaryTest.java": "f114a065f4b86d4fa29277704bc27ce94fda1b80885566918b1ab4b9b3179ec6"
+      },
+      "ck": {
+        "command": [
+          "java",
+          "-jar",
+          "ck-0.7.1-SNAPSHOT-jar-with-dependencies.jar",
+          "C:\\t\\w\\m4_feature_cksrc",
+          "false",
+          "0",
+          "false",
+          "C:\\t\\run_20261120T175326Z\\m4_feature\\ck"
+        ],
+        "java_files": 146,
+        "exit_code": 0,
+        "class_rows": 167,
+        "classes": {
+          "brut.androlib.res.AndrolibResources": {
+            "totalMethodsQty": "35",
+            "totalFieldsQty": "14",
+            "loc": "612",
+            "cbo": "35",
+            "wmc": "150",
+            "lcom*": "0.8897959"
+          },
+          "brut.androlib.res.Framework": {
+            "totalMethodsQty": "12",
+            "totalFieldsQty": "3",
+            "loc": "199",
+            "cbo": "10",
+            "wmc": "51",
+            "lcom*": "0.75"
+          }
+        },
+        "class_csv_sha256": "0807275f89f2a6b3ed76dc18b5d9dbc51a2a7c51a3d30c7f47d41231506ab80a"
+      },
+      "tests": {
+        "command": [
+          "C:\\t\\w\\m4_feature\\gradlew.bat",
+          ":brut.apktool:apktool-lib:test",
+          "--rerun-tasks",
+          "--no-daemon",
+          "--console=plain"
+        ],
+        "exit_code": 0,
+        "existing_tests": {
+          "tests": 176,
+          "passed": 175,
+          "failed": 0,
+          "error": 0,
+          "skipped": 1
+        },
+        "new_tests": {
+          "tests": 5,
+          "passed": 5,
+          "failed": 0,
+          "error": 0,
+          "skipped": 0
+        }
+      }
+    }
+  },
+  "environment": {
+    "java_version": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment Temurin-17.0.20.1+1 (build 17.0.20.1+1)\nOpenJDK 64-Bit Server VM Temurin-17.0.20.1+1 (build 17.0.20.1+1, mixed mode, sharing)",
+    "gradle_version": "------------------------------------------------------------\nGradle 8.1.1\n------------------------------------------------------------\n\nBuild time:   2023-04-21 12:31:26 UTC\nRevision:     1cf537a851c635c364a4214885f8b9798051175b\n\nKotlin:       1.8.10\nGroovy:       3.0.15\nAnt:          Apache Ant(TM) version 1.10.11 compiled on July 10 2021\nJVM:          17.0.20.1 (Eclipse Adoptium 17.0.20.1+1)\nOS:           Windows 11 10.0 amd64",
+    "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26300-SP0"
+  },
+  "finished_utc": "2026-11-20T18:09:55.647043+00:00"
+}
