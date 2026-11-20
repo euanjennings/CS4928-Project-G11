@@ -11,6 +11,7 @@ upstream/Implementation/experienments/example.rsf
 
 # IDEs / OS
 .idea/
+*.iml
 .vscode/*
 !.vscode/extensions.json
 .DS_Store
