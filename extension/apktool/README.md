@@ -15,9 +15,9 @@ The original algorithm runs used **declaration-only** ground truth: ten methods 
 | [RESULTS_SUMMARY.json](RESULTS_SUMMARY.json) | Saved scores and v4 partitions, input/cache/result hashes, retrospective rerun outcomes, validation/test counts and CK metrics. |
 | [verify_evidence.py](verify_evidence.py) | Read-only checks of published inputs, caches and results; optional deeper comparison with preserved raw evidence. |
 | [cleanup.patch](publication/cleanup.patch), [run_ck_pair.py](publication/run_ck_pair.py) | Exact one-field cleanup and matched CK reproduction from external source. |
-| [mapper_validation_members_v2.py](publication/scripts_original/mapper_validation_members_v2.py) | Targeted MapperHelper diagnostic requiring `apktool_input_extractor_v2.py` and `apktool_input_extractor.py` outside the repository; not independently runnable from a fresh clone. |
+| [mapper_validation_members_v2.py](publication/scripts_original/mapper_validation_members_v2.py) | Targeted MapperHelper diagnostic. The two extractors it imports, `apktool_input_extractor_v2.py` and `apktool_input_extractor.py`, are in the [raw archive](apktool_raw_archive.zip) under `extension/apktool/publication/scripts_original/`, and their SHA-256 hashes match those recorded in the diagnostic's saved metadata. The script expects them in a `Week_9` parent folder, so it is not runnable directly from a fresh clone. |
 
-The v2-to-v3 candidate changes 22 `inner invocations` cells; v3-to-v4 changes 60 cells across calls and invocation columns. They are different scientific inputs, not copies distinguished only by line endings. Earlier duplicate ground-truth and v2 candidate copies are preserved outside this repository; the committed ground truth differs from its historical CRLF representation only in LF line endings. The semantic-field truth is a separate retrospective alternative and is not substituted into the algorithm inputs.
+The v2-to-v3 candidate changes 22 `inner invocations` cells; v3-to-v4 changes 60 cells across calls and invocation columns. They are different scientific inputs, not copies distinguished only by line endings. Earlier duplicate ground-truth and v2 candidate copies are preserved in the [raw archive](apktool_raw_archive.zip); the committed ground truth differs from its historical CRLF representation only in LF line endings. The semantic-field truth is a separate retrospective alternative and is not substituted into the algorithm inputs.
 
 ## External source and reproduction
 
@@ -42,7 +42,7 @@ python extension/apktool/publication/rerun_exploratory.py --version 4
 
 The wrapper selects the corresponding candidate and cache, uses seed 2026 and `sentence-transformers/all-mpnet-base-v2`, and writes new results under a unique temporary directory. It does not overwrite saved evidence or the Git index. These are **retrospective reproductions**, not the original runs. Under the recorded later environment, v2 and v3 output files reproduced byte-for-byte; v4 scores reproduced but `mFramework` (member 5) changed ClassSplitter group, so its full JSON hash did not match. The cause is unresolved. The original comparison files did not record their producing Git commit or dirty status; a contemporaneous 4 November snapshot was dirty. [RESULTS_SUMMARY.json](RESULTS_SUMMARY.json) distinguishes these facts.
 
-The historical-before forced test run at `9c495cae` succeeded with 176 tests, 175 passes, one skip and no failures or errors. The historical-after baseline had the same testcase identities and outcomes, although test sources changed. The pristine-after versus independent-cleanup comparison also had 176 tests on each side with identical outcomes. Full Gradle logs and XML are preserved outside the repository; concise verified counts are in the [results summary](RESULTS_SUMMARY.json).
+The historical-before forced test run at `9c495cae` succeeded with 176 tests, 175 passes, one skip and no failures or errors. The historical-after baseline had the same testcase identities and outcomes, although test sources changed. The pristine-after versus independent-cleanup comparison also had 176 tests on each side with identical outcomes. Full Gradle logs and XML are in the [raw archive](apktool_raw_archive.zip); concise verified counts are in the [results summary](RESULTS_SUMMARY.json).
 
 To repeat matched CK measurement, build CK at the exact commit with Java 17 and Maven 3.6.1; the successful local build used `mvn -Dmaven.test.skip=true -Dmaven.javadoc.skip=true package`. Then provide a dependency-inclusive JAR and an Apktool clone containing the historical-after revision:
 
@@ -52,4 +52,19 @@ python extension/apktool/publication/run_ck_pair.py --repo "<APKTOOL_REPOSITORY>
 
 This script uses read-only Git archives, 145 tracked Java files, one JAR and options `false 0 false`. It makes fresh private outputs and does not alter a checkout. The matched original runs emitted 166 class rows per side. The small LCOM* decrease after field removal partly follows from the field-based metric calculation; method interactions did not measurably improve.
 
-Full method-level CK tables, testcase XML, diagnostic comparisons and original result JSONs are retained in the separate local archive for extended audit. A fresh clone supports compact evidence checks and exploratory reruns using the published inputs, not full end-to-end reproduction. Exact v4 output reproduction remains a limitation, and no published data repairs the extractor's failed feature-equivalence validation.
+The original 4–5 November files are in [`apktool_raw_archive.zip`](apktool_raw_archive.zip) (101 files, 1.06 MB; SHA-256 `f3f66283c2d83fdd7bba1e8b256d45dfbf75725d3668db1a4b0d73d81b7ce28c`). It contains:
+
+- method- and class-level CK tables for the matched pristine and cleanup runs and for historical before and after, with the D5 CK run manifest;
+- testcase XML (`baseline_xml.zip`, `cleanup_xml.zip` and the 5 November historical-before `successful_test_xml.zip`) with the Gradle logs;
+- both MapperHelper diagnostic comparisons;
+- the original v2/v3/v4 result JSONs and caches, and the 5 November algorithm reruns;
+- the original extractor scripts v1–v4.
+
+Three files from the local archive were left out: `MOVED_FILES_MANIFEST.csv` and `followup_20261105/SUBMISSION_CACHE_MOVE.csv`, which only record local file moves and contain absolute paths from one member's machine, and `extension/apktool/submission/__pycache__/prepare_publication.cpython-310.pyc`, a Python bytecode cache. The verifier uses none of them. To compare the published evidence with the originals, unzip the archive to a new directory and run:
+
+```powershell
+python -c "import zipfile; zipfile.ZipFile('extension/apktool/apktool_raw_archive.zip').extractall('<NEW_DIRECTORY>')"
+python extension/apktool/verify_evidence.py --archive "<NEW_DIRECTORY>"
+```
+
+A fresh clone supports compact evidence checks and exploratory reruns using the published inputs, not full end-to-end reproduction. Exact v4 output reproduction remains a limitation, and no published data repairs the extractor's failed feature-equivalence validation.
