@@ -26,7 +26,7 @@ The external-invocation comparison matches empty representations. It does not te
 
 ## Concrete remaining mismatches
 
-The raw examples, including both reference and candidate values, remain in the private archive. The compact summary identifies representative failures.
+The raw examples, including both reference and candidate values, are in [`apktool_raw_archive.zip`](apktool_raw_archive.zip) (committed 2026-11-20, D9). The compact summary identifies representative failures.
 
 - Nested signatures: the original diagnostic collapsed `newSelectKeyMappedStatement(MappedStatement,EntityHelper.EntityColumn)` to `...EntityColumn`, and erased `List<ResultMapping>` in `processMap` and `toPropertySet`. The targeted diagnostic restores these identities and nested enum/class members.
 - Ownership and incoming calls: the reference attributes calls to `Config`, including `getSelectReturnType`, `getBEFORE` and `getIDENTITY`. The candidate uses `MapperHelper` for those tokens and misses `EntityHelper.EntityColumn` calls such as `getGenerator` and `getProperty`.
@@ -38,7 +38,7 @@ These failures affect structural input, not merely formatting. The group did not
 
 ## Version lineage and interpretation
 
-The private archive retains v1–v4 and both diagnostics. Inspection confirms v2 repairs declaration-text/modifier handling and field-qualifier handling; v3 adds local inner-invocation information and a bounded overload correction; v4 adds heuristic client-call information. Human review identified problems in the earlier extractor. The targeted Mapper correction is a separate diagnostic and was **not** silently substituted into the Apktool algorithm inputs.
+The raw archive ([`apktool_raw_archive.zip`](apktool_raw_archive.zip), committed 2026-11-20) retains v1–v4 and both diagnostics. Inspection confirms v2 repairs declaration-text/modifier handling and field-qualifier handling; v3 adds local inner-invocation information and a bounded overload correction; v4 adds heuristic client-call information. Human review identified problems in the earlier extractor. The targeted Mapper correction is a separate diagnostic and was **not** silently substituted into the Apktool algorithm inputs.
 
 The preserved v2/v3/v4 algorithm inputs and their result hashes are recorded in [RESULTS_SUMMARY.json](RESULTS_SUMMARY.json). All three result files name seed 2026 and `sentence-transformers/all-mpnet-base-v2`. Input hashes match the copied originals. Historical package versions and the exact edited invocation used for v3/v4 were not recorded in those JSONs, so provenance is incomplete at that level. The archived portable runner supplies explicit version selection for future reproduction.
 
